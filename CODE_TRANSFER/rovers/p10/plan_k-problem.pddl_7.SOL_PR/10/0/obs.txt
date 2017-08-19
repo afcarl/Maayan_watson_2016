@@ -1,0 +1,7 @@
+( calibrated CAMERA2 ROVER1 )
+( have_image ROVER2 OBJECTIVE3 COLOUR )
+( full ROVER2STORE )
+( have_rock_analysis ROVER2 WAYPOINT1 )
+( at ROVER1 WAYPOINT6 )
+( full ROVER3STORE )
+( have_rock_analysis ROVER3 WAYPOINT0 )

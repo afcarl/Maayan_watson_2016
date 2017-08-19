@@ -1,0 +1,2 @@
+( pointing SATELLITE2 STAR10 )
+( have_image PLANET13 SPECTROGRAPH4 )

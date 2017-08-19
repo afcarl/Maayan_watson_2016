@@ -1,0 +1,4 @@
+( have_image STAR14 THERMOGRAPH2 )
+( pointing SATELLITE1 STAR19 )
+( pointing SATELLITE4 STAR23 )
+( have_image PLANET5 INFRARED0 )

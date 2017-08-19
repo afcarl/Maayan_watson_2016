@@ -1,0 +1,3 @@
+( pointing SATELLITE7 GROUNDSTATION4 )
+( calibrated INSTRUMENT17 )
+( pointing SATELLITE8 STAR16 )

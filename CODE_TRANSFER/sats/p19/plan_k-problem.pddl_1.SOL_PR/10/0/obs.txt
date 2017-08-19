@@ -1,0 +1,5 @@
+( calibrated INSTRUMENT0 )
+( pointing SATELLITE1 PLANET9 )
+( pointing SATELLITE0 STAR14 )
+( pointing SATELLITE1 STAR12 )
+( have_image STAR12 THERMOGRAPH1 )

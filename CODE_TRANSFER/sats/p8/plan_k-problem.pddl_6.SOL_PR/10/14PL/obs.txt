@@ -1,0 +1,4 @@
+( pointing satellite1 phenomenon13 )
+( calibrated INSTRUMENT4 )
+( pointing SATELLITE1 PHENOMENON13 )
+( calibrated instrument8 )

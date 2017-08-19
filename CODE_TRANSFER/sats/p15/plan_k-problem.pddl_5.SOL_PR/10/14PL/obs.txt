@@ -1,0 +1,4 @@
+( have_image planet20 image1 )
+( pointing satellite4 planet6 )
+( pointing SATELLITE5 GROUNDSTATION0 )
+( have_image PLANET6 SPECTROGRAPH2 )

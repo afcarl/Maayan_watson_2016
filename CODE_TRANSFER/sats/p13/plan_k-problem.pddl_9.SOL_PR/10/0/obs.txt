@@ -1,0 +1,4 @@
+( pointing SATELLITE2 PLANET9 )
+( pointing SATELLITE3 PLANET25 )
+( have_image PLANET25 THERMOGRAPH1 )
+( have_image PLANET24 THERMOGRAPH2 )

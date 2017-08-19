@@ -1,0 +1,3 @@
+( in PERSON3 PLANE1 )
+( at PERSON3 CITY4 )
+( at PERSON1 CITY2 )

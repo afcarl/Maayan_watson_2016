@@ -1,0 +1,3 @@
+( have_image STAR6 INFRARED3 )
+( have_image planet5 spectrograph1 )
+( pointing SATELLITE0 PHENOMENON13 )

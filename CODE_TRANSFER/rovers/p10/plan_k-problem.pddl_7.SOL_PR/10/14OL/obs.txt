@@ -1,0 +1,8 @@
+( calibrated CAMERA2 ROVER1 )
+( at ROVER2 WAYPOINT4 )
+( at ROVER1 WAYPOINT0 )
+( calibrated camera0 rover3 )
+( at ROVER3 WAYPOINT0 )
+( channel_free GENERAL )
+( communicated_rock_data WAYPOINT3 )
+( available ROVER0 )

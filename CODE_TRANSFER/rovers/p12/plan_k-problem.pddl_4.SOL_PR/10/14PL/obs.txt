@@ -1,0 +1,7 @@
+( at ROVER3 WAYPOINT7 )
+( channel_free GENERAL )
+( channel_free general )
+( at rover3 waypoint4 )
+( communicated_rock_data WAYPOINT3 )
+( communicated_rock_data waypoint7 )
+( available ROVER3 )

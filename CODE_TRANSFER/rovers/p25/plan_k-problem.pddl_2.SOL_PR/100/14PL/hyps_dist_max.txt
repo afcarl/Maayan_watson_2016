@@ -1,0 +1,8 @@
+******* TRUE GOAL *******
+(communicated_soil_data waypoint14),(communicated_soil_data waypoint21),(communicated_soil_data waypoint16),(communicated_rock_data waypoint9),(communicated_rock_data waypoint2),(communicated_rock_data waypoint10),(communicated_rock_data waypoint7),(communicated_image_data objective1 colour),(communicated_image_data objective1 high_res),(communicated_image_data objective2 colour)
+	0.335110832288
+(communicated_soil_data waypoint14),(communicated_soil_data waypoint21),(communicated_soil_data waypoint16),(communicated_rock_data waypoint9),(communicated_rock_data waypoint2),(communicated_rock_data waypoint10),(communicated_rock_data waypoint7),(communicated_image_data objective2 colour),(communicated_image_data objective2 high_res),(communicated_image_data objective1 colour)
+	0.391363446257
+(communicated_soil_data waypoint14),(communicated_soil_data waypoint21),(communicated_soil_data waypoint16),(communicated_rock_data waypoint9),(communicated_rock_data waypoint2),(communicated_rock_data waypoint10),(communicated_rock_data waypoint7),(communicated_image_data objective5 colour),(communicated_image_data objective0 high_res),(communicated_image_data objective3 high_res)
+	0.000313676286073
+(communicated_soil_data waypoint14),(communicated_soil_data waypoint21),(communicated_soil_data waypoint16),(communicated_rock_data waypoint9),(communicated_rock_data waypoint2),(communicated_rock_data waypoint10),(communicated_rock_data waypoint7),(communicated_image_data objective0 colour),(communicated_image_data objective5 high_res),(communicated_image_data objective4 colour)	0.273212045169

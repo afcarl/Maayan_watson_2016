@@ -1,0 +1,2 @@
+( have_image STAR6 THERMOGRAPH2 )
+( have_image star0 thermograph2 )

@@ -1,0 +1,7 @@
+( power_on INSTRUMENT9 )
+( calibrated INSTRUMENT9 )
+( have_image STAR15 THERMOGRAPH2 )
+( pointing SATELLITE2 PLANET19 )
+( pointing SATELLITE3 PLANET20 )
+( pointing SATELLITE3 PHENOMENON13 )
+( pointing SATELLITE0 PHENOMENON21 )

@@ -1,0 +1,4 @@
+( calibrated instrument0 )
+( have_image groundstation0 image3 )
+( calibrated INSTRUMENT3 )
+( have_image STAR7 IMAGE0 )

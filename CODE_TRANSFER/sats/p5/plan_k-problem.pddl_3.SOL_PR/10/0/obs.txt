@@ -1,0 +1,2 @@
+( calibrated INSTRUMENT4 )
+( pointing SATELLITE1 PLANET9 )

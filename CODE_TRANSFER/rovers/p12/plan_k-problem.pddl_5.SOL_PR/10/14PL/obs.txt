@@ -1,0 +1,7 @@
+( at ROVER0 WAYPOINT0 )
+( channel_free GENERAL )
+( communicated_image_data OBJECTIVE2 LOW_RES )
+( channel_free general )
+( at rover3 waypoint1 )
+( communicated_image_data objective0 colour )
+( available ROVER0 )

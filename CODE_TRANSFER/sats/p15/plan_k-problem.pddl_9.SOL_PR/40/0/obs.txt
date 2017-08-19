@@ -1,0 +1,6 @@
+( calibrated INSTRUMENT5 )
+( pointing SATELLITE2 PHENOMENON16 )
+( pointing SATELLITE7 PLANET14 )
+( have_image PLANET22 IMAGE1 )
+( have_image PLANET20 IMAGE1 )
+( pointing SATELLITE3 PLANET7 )

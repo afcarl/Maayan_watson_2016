@@ -1,0 +1,7 @@
+( at ROVER0 WAYPOINT0 )
+( at ROVER3 WAYPOINT12 )
+( at ROVER1 WAYPOINT0 )
+( channel_free GENERAL )
+( communicated_rock_data WAYPOINT5 )
+( available ROVER5 )
+( at ROVER5 WAYPOINT1 )

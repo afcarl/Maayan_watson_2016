@@ -1,0 +1,3 @@
+( pointing SATELLITE1 STAR6 )
+( have_image STAR6 THERMOGRAPH1 )
+( pointing satellite2 star3 )

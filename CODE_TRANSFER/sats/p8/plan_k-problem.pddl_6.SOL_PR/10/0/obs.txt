@@ -1,0 +1,2 @@
+( have_image PLANET11 THERMOGRAPH2 )
+( have_image PHENOMENON9 IMAGE0 )

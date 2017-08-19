@@ -1,0 +1,6 @@
+( pointing SATELLITE6 STAR38 )
+( have_image PHENOMENON51 THERMOGRAPH2 )
+( pointing SATELLITE1 PLANET36 )
+( have_image PLANET64 INFRARED0 )
+( have_image STAR70 INFRARED1 )
+( have_image PLANET12 THERMOGRAPH2 )

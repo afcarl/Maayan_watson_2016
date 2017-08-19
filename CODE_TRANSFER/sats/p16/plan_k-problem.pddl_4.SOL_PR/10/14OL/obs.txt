@@ -1,0 +1,4 @@
+( power_on INSTRUMENT17 )
+( pointing SATELLITE8 PHENOMENON5 )
+( power_on instrument14 )
+( pointing SATELLITE8 STAR16 )

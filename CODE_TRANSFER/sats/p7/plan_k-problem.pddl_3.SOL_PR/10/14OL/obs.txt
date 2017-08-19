@@ -1,0 +1,3 @@
+( calibrated INSTRUMENT5 )
+( calibrated instrument2 )
+( have_image PLANET11 IMAGE2 )

@@ -1,0 +1,7 @@
+( in CRATE2 TRUCK0 )
+( available DEPOT0 HOIST0 )
+( available DISTRIBUTOR0 HOIST2 )
+( at CRATE5 DISTRIBUTOR0 )
+( in crate5 truck0 )
+( clear CRATE5 )
+( on CRATE5 PALLET2 )

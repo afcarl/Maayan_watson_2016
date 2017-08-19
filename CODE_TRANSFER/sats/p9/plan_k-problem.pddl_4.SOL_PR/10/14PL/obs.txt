@@ -1,0 +1,4 @@
+( have_image star2 image3 )
+( have_image PHENOMENON6 IMAGE3 )
+( pointing SATELLITE2 PLANET11 )
+( pointing satellite0 phenomenon8 )

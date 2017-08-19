@@ -1,0 +1,8 @@
+( full ROVER6STORE )
+( have_rock_analysis ROVER6 WAYPOINT7 )
+( at ROVER6 WAYPOINT8 )
+( empty ROVER2STORE )
+( channel_free GENERAL )
+( communicated_image_data OBJECTIVE1 HIGH_RES )
+( full rover8store )
+( available ROVER5 )

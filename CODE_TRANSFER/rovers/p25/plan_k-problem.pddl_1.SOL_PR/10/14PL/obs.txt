@@ -1,0 +1,6 @@
+( at ROVER6 WAYPOINT4 )
+( at ROVER2 WAYPOINT4 )
+( at rover8 waypoint2 )
+( at rover8 waypoint17 )
+( at rover7 waypoint15 )
+( at ROVER0 WAYPOINT10 )

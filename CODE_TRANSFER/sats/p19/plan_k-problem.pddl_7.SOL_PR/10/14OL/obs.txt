@@ -1,0 +1,4 @@
+( have_image STAR18 INFRARED2 )
+( have_image planet21 infrared3 )
+( pointing SATELLITE2 PLANET15 )
+( have_image PLANET15 INFRARED2 )

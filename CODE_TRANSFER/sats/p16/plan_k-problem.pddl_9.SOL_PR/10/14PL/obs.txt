@@ -1,0 +1,4 @@
+( have_image star24 image0 )
+( have_image star2 image2 )
+( have_image STAR14 THERMOGRAPH1 )
+( have_image PLANET11 INFRARED4 )

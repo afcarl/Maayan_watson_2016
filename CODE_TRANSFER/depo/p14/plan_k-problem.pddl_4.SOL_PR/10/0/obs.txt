@@ -1,0 +1,6 @@
+( available DEPOT1 HOIST1 )
+( at CRATE8 DEPOT1 )
+( clear CRATE8 )
+( on CRATE8 PALLET7 )
+( at TRUCK0 DISTRIBUTOR1 )
+( at TRUCK0 DEPOT0 )

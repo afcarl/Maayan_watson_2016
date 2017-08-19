@@ -1,0 +1,8 @@
+( full ROVER0STORE )
+( have_soil_analysis ROVER0 WAYPOINT3 )
+( channel_free GENERAL )
+( communicated_image_data OBJECTIVE0 LOW_RES )
+( available ROVER3 )
+( channel_free GENERAL )
+( communicated_soil_data WAYPOINT6 )
+( available ROVER1 )

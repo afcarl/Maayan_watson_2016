@@ -1,0 +1,6 @@
+( have_image STAR6 INFRARED3 )
+( have_image PLANET10 INFRARED3 )
+( power_on instrument3 )
+( have_image groundstation3 image2 )
+( have_image star0 infrared3 )
+( power_on INSTRUMENT2 )

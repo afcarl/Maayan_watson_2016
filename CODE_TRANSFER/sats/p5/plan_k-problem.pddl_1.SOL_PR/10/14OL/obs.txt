@@ -1,0 +1,3 @@
+( pointing SATELLITE1 PHENOMENON5 )
+( pointing satellite0 groundstation1 )
+( have_image PHENOMENON5 IMAGE2 )

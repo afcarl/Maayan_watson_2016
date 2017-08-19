@@ -1,0 +1,4 @@
+( calibrated INSTRUMENT8 )
+( pointing satellite3 planet19 )
+( pointing SATELLITE2 PLANET14 )
+( calibrated instrument7 )

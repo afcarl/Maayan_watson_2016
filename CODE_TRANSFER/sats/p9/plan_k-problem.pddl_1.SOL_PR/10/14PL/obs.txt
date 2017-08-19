@@ -1,0 +1,4 @@
+( have_image PLANET5 IMAGE2 )
+( have_image phenomenon7 infrared1 )
+( have_image PHENOMENON12 IMAGE3 )
+( have_image phenomenon7 image3 )

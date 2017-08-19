@@ -1,0 +1,8 @@
+( have_image phenomenon8 spectrograph0 )
+( power_on INSTRUMENT0 )
+( have_image PLANET5 SPECTROGRAPH0 )
+( have_image PHENOMENON8 SPECTROGRAPH0 )
+( pointing SATELLITE1 STAR2 )
+( pointing SATELLITE1 STAR7 )
+( power_on instrument4 )
+( pointing SATELLITE1 STAR10 )

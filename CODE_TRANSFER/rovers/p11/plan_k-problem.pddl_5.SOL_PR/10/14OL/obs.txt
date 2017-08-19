@@ -1,0 +1,8 @@
+( full ROVER3STORE )
+( have_soil_analysis ROVER3 WAYPOINT6 )
+( at ROVER2 WAYPOINT3 )
+( at ROVER1 WAYPOINT4 )
+( channel_free GENERAL )
+( communicated_soil_data WAYPOINT3 )
+( available ROVER0 )
+( full rover0store )

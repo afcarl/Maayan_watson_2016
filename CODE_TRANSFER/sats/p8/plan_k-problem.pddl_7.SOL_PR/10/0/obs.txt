@@ -1,0 +1,2 @@
+( pointing SATELLITE1 STAR6 )
+( have_image STAR6 THERMOGRAPH1 )

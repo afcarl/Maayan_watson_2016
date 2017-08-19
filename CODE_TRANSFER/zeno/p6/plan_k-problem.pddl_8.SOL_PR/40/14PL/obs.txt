@@ -1,0 +1,8 @@
+( at PLANE1 CITY0 )
+( fuel-level PLANE1 FL3 )
+( in PERSON1 PLANE1 )
+( fuel-level plane1 fl6 )
+( at PERSON4 CITY3 )
+( at PLANE1 CITY1 )
+( at plane2 city0 )
+( fuel-level PLANE1 FL1 )

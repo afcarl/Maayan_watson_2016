@@ -1,0 +1,4 @@
+( power_on INSTRUMENT6 )
+( have_image PLANET13 THERMOGRAPH1 )
+( have_image PHENOMENON18 IMAGE3 )
+( pointing SATELLITE4 PHENOMENON5 )

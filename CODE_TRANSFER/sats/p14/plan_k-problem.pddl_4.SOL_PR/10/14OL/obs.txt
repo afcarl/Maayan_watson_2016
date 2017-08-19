@@ -1,0 +1,4 @@
+( have_image star24 thermograph4 )
+( have_image PHENOMENON5 IMAGE1 )
+( pointing SATELLITE3 STAR22 )
+( have_image PLANET17 IMAGE2 )

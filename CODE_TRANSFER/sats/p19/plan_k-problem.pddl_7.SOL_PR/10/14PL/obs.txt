@@ -1,0 +1,6 @@
+( pointing satellite3 groundstation0 )
+( have_image STAR14 INFRARED2 )
+( have_image phenomenon8 thermograph1 )
+( pointing SATELLITE2 PLANET15 )
+( have_image planet17 thermograph1 )
+( have_image PLANET15 INFRARED2 )

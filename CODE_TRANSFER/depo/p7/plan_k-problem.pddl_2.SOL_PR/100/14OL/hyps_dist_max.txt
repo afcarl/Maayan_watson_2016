@@ -1,0 +1,8 @@
+******* TRUE GOAL *******
+(on crate0 pallet3),(on crate1 crate4),(on crate3 pallet1),(on crate4 pallet5),(on crate5 crate1)
+	0.411278735632
+(on crate0 pallet1),(on crate1 crate4),(on crate3 pallet3),(on crate4 pallet5),(on crate5 crate1)
+	0.189295977011
+(on crate0 pallet5),(on crate1 crate4),(on crate3 pallet1),(on crate4 pallet3),(on crate5 crate1)
+	0.304238505747
+(on crate0 pallet3),(on crate1 crate4),(on crate3 pallet5),(on crate4 pallet1),(on crate5 crate1)	0.0951867816092

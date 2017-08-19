@@ -1,0 +1,8 @@
+******* TRUE GOAL *******
+(have_image planet5 image2),(have_image phenomenon6 image3),(have_image phenomenon7 infrared1),(have_image phenomenon8 image2),(have_image star9 image3),(have_image planet10 image4),(have_image planet11 spectrograph0),(have_image phenomenon12 image3),(have_image phenomenon13 spectrograph0),(have_image star14 image4)
+	0.246759081428
+(have_image planet5 image3),(have_image phenomenon6 image2),(have_image phenomenon7 infrared1),(have_image phenomenon8 image2),(have_image star9 image2),(have_image planet10 image3),(have_image planet11 spectrograph0),(have_image phenomenon12 image2),(have_image phenomenon13 spectrograph0),(have_image star14 image3)
+	0.248821520992
+(have_image planet5 image4),(have_image phenomenon6 image3),(have_image phenomenon7 infrared1),(have_image phenomenon8 image2),(have_image star9 image3),(have_image planet10 image2),(have_image planet11 spectrograph0),(have_image phenomenon12 image4),(have_image phenomenon13 image3),(have_image star14 image2)
+	0.25345860439
+(have_image planet5 image2),(have_image phenomenon6 image4),(have_image phenomenon7 infrared1),(have_image phenomenon8 image3),(have_image star9 image4),(have_image planet10 image4),(have_image planet11 image2),(have_image phenomenon12 image3),(have_image phenomenon13 image3),(have_image star14 image4)	0.250960793191

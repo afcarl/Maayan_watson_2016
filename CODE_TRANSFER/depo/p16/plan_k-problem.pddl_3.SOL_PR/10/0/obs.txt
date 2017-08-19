@@ -1,0 +1,2 @@
+( in CRATE3 TRUCK0 )
+( available DEPOT1 HOIST5 )

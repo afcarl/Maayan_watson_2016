@@ -1,0 +1,4 @@
+( pointing SATELLITE2 PLANET22 )
+( pointing SATELLITE0 PLANET22 )
+( pointing SATELLITE1 PLANET13 )
+( have_image PLANET13 INFRARED5 )

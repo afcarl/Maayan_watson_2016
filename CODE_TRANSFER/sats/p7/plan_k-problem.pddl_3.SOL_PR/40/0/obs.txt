@@ -1,0 +1,5 @@
+( pointing SATELLITE2 STAR1 )
+( have_image STAR7 IMAGE0 )
+( pointing SATELLITE3 PLANET10 )
+( pointing SATELLITE1 PLANET8 )
+( have_image PLANET10 IMAGE0 )

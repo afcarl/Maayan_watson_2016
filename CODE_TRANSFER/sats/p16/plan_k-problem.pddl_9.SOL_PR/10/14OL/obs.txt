@@ -1,0 +1,3 @@
+( pointing SATELLITE5 PLANET11 )
+( pointing SATELLITE4 STAR15 )
+( pointing satellite4 phenomenon5 )

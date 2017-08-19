@@ -1,0 +1,4 @@
+( calibrated INSTRUMENT3 )
+( pointing SATELLITE0 STAR12 )
+( calibrated instrument4 )
+( pointing SATELLITE1 STAR16 )

@@ -1,0 +1,2 @@
+( have_image PLANET22 IMAGE1 )
+( have_image STAR15 THERMOGRAPH4 )

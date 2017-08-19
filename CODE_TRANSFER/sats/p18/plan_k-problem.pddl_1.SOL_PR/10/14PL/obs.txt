@@ -1,0 +1,4 @@
+( have_image PLANET19 THERMOGRAPH2 )
+( have_image PHENOMENON18 IMAGE1 )
+( have_image planet7 thermograph0 )
+( have_image star22 thermograph4 )

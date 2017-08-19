@@ -1,0 +1,3 @@
+( at person1 city1 )
+( at PERSON4 CITY3 )
+( at PERSON1 CITY2 )

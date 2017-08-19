@@ -1,0 +1,8 @@
+( pointing SATELLITE2 STAR2 )
+( power_avail SATELLITE0 )
+( power_on INSTRUMENT2 )
+( have_image PHENOMENON13 SPECTROGRAPH0 )
+( pointing SATELLITE2 PLANET5 )
+( have_image PHENOMENON12 IMAGE3 )
+( have_image PLANET5 IMAGE2 )
+( have_image PLANET11 SPECTROGRAPH0 )

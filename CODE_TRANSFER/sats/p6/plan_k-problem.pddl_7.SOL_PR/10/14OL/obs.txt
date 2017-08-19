@@ -1,0 +1,2 @@
+( pointing SATELLITE0 STAR1 )
+( pointing satellite1 star7 )

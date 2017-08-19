@@ -1,0 +1,2 @@
+plan_k-problem.pddl_8.SOL_PR
+plan_k-problem.pddl_7.SOL_PR

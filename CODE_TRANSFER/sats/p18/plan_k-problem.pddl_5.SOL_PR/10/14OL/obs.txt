@@ -1,0 +1,3 @@
+( power_on instrument5 )
+( power_on INSTRUMENT9 )
+( have_image PHENOMENON21 IMAGE1 )
