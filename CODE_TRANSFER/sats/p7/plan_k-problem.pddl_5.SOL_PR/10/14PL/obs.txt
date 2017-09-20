@@ -1,4 +1,0 @@
-( power_on INSTRUMENT3 )
-( power_on instrument2 )
-( pointing satellite3 star6 )
-( pointing SATELLITE1 PLANET9 )

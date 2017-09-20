@@ -183,7 +183,7 @@ class GroundFunction(object):
 
 
 class PlanningProblem(object):
-  def __init__(self, domainfile, problemfile):
+  def __init__(self, domainfile, problemfile, agents_to_delete):
     self.domain = '' #String
     self.requirements = set() #[String]
     self.type_list = set() #{String}
@@ -207,7 +207,7 @@ class PlanningProblem(object):
     self.metric = False
 
     self.parse_domain(domainfile)
-    self.parse_problem(problemfile)
+    self.parse_problem(problemfile, agents_to_delete)
 
     orig_constants = []
     if len( self.constants.values() ) > 0:
@@ -427,13 +427,58 @@ class PlanningProblem(object):
       
     self.actions = new_actions
 
-  def parse_problem(self, problemfile):
+  def parse_problem(self, problemfile, agents_to_delete = []):
     """The main method for parsing a PDDL files."""
+    after_init = False
+    found_agent = 0
+    delete_line = False
+    print("AGENTS_TO_DELETE")
+    print(agents_to_delete)
+    print("====================")
+    if len(agents_to_delete) > 0:
+      problemfile_orig = problemfile
+      problemfile = problemfile_orig + "_modified.pddl"
+      pfile_to_write = open(problemfile, 'w+')
+      print(problemfile)
+      with open(problemfile_orig) as pfile:
+        for line in pfile:
+          delete_line = False
+          if line.find(':init') != -1:
+            after_init = True
+          if found_agent > 0:
+            found_agent -= 1
+            continue
+          if after_init:
+            for agent in agents_to_delete:
+              if line.find(agent) != -1:
+                delete_line = True
+                break
+            if not delete_line:
+              #print(line)
+              pfile_to_write.write(line)
+              #pfile_to_write.write('\n')
+          else:
+            if (line.find('private') != -1):
+              for agent in agents_to_delete:
+                if line.find(agent) != -1:
+                  found_agent = 2
+                  delete_line = True
+                  break
+            if not delete_line:
+              #print(line)
+              pfile_to_write.write(line)
+              #pfile_to_write.write('\n')
+      #print("DONE")
+      #while (1):
+      #  a = 0
 
-    with open(problemfile) as pfile:
+      pfile_to_write.close()
+
+    with open(problemfile, 'r') as pfile:
       pfile_array = self._get_file_as_array(pfile)
     #Deal with front/end define, problem, :domain
     if pfile_array[0:4] != ['(', 'define', '(', 'problem']:
+      #print(pfile_array[0:10])
       print 'PARSING ERROR: Expected (define (problem ... at start of problem file'
       sys.exit()
     self.problem = pfile_array[4]
@@ -483,6 +528,7 @@ class PlanningProblem(object):
               obj_list = []
               keyword = 'objects'
               priv_agent = word
+              print(priv_agent)
               continue
           if is_obj_list:
             if word == '-':
@@ -763,8 +809,8 @@ class PlanningProblem(object):
 
 
 
-def compile_away_ma(domain_file, problem_file, path_to_dir = "0", penalty = 'penalty_off'):
-	pp = PlanningProblem(domain_file, problem_file)
+def compile_away_ma(domain_file, problem_file, path_to_dir = "0", penalty = 'penalty_off', agents_to_delete = []):
+	pp = PlanningProblem(domain_file, problem_file, agents_to_delete)
 	max_duration =  max ([int(action.duration) for action in pp.actions])
 	if penalty == 'penalty_on':
 		for action in pp.actions:
@@ -783,6 +829,7 @@ def compile_away_ma(domain_file, problem_file, path_to_dir = "0", penalty = 'pen
 		pp.write_pddl_problem('k-problem.pddl')
 		
 	return pp, max_duration
+
 
 
 

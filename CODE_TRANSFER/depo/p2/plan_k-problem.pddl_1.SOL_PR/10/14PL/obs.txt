@@ -1,2 +1,0 @@
-( lifting DISTRIBUTOR0 HOIST1 CRATE1 )
-( lifting distributor0 hoist2 crate2 )

@@ -18,7 +18,7 @@ pallet2 - pallet
 distributor1 - distributor
 distributor0 - distributor
 )
-(:init (notdone) (= (total-cost) 0) (considered_occur_init)
+(:init (= (total-cost) 0) (considered_occur_init)
 (driving driver0 truck0)
 (driving driver1 truck1)
 (at pallet0 depot0)
@@ -157,7 +157,7 @@ distributor0 - distributor
 (K-ag-pred driver0 pred--clear)
 (K-pred driver0 pred--clear)
 )
-(:goal	(and (done) (considered__on_CRATE1_CRATE3__24)
+(:goal	(and (considered__on_CRATE1_CRATE3__24)
 )
 )
 (:metric minimize (total-time))

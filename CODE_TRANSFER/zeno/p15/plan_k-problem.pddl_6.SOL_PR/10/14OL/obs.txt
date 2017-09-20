@@ -1,5 +1,0 @@
-( in PERSON13 PLANE5 )
-( in PERSON8 PLANE2 )
-( in person4 plane2 )
-( at PERSON8 CITY11 )
-( at PERSON4 CITY6 )

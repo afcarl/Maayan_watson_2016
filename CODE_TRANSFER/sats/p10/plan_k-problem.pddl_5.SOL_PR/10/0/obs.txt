@@ -1,2 +1,0 @@
-( calibrated INSTRUMENT7 )
-( pointing SATELLITE0 PHENOMENON13 )

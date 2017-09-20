@@ -1,6 +1,0 @@
-( pointing SATELLITE0 STAR1 )
-( calibrated INSTRUMENT0 )
-( pointing SATELLITE1 STAR6 )
-( pointing SATELLITE0 STAR9 )
-( pointing satellite0 star2 )
-( calibrated instrument0 )

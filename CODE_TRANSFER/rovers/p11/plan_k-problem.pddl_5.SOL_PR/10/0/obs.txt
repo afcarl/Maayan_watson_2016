@@ -1,7 +1,0 @@
-( at ROVER0 WAYPOINT3 )
-( full ROVER3STORE )
-( have_soil_analysis ROVER3 WAYPOINT6 )
-( at ROVER2 WAYPOINT0 )
-( channel_free GENERAL )
-( communicated_rock_data WAYPOINT4 )
-( available ROVER1 )

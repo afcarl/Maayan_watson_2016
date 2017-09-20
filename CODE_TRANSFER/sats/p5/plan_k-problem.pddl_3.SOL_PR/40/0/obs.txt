@@ -1,7 +1,0 @@
-( power_on INSTRUMENT1 )
-( pointing SATELLITE0 GROUNDSTATION1 )
-( have_image STAR3 THERMOGRAPH0 )
-( have_image PHENOMENON6 IMAGE2 )
-( have_image STAR7 THERMOGRAPH0 )
-( pointing SATELLITE1 PLANET9 )
-( have_image PHENOMENON8 IMAGE2 )

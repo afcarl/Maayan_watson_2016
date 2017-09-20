@@ -1,8 +1,0 @@
-( have_image planet23 thermograph0 )
-( pointing SATELLITE1 STAR26 )
-( pointing satellite2 planet10 )
-( have_image STAR19 THERMOGRAPH0 )
-( pointing satellite4 star21 )
-( have_image PHENOMENON18 IMAGE3 )
-( have_image star26 image4 )
-( pointing SATELLITE1 PLANET11 )

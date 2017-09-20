@@ -1,6 +1,0 @@
-( power_on INSTRUMENT6 )
-( calibrated INSTRUMENT3 )
-( pointing SATELLITE1 PLANET11 )
-( have_image PLANET11 IMAGE2 )
-( power_on instrument4 )
-( have_image PLANET10 IMAGE0 )

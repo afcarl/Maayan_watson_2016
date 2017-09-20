@@ -1,8 +1,0 @@
-******* TRUE GOAL *******
-(have_image phenomenon5 image0),(have_image star6 image1),(have_image star7 image0),(have_image planet8 image0),(have_image planet9 image3),(have_image planet10 image0),(have_image planet11 image2)
-	0.35824742268
-(have_image phenomenon5 image1),(have_image star6 image0),(have_image star7 image0),(have_image planet8 image0),(have_image planet9 image3),(have_image planet10 image2),(have_image planet11 image2)
-	0.201030927835
-(have_image phenomenon5 image0),(have_image star6 image0),(have_image star7 image1),(have_image planet8 image3),(have_image planet9 image0),(have_image planet10 image2),(have_image planet11 image0)
-	0.335051546392
-(have_image phenomenon5 image1),(have_image star6 image1),(have_image star7 image0),(have_image planet8 image0),(have_image planet9 image0),(have_image planet10 image3),(have_image planet11 image2)	0.105670103093

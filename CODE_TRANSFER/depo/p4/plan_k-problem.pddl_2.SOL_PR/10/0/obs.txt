@@ -1,1 +1,0 @@
-( lifting DEPOT0 HOIST0 CRATE4 )

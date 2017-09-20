@@ -1,6 +1,0 @@
-( calibrated INSTRUMENT0 )
-( calibrated instrument2 )
-( have_image groundstation1 thermograph0 )
-( pointing satellite0 phenomenon13 )
-( have_image STAR10 THERMOGRAPH3 )
-( pointing SATELLITE3 PLANET17 )

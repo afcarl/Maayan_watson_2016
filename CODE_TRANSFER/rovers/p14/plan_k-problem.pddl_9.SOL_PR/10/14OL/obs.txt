@@ -1,5 +1,0 @@
-( at ROVER0 WAYPOINT2 )
-( at rover0 waypoint9 )
-( full ROVER0STORE )
-( have_soil_analysis ROVER0 WAYPOINT3 )
-( at ROVER0 WAYPOINT2 )

@@ -1,6 +1,0 @@
-( have_image STAR18 SPECTROGRAPH4 )
-( pointing SATELLITE1 STAR7 )
-( have_image star18 spectrograph4 )
-( pointing SATELLITE0 STAR23 )
-( have_image PLANET5 INFRARED0 )
-( pointing SATELLITE0 PLANET8 )

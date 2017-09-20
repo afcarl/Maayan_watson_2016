@@ -12,59 +12,31 @@ depot distributor - place
 pred--at pred--on pred--in pred--clear pred--lifting pred--available pred--driving  - superduperpred
 )
 (:functions (total-cost))
-(:predicates 
- (done) (notdone) (considered_occur_init) (freeze)(considered__in_CRATE6_TRUCK0__0)
-(considered__available_DISTRIBUTOR1_HOIST2__1)
-(considered__in_CRATE5_TRUCK0__2)
-(considered__available_DISTRIBUTOR1_HOIST2__3)
-(considered__in_CRATE3_TRUCK0__4)
-(considered__available_DISTRIBUTOR1_HOIST2__5)
-(considered__at_TRUCK1_DEPOT0__6)
-(considered__in_CRATE7_TRUCK1__7)
-(considered__available_DEPOT0_HOIST0__8)
-(considered__lifting_DISTRIBUTOR1_HOIST2_CRATE5__9)
-(considered__available_DISTRIBUTOR1_HOIST2__10)
-(considered__at_CRATE5_DISTRIBUTOR1__11)
-(considered__clear_CRATE5__12)
-(considered__on_CRATE5_PALLET2__13)
-(considered__in_CRATE4_TRUCK1__14)
+(:predicates (considered_occur_init) (freeze)(considered__in_CRATE0_TRUCK0__0)
+(considered__available_DEPOT0_HOIST0__1)
+(considered__at_TRUCK1_DISTRIBUTOR1__2)
+(considered__in_CRATE2_TRUCK1__3)
+(considered__available_DISTRIBUTOR1_HOIST2__4)
+(considered__at_TRUCK0_DISTRIBUTOR1__5)
+(considered__in_CRATE1_TRUCK0__6)
+(considered__available_DISTRIBUTOR1_HOIST2__7)
+(considered__lifting_DISTRIBUTOR1_HOIST2_CRATE0__8)
+(considered__available_DISTRIBUTOR1_HOIST2__9)
+(considered__at_CRATE0_DISTRIBUTOR1__10)
+(considered__clear_CRATE0__11)
+(considered__on_CRATE0_PALLET2__12)
+(considered__at_TRUCK1_DEPOT0__13)
+(considered__lifting_DEPOT0_HOIST0_CRATE2__14)
 (considered__available_DEPOT0_HOIST0__15)
-(considered__in_CRATE1_TRUCK1__16)
-(considered__available_DEPOT0_HOIST0__17)
-(considered__in_CRATE0_TRUCK1__18)
-(considered__available_DEPOT0_HOIST0__19)
-(considered__available_distributor0_hoist0__20)
-(considered__at_TRUCK0_DISTRIBUTOR0__21)
-(considered__lifting_DEPOT0_HOIST0_CRATE7__22)
-(considered__in_CRATE2_TRUCK0__23)
-(considered__available_DISTRIBUTOR0_HOIST1__24)
-(considered__available_DEPOT0_HOIST0__25)
-(considered__at_CRATE7_DEPOT0__26)
-(considered__clear_CRATE7__27)
-(considered__on_CRATE7_PALLET0__28)
-(considered__lifting_DISTRIBUTOR0_HOIST1_CRATE6__29)
-(considered__lifting_DEPOT0_HOIST0_CRATE4__30)
-(considered__available_DISTRIBUTOR0_HOIST1__31)
-(considered__at_CRATE6_DISTRIBUTOR0__32)
-(considered__in_crate3_truck1__33)
-(considered__clear_CRATE6__34)
-(considered__available_distributor1_hoist0__35)
-(considered__in_crate5_truck1__36)
-(considered__on_CRATE6_PALLET1__37)
-(considered__available_DEPOT0_HOIST0__38)
-(considered__at_CRATE4_DEPOT0__39)
-(considered__clear_CRATE4__40)
-(considered__on_CRATE4_CRATE7__41)
-(considered__lifting_DISTRIBUTOR0_HOIST1_CRATE2__42)
-(considered__lifting_DEPOT0_HOIST0_CRATE0__43)
-(considered__available_DISTRIBUTOR0_HOIST1__44)
-(considered__at_CRATE2_DISTRIBUTOR0__45)
-(considered__clear_CRATE2__46)
-(considered__on_CRATE2_CRATE6__47)
-(considered__available_DEPOT0_HOIST0__48)
-(considered__at_CRATE0_DEPOT0__49)
-(considered__clear_CRATE0__50)
-(considered__on_CRATE0_CRATE4__51)
+(considered__at_CRATE2_DEPOT0__16)
+(considered__clear_CRATE2__17)
+(considered__on_CRATE2_PALLET0__18)
+(considered__at_TRUCK0_DISTRIBUTOR0__19)
+(considered__lifting_DISTRIBUTOR0_HOIST1_CRATE1__20)
+(considered__available_DISTRIBUTOR0_HOIST1__21)
+(considered__at_CRATE1_DISTRIBUTOR0__22)
+(considered__clear_CRATE1__23)
+(considered__on_CRATE1_CRATE3__24)
 (at ?x - locatable ?y - place)
 (on ?x - crate ?y - surface)
 (in ?x - crate ?y - truck)
@@ -76,31 +48,6 @@ pred--at pred--on pred--in pred--clear pred--lifting pred--available pred--drivi
 (K-pred ?ag - superduperagent ?pr - superduperpred)
 (K-ag-pred ?ag - superduperagent ?pr - superduperpred)
 )
-(:durative-action goal_-8592325327269408989
- :parameters () 
- :duration (= ?duration 0) 
-:condition (and (at start (notdone) )  (at start (on crate0 crate4) ) (at start (on crate2 crate6) ) (at start (on crate4 crate7) ) (at start (on crate5 pallet2) ) (at start (on crate6 pallet1) ) (at start (on crate7 pallet0)
- ) ) 
-:effect (and (at end (not (notdone))) (at end (done)) (at end (increase (total-cost) 1)))) 
-(:durative-action goal_-1024682167076756700
- :parameters () 
- :duration (= ?duration 0) 
-:condition (and (at start (notdone) )  (at start (on crate1 crate0) ) (at start (on crate3 crate1) ) (at start (on crate0 crate4) ) (at start (on crate2 crate6) ) (at start (on crate4 crate7) ) (at start (on crate5 pallet2) ) (at start (on crate6 pallet1) ) (at start (on crate7 pallet0)
- ) ) 
-:effect (and (at end (not (notdone))) (at end (done)) (at end (increase (total-cost) 1)))) 
-(:durative-action goal_-2482639919653512641
- :parameters () 
- :duration (= ?duration 0) 
-:condition (and (at start (notdone) )  (at start (on crate0 crate4) ) (at start (on crate2 crate6) ) (at start (on crate4 crate7) ) (at start (on crate5 pallet1) ) (at start (on crate6 pallet0) ) (at start (on crate7 pallet2)
- ) ) 
-:effect (and (at end (not (notdone))) (at end (done)) (at end (increase (total-cost) 1)))) 
-(:durative-action goal_4258711406561692927
- :parameters () 
- :duration (= ?duration 0) 
-:condition (and (at start (notdone) )  (at start (on crate0 crate4) ) (at start (on crate2 crate6) ) (at start (on crate4 crate7) ) (at start (on crate5 pallet0) ) (at start (on crate6 pallet2) ) (at start (on crate7 pallet1)
- ) ) 
-:effect (and (at end (not (notdone))) (at end (done)) (at end (increase (total-cost) 1)))) 
-
 (:durative-action drive
 :parameters (?a - driver ?x - truck ?y - place ?z - place)
 :duration (= ?duration 20)
@@ -214,524 +161,254 @@ pred--at pred--on pred--in pred--clear pred--lifting pred--available pred--drivi
 (at start(not (available ?p ?x )))
 )
 )
-(:durative-action hidden-explain-obs-_in_CRATE6_TRUCK0__0
+(:durative-action hidden-explain-obs-_in_CRATE0_TRUCK0__0
 :parameters ()
 :duration (= ?duration 1)
-:condition (and  (at start (not (freeze))) (at start (considered_occur_init)) (at start ( in CRATE6 TRUCK0 )))
-:effect (and (at start (not  (considered_occur_init))) (at end (considered__in_CRATE6_TRUCK0__0)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DISTRIBUTOR1_HOIST2__1
+:condition (and  (at start (not (freeze))) (at start (considered_occur_init)) (at start ( in CRATE0 TRUCK0 )))
+:effect (and (at start (not  (considered_occur_init))) (at end (considered__in_CRATE0_TRUCK0__0)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_available_DEPOT0_HOIST0__1
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE6_TRUCK0__0) ) (at start ( available DISTRIBUTOR1 HOIST2 ) ))
-:effect (and (at start (not (considered__in_CRATE6_TRUCK0__0)) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__1)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_in_CRATE5_TRUCK0__2
+:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE0_TRUCK0__0) ) (at start ( available DEPOT0 HOIST0 ) ))
+:effect (and (at start (not (considered__in_CRATE0_TRUCK0__0)) ) (at end (considered__available_DEPOT0_HOIST0__1)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_at_TRUCK1_DISTRIBUTOR1__2
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__1) ) (at start ( in CRATE5 TRUCK0 ) ))
-:effect (and (at start (not (considered__available_DISTRIBUTOR1_HOIST2__1)) ) (at end (considered__in_CRATE5_TRUCK0__2)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DISTRIBUTOR1_HOIST2__3
+:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__1) ) (at start ( at TRUCK1 DISTRIBUTOR1 ) ))
+:effect (and (at start (not (considered__available_DEPOT0_HOIST0__1)) ) (at end (considered__at_TRUCK1_DISTRIBUTOR1__2)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_in_CRATE2_TRUCK1__3
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE5_TRUCK0__2) ) (at start ( available DISTRIBUTOR1 HOIST2 ) ))
-:effect (and (at start (not (considered__in_CRATE5_TRUCK0__2)) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__3)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_in_CRATE3_TRUCK0__4
+:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK1_DISTRIBUTOR1__2) ) (at start ( in CRATE2 TRUCK1 ) ))
+:effect (and (at start (not (considered__at_TRUCK1_DISTRIBUTOR1__2)) ) (at end (considered__in_CRATE2_TRUCK1__3)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_available_DISTRIBUTOR1_HOIST2__4
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__3) ) (at start ( in CRATE3 TRUCK0 ) ))
-:effect (and (at start (not (considered__available_DISTRIBUTOR1_HOIST2__3)) ) (at end (considered__in_CRATE3_TRUCK0__4)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DISTRIBUTOR1_HOIST2__5
+:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE2_TRUCK1__3) ) (at start ( available DISTRIBUTOR1 HOIST2 ) ))
+:effect (and (at start (not (considered__in_CRATE2_TRUCK1__3)) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__4)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_at_TRUCK0_DISTRIBUTOR1__5
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE3_TRUCK0__4) ) (at start ( available DISTRIBUTOR1 HOIST2 ) ))
-:effect (and (at start (not (considered__in_CRATE3_TRUCK0__4)) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__5)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_at_TRUCK1_DEPOT0__6
+:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__4) ) (at start ( at TRUCK0 DISTRIBUTOR1 ) ))
+:effect (and (at start (not (considered__available_DISTRIBUTOR1_HOIST2__4)) ) (at end (considered__at_TRUCK0_DISTRIBUTOR1__5)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_in_CRATE1_TRUCK0__6
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__5) ) (at start ( at TRUCK1 DEPOT0 ) ))
-:effect (and (at start (not (considered__available_DISTRIBUTOR1_HOIST2__5)) ) (at end (considered__at_TRUCK1_DEPOT0__6)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_in_CRATE7_TRUCK1__7
+:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK0_DISTRIBUTOR1__5) ) (at start ( in CRATE1 TRUCK0 ) ))
+:effect (and (at start (not (considered__at_TRUCK0_DISTRIBUTOR1__5)) ) (at end (considered__in_CRATE1_TRUCK0__6)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_available_DISTRIBUTOR1_HOIST2__7
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK1_DEPOT0__6) ) (at start ( in CRATE7 TRUCK1 ) ))
-:effect (and (at start (not (considered__at_TRUCK1_DEPOT0__6)) ) (at end (considered__in_CRATE7_TRUCK1__7)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DEPOT0_HOIST0__8
+:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE1_TRUCK0__6) ) (at start ( available DISTRIBUTOR1 HOIST2 ) ))
+:effect (and (at start (not (considered__in_CRATE1_TRUCK0__6)) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__7)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_lifting_DISTRIBUTOR1_HOIST2_CRATE0__8
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE7_TRUCK1__7) ) (at start ( available DEPOT0 HOIST0 ) ))
-:effect (and (at start (not (considered__in_CRATE7_TRUCK1__7)) ) (at end (considered__available_DEPOT0_HOIST0__8)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_lifting_DISTRIBUTOR1_HOIST2_CRATE5__9
+:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__7) ) (at start ( lifting DISTRIBUTOR1 HOIST2 CRATE0 ) ))
+:effect (and (at start (not (considered__available_DISTRIBUTOR1_HOIST2__7)) ) (at end (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE0__8)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_available_DISTRIBUTOR1_HOIST2__9
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__8) ) (at start ( lifting DISTRIBUTOR1 HOIST2 CRATE5 ) ))
-:effect (and (at start (not (considered__available_DEPOT0_HOIST0__8)) ) (at end (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE5__9)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DISTRIBUTOR1_HOIST2__10
+:condition (and (at start (not (freeze))) ( at start (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE0__8) ) (at start ( available DISTRIBUTOR1 HOIST2 ) ))
+:effect (and (at start (not (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE0__8)) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__9)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_at_CRATE0_DISTRIBUTOR1__10
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE5__9) ) (at start ( available DISTRIBUTOR1 HOIST2 ) ))
-:effect (and (at start (not (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE5__9)) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__10)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_at_CRATE5_DISTRIBUTOR1__11
+:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__9) ) (at start ( at CRATE0 DISTRIBUTOR1 ) ))
+:effect (and (at start (not (considered__available_DISTRIBUTOR1_HOIST2__9)) ) (at end (considered__at_CRATE0_DISTRIBUTOR1__10)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_clear_CRATE0__11
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__10) ) (at start ( at CRATE5 DISTRIBUTOR1 ) ))
-:effect (and (at start (not (considered__available_DISTRIBUTOR1_HOIST2__10)) ) (at end (considered__at_CRATE5_DISTRIBUTOR1__11)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_clear_CRATE5__12
+:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE0_DISTRIBUTOR1__10) ) (at start ( clear CRATE0 ) ))
+:effect (and (at start (not (considered__at_CRATE0_DISTRIBUTOR1__10)) ) (at end (considered__clear_CRATE0__11)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_on_CRATE0_PALLET2__12
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE5_DISTRIBUTOR1__11) ) (at start ( clear CRATE5 ) ))
-:effect (and (at start (not (considered__at_CRATE5_DISTRIBUTOR1__11)) ) (at end (considered__clear_CRATE5__12)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_on_CRATE5_PALLET2__13
+:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE0__11) ) (at start ( on CRATE0 PALLET2 ) ))
+:effect (and (at start (not (considered__clear_CRATE0__11)) ) (at end (considered__on_CRATE0_PALLET2__12)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_at_TRUCK1_DEPOT0__13
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE5__12) ) (at start ( on CRATE5 PALLET2 ) ))
-:effect (and (at start (not (considered__clear_CRATE5__12)) ) (at end (considered__on_CRATE5_PALLET2__13)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_in_CRATE4_TRUCK1__14
+:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE0_PALLET2__12) ) (at start ( at TRUCK1 DEPOT0 ) ))
+:effect (and (at start (not (considered__on_CRATE0_PALLET2__12)) ) (at end (considered__at_TRUCK1_DEPOT0__13)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_lifting_DEPOT0_HOIST0_CRATE2__14
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE5_PALLET2__13) ) (at start ( in CRATE4 TRUCK1 ) ))
-:effect (and (at start (not (considered__on_CRATE5_PALLET2__13)) ) (at end (considered__in_CRATE4_TRUCK1__14)) (at start (increase (total-cost) 1))))
+:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK1_DEPOT0__13) ) (at start ( lifting DEPOT0 HOIST0 CRATE2 ) ))
+:effect (and (at start (not (considered__at_TRUCK1_DEPOT0__13)) ) (at end (considered__lifting_DEPOT0_HOIST0_CRATE2__14)) (at start (increase (total-cost) 1))))
 (:durative-action hidden-explain-obs-_available_DEPOT0_HOIST0__15
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE4_TRUCK1__14) ) (at start ( available DEPOT0 HOIST0 ) ))
-:effect (and (at start (not (considered__in_CRATE4_TRUCK1__14)) ) (at end (considered__available_DEPOT0_HOIST0__15)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_in_CRATE1_TRUCK1__16
+:condition (and (at start (not (freeze))) ( at start (considered__lifting_DEPOT0_HOIST0_CRATE2__14) ) (at start ( available DEPOT0 HOIST0 ) ))
+:effect (and (at start (not (considered__lifting_DEPOT0_HOIST0_CRATE2__14)) ) (at end (considered__available_DEPOT0_HOIST0__15)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_at_CRATE2_DEPOT0__16
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__15) ) (at start ( in CRATE1 TRUCK1 ) ))
-:effect (and (at start (not (considered__available_DEPOT0_HOIST0__15)) ) (at end (considered__in_CRATE1_TRUCK1__16)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DEPOT0_HOIST0__17
+:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__15) ) (at start ( at CRATE2 DEPOT0 ) ))
+:effect (and (at start (not (considered__available_DEPOT0_HOIST0__15)) ) (at end (considered__at_CRATE2_DEPOT0__16)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_clear_CRATE2__17
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE1_TRUCK1__16) ) (at start ( available DEPOT0 HOIST0 ) ))
-:effect (and (at start (not (considered__in_CRATE1_TRUCK1__16)) ) (at end (considered__available_DEPOT0_HOIST0__17)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_in_CRATE0_TRUCK1__18
+:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE2_DEPOT0__16) ) (at start ( clear CRATE2 ) ))
+:effect (and (at start (not (considered__at_CRATE2_DEPOT0__16)) ) (at end (considered__clear_CRATE2__17)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_on_CRATE2_PALLET0__18
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__17) ) (at start ( in CRATE0 TRUCK1 ) ))
-:effect (and (at start (not (considered__available_DEPOT0_HOIST0__17)) ) (at end (considered__in_CRATE0_TRUCK1__18)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DEPOT0_HOIST0__19
+:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE2__17) ) (at start ( on CRATE2 PALLET0 ) ))
+:effect (and (at start (not (considered__clear_CRATE2__17)) ) (at end (considered__on_CRATE2_PALLET0__18)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_at_TRUCK0_DISTRIBUTOR0__19
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE0_TRUCK1__18) ) (at start ( available DEPOT0 HOIST0 ) ))
-:effect (and (at start (not (considered__in_CRATE0_TRUCK1__18)) ) (at end (considered__available_DEPOT0_HOIST0__19)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_distributor0_hoist0__20
+:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE2_PALLET0__18) ) (at start ( at TRUCK0 DISTRIBUTOR0 ) ))
+:effect (and (at start (not (considered__on_CRATE2_PALLET0__18)) ) (at end (considered__at_TRUCK0_DISTRIBUTOR0__19)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_lifting_DISTRIBUTOR0_HOIST1_CRATE1__20
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__19) ) (at start ( available distributor0 hoist0 ) ))
-:effect (and (at start (not (considered__available_DEPOT0_HOIST0__19)) ) (at end (considered__available_distributor0_hoist0__20)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_at_TRUCK0_DISTRIBUTOR0__21
+:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK0_DISTRIBUTOR0__19) ) (at start ( lifting DISTRIBUTOR0 HOIST1 CRATE1 ) ))
+:effect (and (at start (not (considered__at_TRUCK0_DISTRIBUTOR0__19)) ) (at end (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE1__20)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_available_DISTRIBUTOR0_HOIST1__21
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_distributor0_hoist0__20) ) (at start ( at TRUCK0 DISTRIBUTOR0 ) ))
-:effect (and (at start (not (considered__available_distributor0_hoist0__20)) ) (at end (considered__at_TRUCK0_DISTRIBUTOR0__21)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_lifting_DEPOT0_HOIST0_CRATE7__22
+:condition (and (at start (not (freeze))) ( at start (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE1__20) ) (at start ( available DISTRIBUTOR0 HOIST1 ) ))
+:effect (and (at start (not (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE1__20)) ) (at end (considered__available_DISTRIBUTOR0_HOIST1__21)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_at_CRATE1_DISTRIBUTOR0__22
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK0_DISTRIBUTOR0__21) ) (at start ( lifting DEPOT0 HOIST0 CRATE7 ) ))
-:effect (and (at start (not (considered__at_TRUCK0_DISTRIBUTOR0__21)) ) (at end (considered__lifting_DEPOT0_HOIST0_CRATE7__22)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_in_CRATE2_TRUCK0__23
+:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR0_HOIST1__21) ) (at start ( at CRATE1 DISTRIBUTOR0 ) ))
+:effect (and (at start (not (considered__available_DISTRIBUTOR0_HOIST1__21)) ) (at end (considered__at_CRATE1_DISTRIBUTOR0__22)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_clear_CRATE1__23
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DEPOT0_HOIST0_CRATE7__22) ) (at start ( in CRATE2 TRUCK0 ) ))
-:effect (and (at start (not (considered__lifting_DEPOT0_HOIST0_CRATE7__22)) ) (at end (considered__in_CRATE2_TRUCK0__23)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DISTRIBUTOR0_HOIST1__24
+:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE1_DISTRIBUTOR0__22) ) (at start ( clear CRATE1 ) ))
+:effect (and (at start (not (considered__at_CRATE1_DISTRIBUTOR0__22)) ) (at end (considered__clear_CRATE1__23)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-explain-obs-_on_CRATE1_CRATE3__24
 :parameters ()
 :duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE2_TRUCK0__23) ) (at start ( available DISTRIBUTOR0 HOIST1 ) ))
-:effect (and (at start (not (considered__in_CRATE2_TRUCK0__23)) ) (at end (considered__available_DISTRIBUTOR0_HOIST1__24)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DEPOT0_HOIST0__25
+:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE1__23) ) (at start ( on CRATE1 CRATE3 ) ))
+:effect (and (at start (not (considered__clear_CRATE1__23)) ) (at end (considered__on_CRATE1_CRATE3__24)) (at start (increase (total-cost) 1))))
+(:durative-action hidden-discard-obs-_in_CRATE0_TRUCK0__0
 :parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR0_HOIST1__24) ) (at start ( available DEPOT0 HOIST0 ) ))
-:effect (and (at start (not (considered__available_DISTRIBUTOR0_HOIST1__24)) ) (at end (considered__available_DEPOT0_HOIST0__25)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_at_CRATE7_DEPOT0__26
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__25) ) (at start ( at CRATE7 DEPOT0 ) ))
-:effect (and (at start (not (considered__available_DEPOT0_HOIST0__25)) ) (at end (considered__at_CRATE7_DEPOT0__26)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_clear_CRATE7__27
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE7_DEPOT0__26) ) (at start ( clear CRATE7 ) ))
-:effect (and (at start (not (considered__at_CRATE7_DEPOT0__26)) ) (at end (considered__clear_CRATE7__27)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_on_CRATE7_PALLET0__28
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE7__27) ) (at start ( on CRATE7 PALLET0 ) ))
-:effect (and (at start (not (considered__clear_CRATE7__27)) ) (at end (considered__on_CRATE7_PALLET0__28)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_lifting_DISTRIBUTOR0_HOIST1_CRATE6__29
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE7_PALLET0__28) ) (at start ( lifting DISTRIBUTOR0 HOIST1 CRATE6 ) ))
-:effect (and (at start (not (considered__on_CRATE7_PALLET0__28)) ) (at end (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE6__29)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_lifting_DEPOT0_HOIST0_CRATE4__30
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE6__29) ) (at start ( lifting DEPOT0 HOIST0 CRATE4 ) ))
-:effect (and (at start (not (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE6__29)) ) (at end (considered__lifting_DEPOT0_HOIST0_CRATE4__30)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DISTRIBUTOR0_HOIST1__31
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DEPOT0_HOIST0_CRATE4__30) ) (at start ( available DISTRIBUTOR0 HOIST1 ) ))
-:effect (and (at start (not (considered__lifting_DEPOT0_HOIST0_CRATE4__30)) ) (at end (considered__available_DISTRIBUTOR0_HOIST1__31)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_at_CRATE6_DISTRIBUTOR0__32
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR0_HOIST1__31) ) (at start ( at CRATE6 DISTRIBUTOR0 ) ))
-:effect (and (at start (not (considered__available_DISTRIBUTOR0_HOIST1__31)) ) (at end (considered__at_CRATE6_DISTRIBUTOR0__32)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_in_crate3_truck1__33
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE6_DISTRIBUTOR0__32) ) (at start ( in crate3 truck1 ) ))
-:effect (and (at start (not (considered__at_CRATE6_DISTRIBUTOR0__32)) ) (at end (considered__in_crate3_truck1__33)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_clear_CRATE6__34
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__in_crate3_truck1__33) ) (at start ( clear CRATE6 ) ))
-:effect (and (at start (not (considered__in_crate3_truck1__33)) ) (at end (considered__clear_CRATE6__34)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_distributor1_hoist0__35
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE6__34) ) (at start ( available distributor1 hoist0 ) ))
-:effect (and (at start (not (considered__clear_CRATE6__34)) ) (at end (considered__available_distributor1_hoist0__35)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_in_crate5_truck1__36
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_distributor1_hoist0__35) ) (at start ( in crate5 truck1 ) ))
-:effect (and (at start (not (considered__available_distributor1_hoist0__35)) ) (at end (considered__in_crate5_truck1__36)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_on_CRATE6_PALLET1__37
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__in_crate5_truck1__36) ) (at start ( on CRATE6 PALLET1 ) ))
-:effect (and (at start (not (considered__in_crate5_truck1__36)) ) (at end (considered__on_CRATE6_PALLET1__37)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DEPOT0_HOIST0__38
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE6_PALLET1__37) ) (at start ( available DEPOT0 HOIST0 ) ))
-:effect (and (at start (not (considered__on_CRATE6_PALLET1__37)) ) (at end (considered__available_DEPOT0_HOIST0__38)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_at_CRATE4_DEPOT0__39
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__38) ) (at start ( at CRATE4 DEPOT0 ) ))
-:effect (and (at start (not (considered__available_DEPOT0_HOIST0__38)) ) (at end (considered__at_CRATE4_DEPOT0__39)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_clear_CRATE4__40
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE4_DEPOT0__39) ) (at start ( clear CRATE4 ) ))
-:effect (and (at start (not (considered__at_CRATE4_DEPOT0__39)) ) (at end (considered__clear_CRATE4__40)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_on_CRATE4_CRATE7__41
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE4__40) ) (at start ( on CRATE4 CRATE7 ) ))
-:effect (and (at start (not (considered__clear_CRATE4__40)) ) (at end (considered__on_CRATE4_CRATE7__41)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_lifting_DISTRIBUTOR0_HOIST1_CRATE2__42
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE4_CRATE7__41) ) (at start ( lifting DISTRIBUTOR0 HOIST1 CRATE2 ) ))
-:effect (and (at start (not (considered__on_CRATE4_CRATE7__41)) ) (at end (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE2__42)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_lifting_DEPOT0_HOIST0_CRATE0__43
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE2__42) ) (at start ( lifting DEPOT0 HOIST0 CRATE0 ) ))
-:effect (and (at start (not (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE2__42)) ) (at end (considered__lifting_DEPOT0_HOIST0_CRATE0__43)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DISTRIBUTOR0_HOIST1__44
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DEPOT0_HOIST0_CRATE0__43) ) (at start ( available DISTRIBUTOR0 HOIST1 ) ))
-:effect (and (at start (not (considered__lifting_DEPOT0_HOIST0_CRATE0__43)) ) (at end (considered__available_DISTRIBUTOR0_HOIST1__44)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_at_CRATE2_DISTRIBUTOR0__45
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR0_HOIST1__44) ) (at start ( at CRATE2 DISTRIBUTOR0 ) ))
-:effect (and (at start (not (considered__available_DISTRIBUTOR0_HOIST1__44)) ) (at end (considered__at_CRATE2_DISTRIBUTOR0__45)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_clear_CRATE2__46
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE2_DISTRIBUTOR0__45) ) (at start ( clear CRATE2 ) ))
-:effect (and (at start (not (considered__at_CRATE2_DISTRIBUTOR0__45)) ) (at end (considered__clear_CRATE2__46)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_on_CRATE2_CRATE6__47
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE2__46) ) (at start ( on CRATE2 CRATE6 ) ))
-:effect (and (at start (not (considered__clear_CRATE2__46)) ) (at end (considered__on_CRATE2_CRATE6__47)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_available_DEPOT0_HOIST0__48
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE2_CRATE6__47) ) (at start ( available DEPOT0 HOIST0 ) ))
-:effect (and (at start (not (considered__on_CRATE2_CRATE6__47)) ) (at end (considered__available_DEPOT0_HOIST0__48)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_at_CRATE0_DEPOT0__49
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__48) ) (at start ( at CRATE0 DEPOT0 ) ))
-:effect (and (at start (not (considered__available_DEPOT0_HOIST0__48)) ) (at end (considered__at_CRATE0_DEPOT0__49)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_clear_CRATE0__50
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE0_DEPOT0__49) ) (at start ( clear CRATE0 ) ))
-:effect (and (at start (not (considered__at_CRATE0_DEPOT0__49)) ) (at end (considered__clear_CRATE0__50)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-explain-obs-_on_CRATE0_CRATE4__51
-:parameters ()
-:duration (= ?duration 1)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE0__50) ) (at start ( on CRATE0 CRATE4 ) ))
-:effect (and (at start (not (considered__clear_CRATE0__50)) ) (at end (considered__on_CRATE0_CRATE4__51)) (at start (increase (total-cost) 1))))
-(:durative-action hidden-discard-obs-_in_CRATE6_TRUCK0__0
-:parameters ()
-:duration (= ?duration 100)
+:duration (= ?duration 500)
 :condition (and  (at start (not (freeze))) (at start (considered_occur_init)) )
-:effect (and (at start (not  (considered_occur_init))) (at end (considered__in_CRATE6_TRUCK0__0)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DISTRIBUTOR1_HOIST2__1
+:effect (and (at start (not  (considered_occur_init))) (at end (considered__in_CRATE0_TRUCK0__0)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_available_DEPOT0_HOIST0__1
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE6_TRUCK0__0) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE6_TRUCK0__0) ) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__1)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_in_CRATE5_TRUCK0__2
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE0_TRUCK0__0) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE0_TRUCK0__0) ) ) (at end (considered__available_DEPOT0_HOIST0__1)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_at_TRUCK1_DISTRIBUTOR1__2
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__1) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR1_HOIST2__1) ) ) (at end (considered__in_CRATE5_TRUCK0__2)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DISTRIBUTOR1_HOIST2__3
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__1) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DEPOT0_HOIST0__1) ) ) (at end (considered__at_TRUCK1_DISTRIBUTOR1__2)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_in_CRATE2_TRUCK1__3
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE5_TRUCK0__2) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE5_TRUCK0__2) ) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__3)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_in_CRATE3_TRUCK0__4
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK1_DISTRIBUTOR1__2) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_TRUCK1_DISTRIBUTOR1__2) ) ) (at end (considered__in_CRATE2_TRUCK1__3)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_available_DISTRIBUTOR1_HOIST2__4
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__3) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR1_HOIST2__3) ) ) (at end (considered__in_CRATE3_TRUCK0__4)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DISTRIBUTOR1_HOIST2__5
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE2_TRUCK1__3) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE2_TRUCK1__3) ) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__4)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_at_TRUCK0_DISTRIBUTOR1__5
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE3_TRUCK0__4) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE3_TRUCK0__4) ) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__5)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_at_TRUCK1_DEPOT0__6
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__4) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR1_HOIST2__4) ) ) (at end (considered__at_TRUCK0_DISTRIBUTOR1__5)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_in_CRATE1_TRUCK0__6
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__5) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR1_HOIST2__5) ) ) (at end (considered__at_TRUCK1_DEPOT0__6)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_in_CRATE7_TRUCK1__7
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK0_DISTRIBUTOR1__5) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_TRUCK0_DISTRIBUTOR1__5) ) ) (at end (considered__in_CRATE1_TRUCK0__6)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_available_DISTRIBUTOR1_HOIST2__7
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK1_DEPOT0__6) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_TRUCK1_DEPOT0__6) ) ) (at end (considered__in_CRATE7_TRUCK1__7)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DEPOT0_HOIST0__8
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE1_TRUCK0__6) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE1_TRUCK0__6) ) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__7)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_lifting_DISTRIBUTOR1_HOIST2_CRATE0__8
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE7_TRUCK1__7) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE7_TRUCK1__7) ) ) (at end (considered__available_DEPOT0_HOIST0__8)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_lifting_DISTRIBUTOR1_HOIST2_CRATE5__9
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__7) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR1_HOIST2__7) ) ) (at end (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE0__8)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_available_DISTRIBUTOR1_HOIST2__9
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__8) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DEPOT0_HOIST0__8) ) ) (at end (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE5__9)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DISTRIBUTOR1_HOIST2__10
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE0__8) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE0__8) ) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__9)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_at_CRATE0_DISTRIBUTOR1__10
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE5__9) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__lifting_DISTRIBUTOR1_HOIST2_CRATE5__9) ) ) (at end (considered__available_DISTRIBUTOR1_HOIST2__10)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_at_CRATE5_DISTRIBUTOR1__11
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__9) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR1_HOIST2__9) ) ) (at end (considered__at_CRATE0_DISTRIBUTOR1__10)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_clear_CRATE0__11
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR1_HOIST2__10) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR1_HOIST2__10) ) ) (at end (considered__at_CRATE5_DISTRIBUTOR1__11)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_clear_CRATE5__12
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE0_DISTRIBUTOR1__10) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_CRATE0_DISTRIBUTOR1__10) ) ) (at end (considered__clear_CRATE0__11)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_on_CRATE0_PALLET2__12
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE5_DISTRIBUTOR1__11) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_CRATE5_DISTRIBUTOR1__11) ) ) (at end (considered__clear_CRATE5__12)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_on_CRATE5_PALLET2__13
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE0__11) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__clear_CRATE0__11) ) ) (at end (considered__on_CRATE0_PALLET2__12)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_at_TRUCK1_DEPOT0__13
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE5__12) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__clear_CRATE5__12) ) ) (at end (considered__on_CRATE5_PALLET2__13)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_in_CRATE4_TRUCK1__14
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE0_PALLET2__12) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__on_CRATE0_PALLET2__12) ) ) (at end (considered__at_TRUCK1_DEPOT0__13)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_lifting_DEPOT0_HOIST0_CRATE2__14
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE5_PALLET2__13) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__on_CRATE5_PALLET2__13) ) ) (at end (considered__in_CRATE4_TRUCK1__14)) (at start (increase (total-cost) 2000))))
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK1_DEPOT0__13) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_TRUCK1_DEPOT0__13) ) ) (at end (considered__lifting_DEPOT0_HOIST0_CRATE2__14)) (at start (increase (total-cost) 2000))))
 (:durative-action hidden-discard-obs-_available_DEPOT0_HOIST0__15
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE4_TRUCK1__14) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE4_TRUCK1__14) ) ) (at end (considered__available_DEPOT0_HOIST0__15)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_in_CRATE1_TRUCK1__16
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__lifting_DEPOT0_HOIST0_CRATE2__14) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__lifting_DEPOT0_HOIST0_CRATE2__14) ) ) (at end (considered__available_DEPOT0_HOIST0__15)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_at_CRATE2_DEPOT0__16
 :parameters ()
-:duration (= ?duration 100)
+:duration (= ?duration 500)
 :condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__15) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DEPOT0_HOIST0__15) ) ) (at end (considered__in_CRATE1_TRUCK1__16)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DEPOT0_HOIST0__17
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DEPOT0_HOIST0__15) ) ) (at end (considered__at_CRATE2_DEPOT0__16)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_clear_CRATE2__17
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE1_TRUCK1__16) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE1_TRUCK1__16) ) ) (at end (considered__available_DEPOT0_HOIST0__17)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_in_CRATE0_TRUCK1__18
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE2_DEPOT0__16) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_CRATE2_DEPOT0__16) ) ) (at end (considered__clear_CRATE2__17)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_on_CRATE2_PALLET0__18
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__17) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DEPOT0_HOIST0__17) ) ) (at end (considered__in_CRATE0_TRUCK1__18)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DEPOT0_HOIST0__19
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE2__17) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__clear_CRATE2__17) ) ) (at end (considered__on_CRATE2_PALLET0__18)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_at_TRUCK0_DISTRIBUTOR0__19
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE0_TRUCK1__18) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE0_TRUCK1__18) ) ) (at end (considered__available_DEPOT0_HOIST0__19)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_distributor0_hoist0__20
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE2_PALLET0__18) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__on_CRATE2_PALLET0__18) ) ) (at end (considered__at_TRUCK0_DISTRIBUTOR0__19)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_lifting_DISTRIBUTOR0_HOIST1_CRATE1__20
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__19) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DEPOT0_HOIST0__19) ) ) (at end (considered__available_distributor0_hoist0__20)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_at_TRUCK0_DISTRIBUTOR0__21
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK0_DISTRIBUTOR0__19) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_TRUCK0_DISTRIBUTOR0__19) ) ) (at end (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE1__20)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_available_DISTRIBUTOR0_HOIST1__21
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_distributor0_hoist0__20) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_distributor0_hoist0__20) ) ) (at end (considered__at_TRUCK0_DISTRIBUTOR0__21)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_lifting_DEPOT0_HOIST0_CRATE7__22
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE1__20) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE1__20) ) ) (at end (considered__available_DISTRIBUTOR0_HOIST1__21)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_at_CRATE1_DISTRIBUTOR0__22
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__at_TRUCK0_DISTRIBUTOR0__21) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_TRUCK0_DISTRIBUTOR0__21) ) ) (at end (considered__lifting_DEPOT0_HOIST0_CRATE7__22)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_in_CRATE2_TRUCK0__23
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR0_HOIST1__21) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR0_HOIST1__21) ) ) (at end (considered__at_CRATE1_DISTRIBUTOR0__22)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_clear_CRATE1__23
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DEPOT0_HOIST0_CRATE7__22) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__lifting_DEPOT0_HOIST0_CRATE7__22) ) ) (at end (considered__in_CRATE2_TRUCK0__23)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DISTRIBUTOR0_HOIST1__24
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE1_DISTRIBUTOR0__22) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_CRATE1_DISTRIBUTOR0__22) ) ) (at end (considered__clear_CRATE1__23)) (at start (increase (total-cost) 2000))))
+(:durative-action hidden-discard-obs-_on_CRATE1_CRATE3__24
 :parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__in_CRATE2_TRUCK0__23) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_CRATE2_TRUCK0__23) ) ) (at end (considered__available_DISTRIBUTOR0_HOIST1__24)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DEPOT0_HOIST0__25
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR0_HOIST1__24) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR0_HOIST1__24) ) ) (at end (considered__available_DEPOT0_HOIST0__25)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_at_CRATE7_DEPOT0__26
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__25) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DEPOT0_HOIST0__25) ) ) (at end (considered__at_CRATE7_DEPOT0__26)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_clear_CRATE7__27
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE7_DEPOT0__26) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_CRATE7_DEPOT0__26) ) ) (at end (considered__clear_CRATE7__27)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_on_CRATE7_PALLET0__28
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE7__27) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__clear_CRATE7__27) ) ) (at end (considered__on_CRATE7_PALLET0__28)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_lifting_DISTRIBUTOR0_HOIST1_CRATE6__29
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE7_PALLET0__28) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__on_CRATE7_PALLET0__28) ) ) (at end (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE6__29)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_lifting_DEPOT0_HOIST0_CRATE4__30
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE6__29) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE6__29) ) ) (at end (considered__lifting_DEPOT0_HOIST0_CRATE4__30)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DISTRIBUTOR0_HOIST1__31
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DEPOT0_HOIST0_CRATE4__30) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__lifting_DEPOT0_HOIST0_CRATE4__30) ) ) (at end (considered__available_DISTRIBUTOR0_HOIST1__31)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_at_CRATE6_DISTRIBUTOR0__32
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR0_HOIST1__31) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR0_HOIST1__31) ) ) (at end (considered__at_CRATE6_DISTRIBUTOR0__32)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_in_crate3_truck1__33
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE6_DISTRIBUTOR0__32) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_CRATE6_DISTRIBUTOR0__32) ) ) (at end (considered__in_crate3_truck1__33)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_clear_CRATE6__34
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__in_crate3_truck1__33) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_crate3_truck1__33) ) ) (at end (considered__clear_CRATE6__34)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_distributor1_hoist0__35
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE6__34) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__clear_CRATE6__34) ) ) (at end (considered__available_distributor1_hoist0__35)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_in_crate5_truck1__36
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_distributor1_hoist0__35) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_distributor1_hoist0__35) ) ) (at end (considered__in_crate5_truck1__36)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_on_CRATE6_PALLET1__37
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__in_crate5_truck1__36) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__in_crate5_truck1__36) ) ) (at end (considered__on_CRATE6_PALLET1__37)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DEPOT0_HOIST0__38
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE6_PALLET1__37) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__on_CRATE6_PALLET1__37) ) ) (at end (considered__available_DEPOT0_HOIST0__38)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_at_CRATE4_DEPOT0__39
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__38) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DEPOT0_HOIST0__38) ) ) (at end (considered__at_CRATE4_DEPOT0__39)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_clear_CRATE4__40
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE4_DEPOT0__39) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_CRATE4_DEPOT0__39) ) ) (at end (considered__clear_CRATE4__40)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_on_CRATE4_CRATE7__41
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE4__40) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__clear_CRATE4__40) ) ) (at end (considered__on_CRATE4_CRATE7__41)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_lifting_DISTRIBUTOR0_HOIST1_CRATE2__42
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE4_CRATE7__41) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__on_CRATE4_CRATE7__41) ) ) (at end (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE2__42)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_lifting_DEPOT0_HOIST0_CRATE0__43
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE2__42) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__lifting_DISTRIBUTOR0_HOIST1_CRATE2__42) ) ) (at end (considered__lifting_DEPOT0_HOIST0_CRATE0__43)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DISTRIBUTOR0_HOIST1__44
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__lifting_DEPOT0_HOIST0_CRATE0__43) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__lifting_DEPOT0_HOIST0_CRATE0__43) ) ) (at end (considered__available_DISTRIBUTOR0_HOIST1__44)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_at_CRATE2_DISTRIBUTOR0__45
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DISTRIBUTOR0_HOIST1__44) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DISTRIBUTOR0_HOIST1__44) ) ) (at end (considered__at_CRATE2_DISTRIBUTOR0__45)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_clear_CRATE2__46
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE2_DISTRIBUTOR0__45) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_CRATE2_DISTRIBUTOR0__45) ) ) (at end (considered__clear_CRATE2__46)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_on_CRATE2_CRATE6__47
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE2__46) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__clear_CRATE2__46) ) ) (at end (considered__on_CRATE2_CRATE6__47)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_available_DEPOT0_HOIST0__48
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__on_CRATE2_CRATE6__47) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__on_CRATE2_CRATE6__47) ) ) (at end (considered__available_DEPOT0_HOIST0__48)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_at_CRATE0_DEPOT0__49
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__available_DEPOT0_HOIST0__48) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__available_DEPOT0_HOIST0__48) ) ) (at end (considered__at_CRATE0_DEPOT0__49)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_clear_CRATE0__50
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__at_CRATE0_DEPOT0__49) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__at_CRATE0_DEPOT0__49) ) ) (at end (considered__clear_CRATE0__50)) (at start (increase (total-cost) 2000))))
-(:durative-action hidden-discard-obs-_on_CRATE0_CRATE4__51
-:parameters ()
-:duration (= ?duration 100)
-:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE0__50) ) )
-:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__clear_CRATE0__50) ) ) (at end (considered__on_CRATE0_CRATE4__51)) (at start (increase (total-cost) 2000))))
+:duration (= ?duration 500)
+:condition (and (at start (not (freeze))) ( at start (considered__clear_CRATE1__23) ) )
+:effect (and (at start (freeze)) (at end (not(freeze)))  (at start (not (considered__clear_CRATE1__23) ) ) (at end (considered__on_CRATE1_CRATE3__24)) (at start (increase (total-cost) 2000))))
 )

@@ -1,5 +1,0 @@
-( at PLANE1 CITY4 )
-( at plane2 city2 )
-( fuel-level PLANE1 FL1 )
-( at PERSON5 CITY4 )
-( at PERSON1 CITY2 )

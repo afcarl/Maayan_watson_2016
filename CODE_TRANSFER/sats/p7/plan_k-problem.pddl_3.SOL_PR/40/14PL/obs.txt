@@ -1,7 +1,0 @@
-( power_on INSTRUMENT6 )
-( pointing SATELLITE1 PLANET11 )
-( have_image STAR7 IMAGE0 )
-( pointing SATELLITE3 PLANET10 )
-( power_on instrument4 )
-( pointing satellite0 star7 )
-( have_image PLANET8 IMAGE0 )

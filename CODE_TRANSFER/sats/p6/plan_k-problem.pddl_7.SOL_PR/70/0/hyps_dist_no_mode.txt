@@ -1,8 +1,0 @@
-******* TRUE GOAL *******
-(have_image planet4 thermograph2),(have_image planet5 spectrograph0),(have_image star6 thermograph2),(have_image star7 infrared3),(have_image phenomenon8 spectrograph0),(have_image star9 infrared1),(have_image star10 infrared3)
-	1.0
-(have_image planet4 thermograph2),(have_image planet5 spectrograph0),(have_image star6 infrared3),(have_image star7 infrared3),(have_image phenomenon8 infrared1),(have_image star9 spectrograph0),(have_image star10 thermograph2)
-	0.0
-(have_image planet4 thermograph2),(have_image planet5 thermograph2),(have_image star6 spectrograph0),(have_image star7 spectrograph0),(have_image phenomenon8 infrared3),(have_image star9 infrared1),(have_image star10 infrared3)
-	2.5998590943e-23
-(have_image planet4 infrared3),(have_image planet5 spectrograph0),(have_image star6 thermograph2),(have_image star7 thermograph2),(have_image phenomenon8 spectrograph0),(have_image star9 infrared1),(have_image star10 infrared0)	0.0

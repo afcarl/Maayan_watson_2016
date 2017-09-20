@@ -1,7 +1,0 @@
-( in PERSON15 PLANE3 )
-( fuel-level PLANE3 FL1 )
-( at PERSON12 CITY12 )
-( at PLANE1 CITY12 )
-( fuel-level PLANE1 FL0 )
-( fuel-level PLANE5 FL1 )
-( at PERSON15 CITY4 )

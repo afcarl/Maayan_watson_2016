@@ -1,7 +1,0 @@
-( clear crate2 )
-( available DISTRIBUTOR0 HOIST1 )
-( at crate1 distributor0 )
-( at CRATE3 DISTRIBUTOR0 )
-( clear CRATE3 )
-( available depot0 hoist2 )
-( on CRATE3 PALLET1 )

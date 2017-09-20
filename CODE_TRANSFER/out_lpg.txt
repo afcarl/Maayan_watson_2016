@@ -2,11 +2,11 @@
 
 NUMERIC_THREATS_MODE: 0
 
-; Command line: ./lpg -o k-domain.pddl_converted.pddl_added_goal_actions.pddl -f depo/p4/plan_k-problem.pddl_3.SOL_PR/100/14PL/template.pddl_converted.pddl_added_goal_actions.pddl -d_coefficient 0.2 -k_coefficient 23 -cputime 300 -out set_of_plans_lpg -v off   
+; Command line: ./lpg -o k-domain.pddl_converted.pddl_added_goal_actions.pddl -f zeno/p12/plan_k-problem.pddl_5.SOL_PR/100/0/template.pddl_converted.pddl_added_goal_actions.pddl -d_coefficient 0.2 -k_coefficient 10 -cputime 300 -out set_of_plans_lpg -v off   
 
 
-Parsing domain file:  domain 'DEPOT' defined ... done.
-Parsing problem file:  problem 'DEPOTPROB6512' defined ... done.
+Parsing domain file:  domain 'ZENO-TRAVEL' defined ... done.
+Parsing problem file:  problem 'ZTRAVEL-3-8' defined ... done.
 
 
 
@@ -17,9 +17,9 @@ Modality: Incremental Planner
 
  Use 0 plan for init with num_different_plans= 0
 
- Num solutions= 0 -- Maxdiff 0.000, mindiff  1000.000 -- Tot num flips 1436 
+ Num solutions= 0 -- Maxdiff 0.000, mindiff  1000.000 -- Tot num flips 53 
 
- Increase NOISE: 30 - step 1436  
+ Increase NOISE: 30 - step 53  
 
  Recompute start times
 
@@ -28,21 +28,19 @@ Modality: Incremental Planner
  Recompute start times
 
 Solution number: 1
-Total time:      1.22
-Search time:     1.19
-Actions:         112
-Duration:        894.000
-Plan quality:    894.000 
-Total Num Flips: 1436
+Total time:      0.62
+Search time:     0.26
+Actions:         38
+Duration:        21848.000
+Plan quality:    21848.000 
+Total Num Flips: 53
      Plan file:       set_of_plans_lpg_1_1.SOL
 
  Use 0 plan for init with num_different_plans= 1
 
  We use plan 0 for initialization 
- Num solutions= 1 -- Maxdiff 0.018, mindiff  0.018 -- Tot num flips 1439 
-
- Increase NOISE: 30 - step 1439  
-
+ Found duplicate plan, skip it 
+ Num solutions= 1 -- Maxdiff 0.667, mindiff  0.667 -- Tot num flips 117 
  Recompute start times
 
     Solution 2 found 
@@ -50,18 +48,19 @@ Total Num Flips: 1436
  Recompute start times
 
 Solution number: 2
-Total time:      1.24
-Search time:     1.21
-Actions:         114
-Duration:        894.000
-Plan quality:    894.000 
-Total Num Flips: 1439
+Total time:      1.05
+Search time:     0.69
+Actions:         46
+Duration:        7565.000
+Plan quality:    7565.000 
+Total Num Flips: 117
      Plan file:       set_of_plans_lpg_2_1.SOL
+
+ Use 0 plan for init with num_different_plans= 2
+
  We use plan 0 for initialization 
- Num solutions= 2 -- Maxdiff 0.034, mindiff  0.018 -- Tot num flips 1442 
-
- Increase NOISE: 30 - step 1442  
-
+ Found duplicate plan, skip it 
+ Num solutions= 2 -- Maxdiff 0.762, mindiff  0.493 -- Tot num flips 237 
  Recompute start times
 
     Solution 3 found 
@@ -69,18 +68,19 @@ Total Num Flips: 1439
  Recompute start times
 
 Solution number: 3
-Total time:      1.26
-Search time:     1.23
-Actions:         114
-Duration:        894.000
-Plan quality:    894.000 
-Total Num Flips: 1442
+Total time:      2.55
+Search time:     2.19
+Actions:         61
+Duration:        18180.000
+Plan quality:    18180.000 
+Total Num Flips: 237
      Plan file:       set_of_plans_lpg_3_1.SOL
- We use plan 1 for initialization 
- Num solutions= 3 -- Maxdiff 0.034, mindiff  0.017 -- Tot num flips 1445 
 
- Increase NOISE: 30 - step 1445  
+ Use 0 plan for init with num_different_plans= 3
 
+ We use plan 0 for initialization 
+ Found duplicate plan, skip it 
+ Num solutions= 3 -- Maxdiff 0.682, mindiff  0.575 -- Tot num flips 443 
  Recompute start times
 
     Solution 4 found 
@@ -88,31 +88,18 @@ Total Num Flips: 1442
  Recompute start times
 
 Solution number: 4
-Total time:      1.28
-Search time:     1.25
-Actions:         116
-Duration:        894.000
-Plan quality:    894.000 
-Total Num Flips: 1445
+Total time:      4.65
+Search time:     4.29
+Actions:         78
+Duration:        23922.000
+Plan quality:    23922.000 
+Total Num Flips: 443
      Plan file:       set_of_plans_lpg_4_1.SOL
 
- Use 1 plan for init with num_different_plans= 1
+ Use 0 plan for init with num_different_plans= 4
 
  We use plan 0 for initialization 
- Found duplicate plan, skip it 
-
- Use 0 plan for init with num_different_plans= 1
-
- We use plan 0 for initialization 
- Found duplicate plan, skip it 
- We use plan 0 for initialization 
- Found duplicate plan, skip it 
- We use plan 0 for initialization 
- We use plan 2 for initialization 
- Num solutions= 4 -- Maxdiff 0.051, mindiff  0.017 -- Tot num flips 3524 
-
- Increase NOISE: 30 - step 3524  
-
+ Num solutions= 4 -- Maxdiff 0.774, mindiff  0.095 -- Tot num flips 449 
  Recompute start times
 
     Solution 5 found 
@@ -120,21 +107,19 @@ Total Num Flips: 1445
  Recompute start times
 
 Solution number: 5
-Total time:      5.85
-Search time:     5.82
-Actions:         118
-Duration:        894.000
-Plan quality:    849.000 
-Total Num Flips: 3524
+Total time:      4.71
+Search time:     4.35
+Actions:         42
+Duration:        22250.000
+Plan quality:    22250.000 
+Total Num Flips: 449
      Plan file:       set_of_plans_lpg_5_1.SOL
 
- Use 2 plan for init with num_different_plans= 1
+ Use 1 plan for init with num_different_plans= 5
 
- We use plan 4 for initialization 
- Num solutions= 5 -- Maxdiff 0.067, mindiff  0.017 -- Tot num flips 3527 
-
- Increase NOISE: 30 - step 3527  
-
+ We use plan 0 for initialization 
+ Found duplicate plan, skip it 
+ Num solutions= 5 -- Maxdiff 0.806, mindiff  0.758 -- Tot num flips 791 
  Recompute start times
 
     Solution 6 found 
@@ -142,26 +127,19 @@ Total Num Flips: 3524
  Recompute start times
 
 Solution number: 6
-Total time:      5.87
-Search time:     5.84
-Actions:         120
-Duration:        894.000
-Plan quality:    894.000 
-Total Num Flips: 3527
+Total time:      8.57
+Search time:     8.21
+Actions:         134
+Duration:        40605.000
+Plan quality:    40605.000 
+Total Num Flips: 791
      Plan file:       set_of_plans_lpg_6_1.SOL
 
- Use 4 plan for init with num_different_plans= 1
+ Use 1 plan for init with num_different_plans= 6
 
- We use plan 3 for initialization 
+ We use plan 0 for initialization 
  Found duplicate plan, skip it 
-
- Use 3 plan for init with num_different_plans= 1
-
- We use plan 4 for initialization 
- Num solutions= 6 -- Maxdiff 0.082, mindiff  0.016 -- Tot num flips 4029 
-
- Increase NOISE: 30 - step 4029  
-
+ Num solutions= 6 -- Maxdiff 0.868, mindiff  0.574 -- Tot num flips 919 
  Recompute start times
 
     Solution 7 found 
@@ -169,21 +147,19 @@ Total Num Flips: 3527
  Recompute start times
 
 Solution number: 7
-Total time:      6.65
-Search time:     6.62
-Actions:         122
-Duration:        894.000
-Plan quality:    849.000 
-Total Num Flips: 4029
+Total time:      9.13
+Search time:     8.77
+Actions:         29
+Duration:        29000.000
+Plan quality:    29000.000 
+Total Num Flips: 919
      Plan file:       set_of_plans_lpg_7_1.SOL
 
- Use 4 plan for init with num_different_plans= 1
+ Use 1 plan for init with num_different_plans= 7
 
- We use plan 6 for initialization 
- Num solutions= 7 -- Maxdiff 0.111, mindiff  0.032 -- Tot num flips 4032 
-
- Increase NOISE: 30 - step 4032  
-
+ We use plan 0 for initialization 
+ Found duplicate plan, skip it 
+ Num solutions= 7 -- Maxdiff 0.843, mindiff  0.483 -- Tot num flips 1224 
  Recompute start times
 
     Solution 8 found 
@@ -191,18 +167,19 @@ Total Num Flips: 4029
  Recompute start times
 
 Solution number: 8
-Total time:      6.67
-Search time:     6.64
-Actions:         126
-Duration:        894.000
-Plan quality:    894.000 
-Total Num Flips: 4032
+Total time:      12.41
+Search time:     12.05
+Actions:         133
+Duration:        39831.000
+Plan quality:    39831.000 
+Total Num Flips: 1224
      Plan file:       set_of_plans_lpg_8_1.SOL
 
- Use 6 plan for init with num_different_plans= 1
+ Use 1 plan for init with num_different_plans= 8
 
- We use plan 6 for initialization 
- Num solutions= 8 -- Maxdiff 0.516, mindiff  0.502 -- Tot num flips 4596 
+ We use plan 2 for initialization 
+ Found duplicate plan, skip it 
+ Num solutions= 8 -- Maxdiff 0.854, mindiff  0.724 -- Tot num flips 1566 
  Recompute start times
 
     Solution 9 found 
@@ -210,15 +187,19 @@ Total Num Flips: 4032
  Recompute start times
 
 Solution number: 9
-Total time:      7.09
-Search time:     7.06
-Actions:         214
-Duration:        1903.000
-Plan quality:    1903.000 
-Total Num Flips: 4596
+Total time:      15.16
+Search time:     14.80
+Actions:         112
+Duration:        42707.000
+Plan quality:    42707.000 
+Total Num Flips: 1566
      Plan file:       set_of_plans_lpg_9_1.SOL
- We use plan 7 for initialization 
- Num solutions= 9 -- Maxdiff 0.519, mindiff  0.016 -- Tot num flips 4599 
+
+ Use 1 plan for init with num_different_plans= 9
+
+ We use plan 4 for initialization 
+ Found duplicate plan, skip it 
+ Num solutions= 9 -- Maxdiff 0.832, mindiff  0.531 -- Tot num flips 1618 
  Recompute start times
 
     Solution 10 found 
@@ -226,924 +207,138 @@ Total Num Flips: 4596
  Recompute start times
 
 Solution number: 10
-Total time:      7.11
-Search time:     7.08
-Actions:         128
-Duration:        894.000
-Plan quality:    894.000 
-Total Num Flips: 4599
+Total time:      15.52
+Search time:     15.16
+Actions:         34
+Duration:        3144.000
+Plan quality:    3144.000 
+Total Num Flips: 1618
      Plan file:       set_of_plans_lpg_10_1.SOL
 
- Use 8 plan for init with num_different_plans= 2
+ Use 1 plan for init with num_different_plans= 10
 
- We use plan 8 for initialization 
- Num solutions= 10 -- Maxdiff 0.524, mindiff  0.009 -- Tot num flips 4600 
+ We use plan 0 for initialization 
+ Found duplicate plan, skip it 
+ Num solutions= 10 -- Maxdiff 0.791, mindiff  0.654 -- Tot num flips 1862 
  Recompute start times
 
     Solution 11 found 
 
+ Max num multiple solutions=5 
  Recompute start times
 
 Solution number: 11
-Total time:      7.13
-Search time:     7.10
-Actions:         216
-Duration:        1903.000
-Plan quality:    1903.000 
-Total Num Flips: 4600
+Total time:      17.84
+Search time:     17.48
+Actions:         63
+Duration:        20486.000
+Plan quality:    20486.000 
+Total Num Flips: 1862
      Plan file:       set_of_plans_lpg_11_1.SOL
 
- Use 9 plan for init with num_different_plans= 3
+ Use 1 plan for init with num_different_plans= 11
 
- We use plan 9 for initialization 
- Num solutions= 11 -- Maxdiff 0.500, mindiff  0.086 -- Tot num flips 4696 
+ We use plan 7 for initialization 
+ Num solutions= 11 -- Maxdiff 0.840, mindiff  0.036 -- Tot num flips 1871 
  Recompute start times
 
     Solution 12 found 
 
+ Max num multiple solutions=1 
  Recompute start times
 
 Solution number: 12
-Total time:      7.18
-Search time:     7.15
+Total time:      18.00
+Search time:     17.64
 Actions:         138
-Duration:        946.000
-Plan quality:    946.000 
-Total Num Flips: 4696
+Duration:        40617.000
+Plan quality:    40617.000 
+Total Num Flips: 1871
      Plan file:       set_of_plans_lpg_12_1.SOL
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Num solutions= 12 -- Maxdiff 0.528, mindiff  0.009 -- Tot num flips 5199 
+
+ Use 1 plan for init with num_different_plans= 12
+
+ We use plan 9 for initialization 
+ Num solutions= 12 -- Maxdiff 0.840, mindiff  0.056 -- Tot num flips 1874 
  Recompute start times
 
     Solution 13 found 
 
+ Max num multiple solutions=5 
  Recompute start times
 
 Solution number: 13
-Total time:      7.61
-Search time:     7.58
-Actions:         218
-Duration:        1941.000
-Plan quality:    1941.000 
-Total Num Flips: 5199
+Total time:      18.07
+Search time:     17.71
+Actions:         36
+Duration:        3549.000
+Plan quality:    3549.000 
+Total Num Flips: 1874
      Plan file:       set_of_plans_lpg_13_1.SOL
 
- Use 9 plan for init with num_different_plans= 4
+ Use 1 plan for init with num_different_plans= 13
 
- We use plan 8 for initialization 
+ We use plan 0 for initialization 
  Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Num solutions= 13 -- Maxdiff 0.524, mindiff  0.009 -- Tot num flips 5702 
+ Num solutions= 13 -- Maxdiff 0.756, mindiff  0.647 -- Tot num flips 1979 
  Recompute start times
 
     Solution 14 found 
 
+ Max num multiple solutions=6 
  Recompute start times
 
 Solution number: 14
-Total time:      7.85
-Search time:     7.82
-Actions:         216
-Duration:        1941.000
-Plan quality:    1941.000 
-Total Num Flips: 5702
+Total time:      18.95
+Search time:     18.59
+Actions:         70
+Duration:        14814.000
+Plan quality:    14814.000 
+Total Num Flips: 1979
      Plan file:       set_of_plans_lpg_14_1.SOL
 
- Use 9 plan for init with num_different_plans= 5
+ Use 1 plan for init with num_different_plans= 14
 
- We use plan 12 for initialization 
- Num solutions= 14 -- Maxdiff 0.532, mindiff  0.009 -- Tot num flips 5703 
+ We use plan 10 for initialization 
+ Num solutions= 14 -- Maxdiff 0.783, mindiff  0.047 -- Tot num flips 1983 
  Recompute start times
 
     Solution 15 found 
 
+ Max num multiple solutions=6 
  Recompute start times
 
 Solution number: 15
-Total time:      7.87
-Search time:     7.84
-Actions:         220
-Duration:        1941.000
-Plan quality:    1941.000 
-Total Num Flips: 5703
+Total time:      19.08
+Search time:     18.72
+Actions:         62
+Duration:        20566.000
+Plan quality:    20566.000 
+Total Num Flips: 1983
      Plan file:       set_of_plans_lpg_15_1.SOL
 
- Use 9 plan for init with num_different_plans= 6
+ Use 1 plan for init with num_different_plans= 15
 
- We use plan 9 for initialization 
- Num solutions= 15 -- Maxdiff 0.548, mindiff  0.045 -- Tot num flips 5727 
+ We use plan 3 for initialization 
+ Found duplicate plan, skip it 
+ Num solutions= 15 -- Maxdiff 0.929, mindiff  0.755 -- Tot num flips 2266 
  Recompute start times
 
     Solution 16 found 
 
+ Max num multiple solutions=10 
+ Delta values
+1	0.0000	0.6667	0.7625	0.6818	0.8056	0.5745	0.8095	0.6711	0.7442	0.7719	
+2	0.6667	0.0000	0.4930	0.5747	0.7838	0.7069	0.8382	0.7024	0.6667	0.8529	
+3	0.7625	0.4930	0.0000	0.6373	0.7580	0.7671	0.8151	0.7347	0.6900	0.8375	
+4	0.6818	0.5747	0.6373	0.0000	0.7746	0.7558	0.7417	0.7182	0.7241	0.8172	
+5	0.8056	0.7838	0.7580	0.7746	0.0000	0.8681	0.7385	0.7914	0.7089	0.9290	
+6	0.5745	0.7069	0.7671	0.7558	0.8681	0.0000	0.8537	0.7568	0.7468	0.7551	
+7	0.8095	0.8382	0.8151	0.7417	0.7385	0.8537	0.0000	0.7762	0.7273	0.8661	
+8	0.6711	0.7024	0.7347	0.7182	0.7914	0.7568	0.7762	0.0000	0.7453	0.8415	
+9	0.7442	0.6667	0.6900	0.7241	0.7089	0.7468	0.7273	0.7453	0.0000	0.8913	
+10	0.7719	0.8529	0.8375	0.8172	0.9290	0.7551	0.8661	0.8415	0.8913	0.0000	
  Recompute start times
 
-Solution number: 16
-Total time:      7.91
-Search time:     7.88
-Actions:         130
-Duration:        974.000
-Plan quality:    974.000 
-Total Num Flips: 5727
-     Plan file:       set_of_plans_lpg_16_1.SOL
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- Num solutions= 16 -- Maxdiff 0.536, mindiff  0.015 -- Tot num flips 8305 
- Recompute start times
+; Total Time: 20.78
 
-    Solution 17 found 
-
- Recompute start times
-
-Solution number: 17
-Total time:      11.58
-Search time:     11.55
-Actions:         130
-Duration:        894.000
-Plan quality:    894.000 
-Total Num Flips: 8305
-     Plan file:       set_of_plans_lpg_17_1.SOL
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 10 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 10 for initialization 
- Num solutions= 17 -- Maxdiff 0.548, mindiff  0.009 -- Tot num flips 10884 
- Recompute start times
-
-    Solution 18 found 
-
- Recompute start times
-
-Solution number: 18
-Total time:      14.48
-Search time:     14.45
-Actions:         220
-Duration:        1941.000
-Plan quality:    1941.000 
-Total Num Flips: 10884
-     Plan file:       set_of_plans_lpg_18_1.SOL
-
- Use 9 plan for init with num_different_plans= 7
-
- We use plan 10 for initialization 
- Num solutions= 18 -- Maxdiff 0.538, mindiff  0.018 -- Tot num flips 10889 
- Recompute start times
-
-    Solution 19 found 
-
- Recompute start times
-
-Solution number: 19
-Total time:      14.51
-Search time:     14.48
-Actions:         218
-Duration:        1788.000
-Plan quality:    1788.000 
-Total Num Flips: 10889
-     Plan file:       set_of_plans_lpg_19_1.SOL
-
- Use 9 plan for init with num_different_plans= 8
-
- We use plan 17 for initialization 
- Num solutions= 19 -- Maxdiff 0.551, mindiff  0.009 -- Tot num flips 10893 
- Recompute start times
-
-    Solution 20 found 
-
- Recompute start times
-
-Solution number: 20
-Total time:      14.54
-Search time:     14.51
-Actions:         222
-Duration:        1968.000
-Plan quality:    1968.000 
-Total Num Flips: 10893
-     Plan file:       set_of_plans_lpg_20_1.SOL
-
- Use 9 plan for init with num_different_plans= 9
-
- We use plan 14 for initialization 
- Num solutions= 20 -- Maxdiff 0.555, mindiff  0.018 -- Tot num flips 10897 
- Recompute start times
-
-    Solution 21 found 
-
- Recompute start times
-
-Solution number: 21
-Total time:      14.56
-Search time:     14.53
-Actions:         224
-Duration:        1981.000
-Plan quality:    1981.000 
-Total Num Flips: 10897
-     Plan file:       set_of_plans_lpg_21_1.SOL
-
- Use 9 plan for init with num_different_plans= 10
-
- We use plan 10 for initialization 
- Found duplicate plan, skip it 
- We use plan 12 for initialization 
- Num solutions= 21 -- Maxdiff 0.551, mindiff  0.009 -- Tot num flips 11402 
- Recompute start times
-
-    Solution 22 found 
-
- Recompute start times
-
-Solution number: 22
-Total time:      14.83
-Search time:     14.80
-Actions:         222
-Duration:        1968.000
-Plan quality:    1968.000 
-Total Num Flips: 11402
-     Plan file:       set_of_plans_lpg_22_1.SOL
-
- Use 9 plan for init with num_different_plans= 11
-
- We use plan 20 for initialization 
- We use plan 12 for initialization 
- Found duplicate plan, skip it 
- We use plan 20 for initialization 
- We use plan 12 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 10 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 17 for initialization 
- Num solutions= 22 -- Maxdiff 0.555, mindiff  0.009 -- Tot num flips 15810 
- Recompute start times
-
-    Solution 23 found 
-
- Recompute start times
-
-Solution number: 23
-Total time:      20.78
-Search time:     20.75
-Actions:         224
-Duration:        1981.000
-Plan quality:    1981.000 
-Total Num Flips: 15810
-     Plan file:       set_of_plans_lpg_23_1.SOL
-
- Use 9 plan for init with num_different_plans= 12
-
- We use plan 19 for initialization 
- Found duplicate plan, skip it 
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 20 for initialization 
- We use plan 21 for initialization 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 19 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 13 for initialization 
- Num solutions= 23 -- Maxdiff 0.544, mindiff  0.009 -- Tot num flips 20135 
- Recompute start times
-
-    Solution 24 found 
-
- Recompute start times
-
-Solution number: 24
-Total time:      30.54
-Search time:     30.51
-Actions:         218
-Duration:        1941.000
-Plan quality:    1941.000 
-Total Num Flips: 20135
-     Plan file:       set_of_plans_lpg_24_1.SOL
-
- Use 9 plan for init with num_different_plans= 13
-
- We use plan 20 for initialization 
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 21 for initialization 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 12 for initialization 
- Found duplicate plan, skip it 
- We use plan 12 for initialization 
- Found duplicate plan, skip it 
- We use plan 10 for initialization 
- Found duplicate plan, skip it 
- We use plan 20 for initialization 
- We use plan 14 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- Num solutions= 24 -- Maxdiff 0.547, mindiff  0.015 -- Tot num flips 27444 
- Recompute start times
-
-    Solution 25 found 
-
- Recompute start times
-
-Solution number: 25
-Total time:      39.59
-Search time:     39.56
-Actions:         132
-Duration:        894.000
-Plan quality:    849.000 
-Total Num Flips: 27444
-     Plan file:       set_of_plans_lpg_25_1.SOL
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 17 for initialization 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 19 for initialization 
- Found duplicate plan, skip it 
- We use plan 18 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 14 for initialization 
- Found duplicate plan, skip it 
- We use plan 20 for initialization 
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- Found duplicate plan, skip it 
- We use plan 19 for initialization 
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 10 for initialization 
- Num solutions= 25 -- Maxdiff 0.544, mindiff  0.009 -- Tot num flips 36248 
- Recompute start times
-
-    Solution 26 found 
-
- Recompute start times
-
-Solution number: 26
-Total time:      53.36
-Search time:     53.33
-Actions:         218
-Duration:        1903.000
-Plan quality:    1903.000 
-Total Num Flips: 36248
-     Plan file:       set_of_plans_lpg_26_1.SOL
-
- Use 9 plan for init with num_different_plans= 14
-
- We use plan 20 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 22 for initialization 
- We use plan 14 for initialization 
- Num solutions= 26 -- Maxdiff 0.551, mindiff  0.009 -- Tot num flips 38405 
- Recompute start times
-
-    Solution 27 found 
-
- Recompute start times
-
-Solution number: 27
-Total time:      59.67
-Search time:     59.64
-Actions:         222
-Duration:        1954.000
-Plan quality:    597.000 
-Total Num Flips: 38405
-     Plan file:       set_of_plans_lpg_27_1.SOL
-
- Use 9 plan for init with num_different_plans= 15
-
- We use plan 23 for initialization 
- Found duplicate plan, skip it 
- We use plan 20 for initialization 
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- We use plan 25 for initialization 
- Num solutions= 27 -- Maxdiff 0.548, mindiff  0.009 -- Tot num flips 40562 
- Recompute start times
-
-    Solution 28 found 
-
- Recompute start times
-
-Solution number: 28
-Total time:      70.01
-Search time:     69.98
-Actions:         220
-Duration:        1916.000
-Plan quality:    597.000 
-Total Num Flips: 40562
-     Plan file:       set_of_plans_lpg_28_1.SOL
-
- Use 9 plan for init with num_different_plans= 16
-
- We use plan 18 for initialization 
- Num solutions= 28 -- Maxdiff 0.542, mindiff  0.018 -- Tot num flips 40572 
- Recompute start times
-
-    Solution 29 found 
-
- Recompute start times
-
-Solution number: 29
-Total time:      70.05
-Search time:     70.02
-Actions:         218
-Duration:        1801.000
-Plan quality:    1801.000 
-Total Num Flips: 40572
-     Plan file:       set_of_plans_lpg_29_1.SOL
-
- Use 9 plan for init with num_different_plans= 17
-
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 26 for initialization 
- We use plan 25 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- We use plan 23 for initialization 
- Found duplicate plan, skip it 
- We use plan 20 for initialization 
- We use plan 18 for initialization 
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 12 for initialization 
- Found duplicate plan, skip it 
- We use plan 26 for initialization 
- We use plan 20 for initialization 
- We use plan 25 for initialization 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 18 for initialization 
- Found duplicate plan, skip it 
- We use plan 21 for initialization 
- We use plan 27 for initialization 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 26 for initialization 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 19 for initialization 
- We use plan 23 for initialization 
- Num solutions= 29 -- Maxdiff 0.555, mindiff  0.009 -- Tot num flips 52912 
- Recompute start times
-
-    Solution 30 found 
-
- Recompute start times
-
-Solution number: 30
-Total time:      80.18
-Search time:     80.15
-Actions:         224
-Duration:        1995.000
-Plan quality:    1995.000 
-Total Num Flips: 52912
-     Plan file:       set_of_plans_lpg_30_1.SOL
-
- Use 9 plan for init with num_different_plans= 18
-
- We use plan 12 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Num solutions= 30 -- Maxdiff 0.536, mindiff  0.009 -- Tot num flips 53417 
- Recompute start times
-
-    Solution 31 found 
-
- Recompute start times
-
-Solution number: 31
-Total time:      80.58
-Search time:     80.55
-Actions:         214
-Duration:        1689.000
-Plan quality:    1689.000 
-Total Num Flips: 53417
-     Plan file:       set_of_plans_lpg_31_1.SOL
-
- Use 9 plan for init with num_different_plans= 19
-
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 22 for initialization 
- We use plan 20 for initialization 
- We use plan 21 for initialization 
- We use plan 26 for initialization 
- We use plan 23 for initialization 
- Found duplicate plan, skip it 
- We use plan 22 for initialization 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- Num solutions= 31 -- Maxdiff 0.543, mindiff  0.015 -- Tot num flips 58426 
- Recompute start times
-
-    Solution 32 found 
-
- Recompute start times
-
-Solution number: 32
-Total time:      87.66
-Search time:     87.63
-Actions:         130
-Duration:        894.000
-Plan quality:    849.000 
-Total Num Flips: 58426
-     Plan file:       set_of_plans_lpg_32_1.SOL
- We use plan 23 for initialization 
- Found duplicate plan, skip it 
- We use plan 23 for initialization 
- Num solutions= 32 -- Maxdiff 0.548, mindiff  0.009 -- Tot num flips 58926 
- Recompute start times
-
-    Solution 33 found 
-
- Recompute start times
-
-Solution number: 33
-Total time:      92.30
-Search time:     92.27
-Actions:         220
-Duration:        1941.000
-Plan quality:    571.000 
-Total Num Flips: 58926
-     Plan file:       set_of_plans_lpg_33_1.SOL
-
- Use 9 plan for init with num_different_plans= 20
-
- We use plan 9 for initialization 
- Found duplicate plan, skip it 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 28 for initialization 
- We use plan 26 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 12 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- We use plan 23 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 12 for initialization 
- Found duplicate plan, skip it 
- We use plan 12 for initialization 
- Found duplicate plan, skip it 
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 27 for initialization 
- We use plan 19 for initialization 
- Num solutions= 33 -- Maxdiff 0.555, mindiff  0.009 -- Tot num flips 65826 
- Recompute start times
-
-    Solution 34 found 
-
- Recompute start times
-
-Solution number: 34
-Total time:      102.93
-Search time:     102.90
-Actions:         224
-Duration:        1981.000
-Plan quality:    597.000 
-Total Num Flips: 65826
-     Plan file:       set_of_plans_lpg_34_1.SOL
-
- Use 9 plan for init with num_different_plans= 21
-
- We use plan 26 for initialization 
- We use plan 32 for initialization 
- Num solutions= 34 -- Maxdiff 0.551, mindiff  0.009 -- Tot num flips 66406 
- Recompute start times
-
-    Solution 35 found 
-
- Recompute start times
-
-Solution number: 35
-Total time:      104.58
-Search time:     104.55
-Actions:         222
-Duration:        1954.000
-Plan quality:    3374.000 
-Total Num Flips: 66406
-     Plan file:       set_of_plans_lpg_35_1.SOL
-
- Use 9 plan for init with num_different_plans= 22
-
- We use plan 32 for initialization 
- Found duplicate plan, skip it 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 29 for initialization 
- Found duplicate plan, skip it 
- We use plan 10 for initialization 
- We use plan 23 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 22 for initialization 
- We use plan 19 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- Found duplicate plan, skip it 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 10 for initialization 
- Found duplicate plan, skip it 
- We use plan 25 for initialization 
- Found duplicate plan, skip it 
- We use plan 21 for initialization 
- We use plan 25 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 23 for initialization 
- We use plan 33 for initialization 
- We use plan 9 for initialization 
- Found duplicate plan, skip it 
- We use plan 18 for initialization 
- Num solutions= 35 -- Maxdiff 0.542, mindiff  0.009 -- Tot num flips 75883 
- Recompute start times
-
-    Solution 36 found 
-
- Recompute start times
-
-Solution number: 36
-Total time:      123.19
-Search time:     123.16
-Actions:         218
-Duration:        1788.000
-Plan quality:    1788.000 
-Total Num Flips: 75883
-     Plan file:       set_of_plans_lpg_36_1.SOL
-
- Use 9 plan for init with num_different_plans= 23
-
- We use plan 26 for initialization 
- We use plan 34 for initialization 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 18 for initialization 
- We use plan 22 for initialization 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- Found duplicate plan, skip it 
- We use plan 23 for initialization 
- Found duplicate plan, skip it 
- We use plan 9 for initialization 
- Num solutions= 36 -- Maxdiff 0.543, mindiff  0.045 -- Tot num flips 81492 
- Recompute start times
-
-    Solution 37 found 
-
- Max num multiple solutions=1 
- Recompute start times
-
-Solution number: 37
-Total time:      131.79
-Search time:     131.76
-Actions:         130
-Duration:        1018.000
-Plan quality:    1018.000 
-Total Num Flips: 81492
-     Plan file:       set_of_plans_lpg_37_1.SOL
- We use plan 19 for initialization 
- Found duplicate plan, skip it 
- We use plan 22 for initialization 
- We use plan 30 for initialization 
- Found duplicate plan, skip it 
- We use plan 29 for initialization 
- We use plan 10 for initialization 
- Found duplicate plan, skip it 
- We use plan 34 for initialization 
- We use plan 33 for initialization 
- We use plan 20 for initialization 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 27 for initialization 
- We use plan 32 for initialization 
- Found duplicate plan, skip it 
- We use plan 28 for initialization 
- We use plan 32 for initialization 
- We use plan 10 for initialization 
- Found duplicate plan, skip it 
- We use plan 20 for initialization 
- We use plan 13 for initialization 
- We use plan 14 for initialization 
- Found duplicate plan, skip it 
- We use plan 33 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 29 for initialization 
- Found duplicate plan, skip it 
- We use plan 29 for initialization 
- Num solutions= 37 -- Maxdiff 0.559, mindiff  0.009 -- Tot num flips 92828 
- Recompute start times
-
-    Solution 38 found 
-
- Recompute start times
-
-Solution number: 38
-Total time:      154.89
-Search time:     154.86
-Actions:         226
-Duration:        2008.000
-Plan quality:    2675.000 
-Total Num Flips: 92828
-     Plan file:       set_of_plans_lpg_38_1.SOL
-
- Use 9 plan for init with num_different_plans= 24
-
- We use plan 32 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 27 for initialization 
- We use plan 28 for initialization 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 19 for initialization 
- Found duplicate plan, skip it 
- We use plan 10 for initialization 
- We use plan 20 for initialization 
- We use plan 33 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 17 for initialization 
- Found duplicate plan, skip it 
- We use plan 10 for initialization 
- Found duplicate plan, skip it 
- We use plan 28 for initialization 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 29 for initialization 
- Found duplicate plan, skip it 
- We use plan 23 for initialization 
- We use plan 32 for initialization 
- Found duplicate plan, skip it 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 30 for initialization 
- Num solutions= 38 -- Maxdiff 0.540, mindiff  0.009 -- Tot num flips 102754 
- Recompute start times
-
-    Solution 39 found 
-
- Recompute start times
-
-Solution number: 39
-Total time:      162.67
-Search time:     162.64
-Actions:         216
-Duration:        1689.000
-Plan quality:    1689.000 
-Total Num Flips: 102754
-     Plan file:       set_of_plans_lpg_39_1.SOL
-
- Use 9 plan for init with num_different_plans= 25
-
- We use plan 20 for initialization 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 35 for initialization 
- Found duplicate plan, skip it 
- We use plan 30 for initialization 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 35 for initialization 
- Found duplicate plan, skip it 
- We use plan 20 for initialization 
- We use plan 23 for initialization 
- Found duplicate plan, skip it 
- We use plan 32 for initialization 
- Found duplicate plan, skip it 
- We use plan 26 for initialization 
- We use plan 35 for initialization 
- Num solutions= 39 -- Maxdiff 0.545, mindiff  0.009 -- Tot num flips 108065 
- Recompute start times
-
-    Solution 40 found 
-
- Recompute start times
-
-Solution number: 40
-Total time:      173.07
-Search time:     173.04
-Actions:         220
-Duration:        1801.000
-Plan quality:    1801.000 
-Total Num Flips: 108065
-     Plan file:       set_of_plans_lpg_40_1.SOL
-
- Use 9 plan for init with num_different_plans= 26
-
- We use plan 29 for initialization 
- Num solutions= 40 -- Maxdiff 0.559, mindiff  0.009 -- Tot num flips 108069 
- Recompute start times
-
-    Solution 41 found 
-
- Recompute start times
-
-Solution number: 41
-Total time:      173.10
-Search time:     173.07
-Actions:         226
-Duration:        2022.000
-Plan quality:    2022.000 
-Total Num Flips: 108069
-     Plan file:       set_of_plans_lpg_41_1.SOL
-
- Use 9 plan for init with num_different_plans= 27
-
- We use plan 21 for initialization 
- Found duplicate plan, skip it 
- We use plan 13 for initialization 
- Found duplicate plan, skip it 
- We use plan 30 for initialization 
- Found duplicate plan, skip it 
- We use plan 29 for initialization 
- We use plan 30 for initialization 
- Num solutions= 41 -- Maxdiff 0.550, mindiff  0.031 -- Tot num flips 110153 
- Recompute start times
-
-    Solution 42 found 
-
- Recompute start times
-
-Solution number: 42
-Total time:      175.16
-Search time:     175.13
-Actions:         221
-Duration:        1689.000
-Plan quality:    1689.000 
-Total Num Flips: 110153
-     Plan file:       set_of_plans_lpg_42_1.SOL
-
- Use 9 plan for init with num_different_plans= 28
-
- We use plan 12 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 8 for initialization 
- Found duplicate plan, skip it 
- We use plan 10 for initialization 

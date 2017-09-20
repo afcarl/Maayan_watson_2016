@@ -1,8 +1,0 @@
-******* TRUE GOAL *******
-(communicated_soil_data waypoint4),(communicated_soil_data waypoint9),(communicated_soil_data waypoint1),(communicated_soil_data waypoint7),(communicated_rock_data waypoint3),(communicated_rock_data waypoint10),(communicated_rock_data waypoint5),(communicated_rock_data waypoint1),(communicated_image_data objective0 high_res),(communicated_image_data objective4 high_res),(communicated_image_data objective2 high_res)
-	0.494890540867
-(communicated_soil_data waypoint4),(communicated_soil_data waypoint3),(communicated_soil_data waypoint1),(communicated_soil_data waypoint7),(communicated_rock_data waypoint5),(communicated_rock_data waypoint10),(communicated_rock_data waypoint5),(communicated_rock_data waypoint1),(communicated_image_data objective0 high_res),(communicated_image_data objective3 high_res),(communicated_image_data objective1 high_res)
-	0.0
-(communicated_soil_data waypoint4),(communicated_soil_data waypoint9),(communicated_soil_data waypoint1),(communicated_soil_data waypoint7),(communicated_rock_data waypoint3),(communicated_rock_data waypoint10),(communicated_rock_data waypoint3),(communicated_rock_data waypoint1),(communicated_image_data objective1 low_res),(communicated_image_data objective4 high_res),(communicated_image_data objective3 high_res)
-	0.505109459133
-(communicated_soil_data waypoint3),(communicated_soil_data waypoint9),(communicated_soil_data waypoint1),(communicated_soil_data waypoint7),(communicated_rock_data waypoint3),(communicated_rock_data waypoint11),(communicated_rock_data waypoint5),(communicated_rock_data waypoint1),(communicated_image_data objective0 high_res),(communicated_image_data objective1 high_res),(communicated_image_data objective3 high_res)	0.0

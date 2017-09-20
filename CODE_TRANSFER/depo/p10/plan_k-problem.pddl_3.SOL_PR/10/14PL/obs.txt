@@ -1,4 +1,0 @@
-( in CRATE0 TRUCK1 )
-( available DEPOT1 HOIST1 )
-( available distributor2 hoist4 )
-( in crate3 truck1 )

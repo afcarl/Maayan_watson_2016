@@ -1,1 +1,0 @@
-(have_image star3 thermograph0)(have_image phenomenon5 image2)(have_image phenomenon6 image2)(have_image star7 thermograph0)(have_image phenomenon8 image2)(have_image planet9 spectrograph1)

@@ -1,2 +1,0 @@
-( pointing SATELLITE1 PLANET11 )
-( have_image STAR7 IMAGE0 )

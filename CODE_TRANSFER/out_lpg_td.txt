@@ -1,0 +1,9 @@
+
+
+NUMERIC_THREATS_MODE: 0
+
+; Command line: ./lpg-td -o k-domain.pddl_converted.pddl -f depo/p2/plan_k-problem.pddl_1.SOL_PR/100/0/curr_hyp.pddl_converted.pddl -nobestfirst -n 20 -cputime 400 -out plan_lpg_td   
+
+
+Parsing domain file: 
+syntax error

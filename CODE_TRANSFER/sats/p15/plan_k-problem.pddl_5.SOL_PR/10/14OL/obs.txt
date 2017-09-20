@@ -1,3 +1,0 @@
-( pointing satellite3 planet11 )
-( pointing SATELLITE6 PHENOMENON9 )
-( have_image PHENOMENON9 INFRARED0 )

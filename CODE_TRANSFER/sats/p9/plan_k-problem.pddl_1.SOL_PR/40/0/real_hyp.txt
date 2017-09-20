@@ -1,1 +1,0 @@
-(have_image planet5 image2)(have_image phenomenon6 image3)(have_image phenomenon7 infrared1)(have_image phenomenon8 image2)(have_image star9 image3)(have_image planet10 image4)(have_image planet11 spectrograph0)(have_image phenomenon12 image3)(have_image phenomenon13 spectrograph0)(have_image star14 image4)

@@ -1,3 +1,0 @@
-( calibrated INSTRUMENT7 )
-( pointing SATELLITE3 STAR10 )
-( have_image PHENOMENON18 IMAGE1 )

@@ -1,8 +1,0 @@
-******* TRUE GOAL *******
-(at person1 city1),(at person2 city4),(at person3 city7),(at person4 city6),(at person5 city8),(at person6 city11),(at person7 city2),(at person8 city11),(at person10 city9),(at person11 city6),(at person12 city4),(at person13 city11),(at person14 city4),(at person15 city6)
-	0.339125171615
-(at person1 city0),(at person2 city1),(at person3 city0),(at person4 city9),(at person5 city4),(at person6 city11),(at person7 city2),(at person8 city11),(at person10 city2),(at person11 city11),(at person12 city3),(at person13 city11),(at person14 city4),(at person15 city3)
-	0.125739972542
-(at person1 city3),(at person2 city5),(at person3 city4),(at person4 city2),(at person5 city1),(at person6 city11),(at person7 city2),(at person8 city11),(at person10 city4),(at person11 city10),(at person12 city5),(at person13 city11),(at person14 city4),(at person15 city7)
-	0.214555130722
-(at person1 city4),(at person2 city8),(at person3 city9),(at person4 city5),(at person5 city7),(at person6 city11),(at person7 city2),(at person8 city11),(at person10 city8),(at person11 city9),(at person12 city10),(at person13 city11),(at person14 city4),(at person15 city1)	0.320579725121

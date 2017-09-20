@@ -1,3 +1,0 @@
-( have_image STAR9 THERMOGRAPH0 )
-( have_image PHENOMENON13 IMAGE1 )
-( have_image PLANET17 IMAGE2 )

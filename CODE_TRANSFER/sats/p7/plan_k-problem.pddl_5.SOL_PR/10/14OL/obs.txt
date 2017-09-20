@@ -1,3 +1,0 @@
-( pointing SATELLITE2 STAR7 )
-( pointing satellite2 planet9 )
-( pointing SATELLITE1 PLANET9 )

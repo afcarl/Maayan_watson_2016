@@ -1,8 +1,0 @@
-( power_on INSTRUMENT6 )
-( have_image phenomenon12 thermograph0 )
-( have_image PLANET13 THERMOGRAPH1 )
-( have_image star21 image4 )
-( have_image STAR19 THERMOGRAPH0 )
-( power_on instrument0 )
-( have_image PHENOMENON5 THERMOGRAPH1 )
-( have_image phenomenon27 thermograph2 )

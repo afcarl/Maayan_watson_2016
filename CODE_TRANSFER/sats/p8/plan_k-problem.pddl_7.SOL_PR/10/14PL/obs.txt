@@ -1,4 +1,0 @@
-( have_image star10 thermograph2 )
-( pointing SATELLITE3 PHENOMENON12 )
-( have_image PHENOMENON14 THERMOGRAPH2 )
-( pointing satellite2 star10 )

@@ -1,1 +1,0 @@
-( lifting DISTRIBUTOR0 HOIST1 CRATE1 )

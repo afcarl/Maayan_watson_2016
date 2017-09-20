@@ -1,2 +1,0 @@
-( pointing SATELLITE5 PLANET14 )
-( pointing SATELLITE6 PHENOMENON9 )

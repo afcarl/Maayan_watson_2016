@@ -1,3 +1,0 @@
-( at person6 city2 )
-( at PERSON1 CITY0 )
-( at PERSON3 CITY1 )

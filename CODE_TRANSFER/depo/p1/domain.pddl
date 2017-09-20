@@ -11,6 +11,7 @@
 	(on ?x - crate ?y - surface)
 	(in ?x - crate ?y - truck)
 	(clear ?x - surface)
+	(free ?x - truck)
 
 	(:private ?agent - place
 		(lifting ?agent - place ?x - hoist ?y - crate)
@@ -84,11 +85,13 @@
 	:parameters (?x - hoist ?y - crate ?z - truck)
 	:duration (= ?duration 3)
 	:condition (and
+		(at start (free ?z))
 		(over all (at ?x ?p))
 		(over all (at ?z ?p))
 		(over all (lifting ?p ?x ?y))
 	)
 	:effect (and
+		(at end (not (free ?w ?z)))
 		(at end (in ?y ?z))
 		(at end (available ?p ?x))
 		(at end (not (lifting ?p ?x ?y)))
@@ -107,6 +110,7 @@
 		(at start (in ?y ?z))
 	)
 	:effect (and
+		(at end (free ?z))
 		(at end (lifting ?p ?x ?y))
 		(at start (not (in ?y ?z)))
 		(at start (not (available ?p ?x)))
@@ -114,4 +118,5 @@
 )
 
 )
+
 

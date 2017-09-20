@@ -1,5 +1,0 @@
-( empty ROVER1STORE )
-( at ROVER0 WAYPOINT8 )
-( full ROVER1STORE )
-( have_rock_analysis ROVER1 WAYPOINT5 )
-( have_image ROVER0 OBJECTIVE2 LOW_RES )

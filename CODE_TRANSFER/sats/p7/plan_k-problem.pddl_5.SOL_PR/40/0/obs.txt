@@ -1,6 +1,0 @@
-( pointing SATELLITE2 STAR1 )
-( calibrated INSTRUMENT5 )
-( have_image PHENOMENON5 IMAGE0 )
-( pointing SATELLITE1 PLANET9 )
-( pointing SATELLITE1 PLANET8 )
-( have_image PLANET8 IMAGE0 )

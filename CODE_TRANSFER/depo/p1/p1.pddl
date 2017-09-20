@@ -34,6 +34,8 @@
 (:init
 	(driving driver0 truck0)
 	(driving driver1 truck1)
+	(free truck0)
+	(free truck1)
 	(at pallet0 depot0)
 	(clear crate1)
 	(at pallet1 distributor0)
@@ -60,4 +62,5 @@
 	)
 )
 )
+
 

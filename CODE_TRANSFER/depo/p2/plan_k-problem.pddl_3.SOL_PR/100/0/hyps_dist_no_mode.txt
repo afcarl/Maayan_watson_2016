@@ -1,8 +1,0 @@
-******* TRUE GOAL *******
-(on crate0 pallet2),(on crate1 crate3),(on crate2 pallet0),(on crate3 pallet1)
-	1.0
-(on crate0 pallet2),(on crate1 crate2),(on crate2 pallet2),(on crate3 pallet1)
-	0.0
-(on crate0 pallet0),(on crate1 crate3),(on crate2 pallet2),(on crate3 pallet1)
-	8.17642202528e-50
-(on crate0 pallet2),(on crate1 crate0),(on crate2 pallet0),(on crate3 pallet2)	0.0

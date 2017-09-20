@@ -1,6 +1,0 @@
-( pointing satellite0 star20 )
-( pointing SATELLITE5 GROUNDSTATION1 )
-( have_image PHENOMENON13 IMAGE1 )
-( have_image phenomenon7 image1 )
-( pointing satellite4 planet23 )
-( pointing SATELLITE4 PLANET17 )

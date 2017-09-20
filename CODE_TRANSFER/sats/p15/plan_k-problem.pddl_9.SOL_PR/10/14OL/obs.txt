@@ -1,3 +1,0 @@
-( calibrated instrument1 )
-( calibrated INSTRUMENT5 )
-( have_image STAR15 THERMOGRAPH4 )

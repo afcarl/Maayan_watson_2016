@@ -1,7 +1,0 @@
-( pointing SATELLITE0 STAR1 )
-( pointing satellite2 star2 )
-( pointing SATELLITE0 PLANET5 )
-( pointing SATELLITE1 STAR2 )
-( pointing SATELLITE1 STAR9 )
-( pointing SATELLITE1 STAR10 )
-( have_image STAR10 INFRARED3 )

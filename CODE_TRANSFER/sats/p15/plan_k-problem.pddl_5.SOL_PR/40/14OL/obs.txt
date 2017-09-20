@@ -1,8 +1,0 @@
-( pointing SATELLITE5 GROUNDSTATION0 )
-( calibrated INSTRUMENT10 )
-( pointing satellite5 phenomenon16 )
-( have_image PLANET6 SPECTROGRAPH2 )
-( have_image PLANET14 THERMOGRAPH4 )
-( pointing SATELLITE5 STAR15 )
-( pointing SATELLITE5 PLANET24 )
-( have_image PHENOMENON5 SPECTROGRAPH2 )

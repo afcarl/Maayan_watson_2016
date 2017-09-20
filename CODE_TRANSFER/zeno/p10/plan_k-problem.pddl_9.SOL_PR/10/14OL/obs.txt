@@ -1,6 +1,0 @@
-( in person6 plane3 )
-( in PERSON6 PLANE2 )
-( at PLANE2 CITY1 )
-( fuel-level PLANE2 FL0 )
-( at PLANE1 CITY0 )
-( fuel-level PLANE1 FL0 )
