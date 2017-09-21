@@ -1,8 +1,0 @@
-******* TRUE GOAL *******
-(on crate0 pallet4),(on crate1 crate12),(on crate2 crate0),(on crate3 crate9),(on crate5 pallet0),(on crate6 crate2),(on crate9 pallet2),(on crate10 crate13),(on crate12 pallet5),(on crate13 pallet1),(on crate14 crate10)
-	0.113067292645
-(on crate0 pallet0),(on crate1 crate12),(on crate2 crate0),(on crate3 crate9),(on crate5 pallet4),(on crate6 crate2),(on crate9 pallet2),(on crate10 crate13),(on crate12 pallet1),(on crate13 pallet5),(on crate14 crate10)
-	0.343505477308
-(on crate0 pallet4),(on crate1 crate12),(on crate2 crate0),(on crate3 crate9),(on crate5 pallet1),(on crate6 crate2),(on crate9 pallet2),(on crate10 crate13),(on crate12 pallet5),(on crate13 pallet0),(on crate14 crate10)
-	0.213223787167
-(on crate0 pallet4),(on crate1 crate12),(on crate2 crate0),(on crate3 crate9),(on crate5 pallet2),(on crate6 crate2),(on crate9 pallet0),(on crate10 crate13),(on crate12 pallet1),(on crate13 pallet5),(on crate14 crate10)	0.330203442879

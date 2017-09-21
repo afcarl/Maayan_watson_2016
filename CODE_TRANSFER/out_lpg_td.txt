@@ -2,8 +2,232 @@
 
 NUMERIC_THREATS_MODE: 0
 
-; Command line: ./lpg-td -o k-domain.pddl_converted.pddl -f depo/p2/plan_k-problem.pddl_1.SOL_PR/100/0/curr_hyp.pddl_converted.pddl -nobestfirst -n 20 -cputime 400 -out plan_lpg_td   
+; Command line: ./lpg-td -o k-domain.pddl -f k-problem.pddl -nobestfirst -n 20 -cputime 450   
 
 
-Parsing domain file: 
-syntax error
+Parsing domain file:  domain 'SATELLITE' defined ... done.
+Parsing problem file:  problem 'STRIPS-SAT-X-1' defined ... done.
+
+
+
+Modality: Incremental Planner
+
+Number of actions             :   39903
+Number of conditional actions :       0
+Number of facts               :     767
+
+
+Analyzing Planning Problem:
+	Temporal Planning Problem: YES
+	Numeric Planning Problem: YES
+	Problem with Timed Initial Literals: NO
+	Problem with Derived Predicates: NO
+
+Evaluation function weights:
+     Action duration 1.00; Action cost 0.00
+
+
+Computing mutex... done
+
+Preprocessing total time: 9.68 seconds
+
+Searching ('.' = every 50 search steps):
+.. solution found: 
+ Recompute start times
+
+ first_solution_cpu_time: 14.09 
+Solution number: 1
+Total time:      14.09
+Search time:     4.41
+Actions:         142
+Duration:        512.000
+Plan quality:    512.000 
+Total Num Flips: 144  (32.653 flips/sec)
+     Plan file:       plan_k-problem.pddl_1.SOL Restart using stored plan
+ solution found: 
+ Recompute start times
+
+Solution number: 2
+Total time:      16.82
+Search time:     7.14
+Actions:         145
+Duration:        486.000
+Plan quality:    486.000 
+Total Num Flips: 186  (26.050 flips/sec)
+     Plan file:       plan_k-problem.pddl_2.SOL Restart using stored plan
+ solution found: 
+ Recompute start times
+
+Solution number: 3
+Total time:      19.89
+Search time:     10.21
+Actions:         149
+Duration:        424.000
+Plan quality:    424.000 
+Total Num Flips: 231  (22.625 flips/sec)
+     Plan file:       plan_k-problem.pddl_3.SOL Restart using null plan
+.... solution found: 
+ Recompute start times
+
+Solution number: 4
+Total time:      28.66
+Search time:     18.98
+Actions:         147
+Duration:        406.000
+Plan quality:    406.000 
+Total Num Flips: 471  (24.816 flips/sec)
+     Plan file:       plan_k-problem.pddl_4.SOL Restart using stored plan
+.. solution found: 
+ Recompute start times
+
+Solution number: 5
+Total time:      34.09
+Search time:     24.41
+Actions:         150
+Duration:        337.000
+Plan quality:    337.000 
+Total Num Flips: 575  (23.556 flips/sec)
+     Plan file:       plan_k-problem.pddl_5.SOL Restart using stored plan
+. solution found: 
+ Recompute start times
+
+Solution number: 6
+Total time:      38.82
+Search time:     29.14
+Actions:         155
+Duration:        320.000
+Plan quality:    320.000 
+Total Num Flips: 648  (22.237 flips/sec)
+     Plan file:       plan_k-problem.pddl_6.SOL Restart using null plan
+.......... search limit exceeded. Restart using stored plan
+. solution found: 
+ Recompute start times
+
+Solution number: 7
+Total time:      66.11
+Search time:     56.43
+Actions:         159
+Duration:        308.000
+Plan quality:    308.000 
+Total Num Flips: 1230  (21.797 flips/sec)
+     Plan file:       plan_k-problem.pddl_7.SOL Restart using stored plan
+.. solution found: 
+ Recompute start times
+
+Solution number: 8
+Total time:      72.82
+Search time:     63.14
+Actions:         181
+Duration:        303.000
+Plan quality:    303.000 
+Total Num Flips: 1328  (21.033 flips/sec)
+     Plan file:       plan_k-problem.pddl_8.SOL
+
+Searching ('.' = every 50 search steps):
+........ solution found: 
+ Recompute start times
+
+Solution number: 9
+Total time:      90.73
+Search time:     81.05
+Actions:         147
+Duration:        298.000
+Plan quality:    298.000 
+Total Num Flips: 1753  (21.629 flips/sec)
+     Plan file:       plan_k-problem.pddl_9.SOL Restart using stored plan
+ solution found: 
+ Recompute start times
+
+Solution number: 10
+Total time:      93.64
+Search time:     83.96
+Actions:         150
+Duration:        291.000
+Plan quality:    236.000 
+Total Num Flips: 1787  (21.284 flips/sec)
+     Plan file:       plan_k-problem.pddl_10.SOL Restart using stored plan
+. solution found: 
+ Recompute start times
+
+Solution number: 11
+Total time:      98.19
+Search time:     88.51
+Actions:         147
+Duration:        226.000
+Plan quality:    226.000 
+Total Num Flips: 1850  (20.902 flips/sec)
+     Plan file:       plan_k-problem.pddl_11.SOL Restart using null plan
+......... solution found: 
+ Recompute start times
+
+Solution number: 12
+Total time:      118.04
+Search time:     108.36
+Actions:         154
+Duration:        250.000
+Plan quality:    178.000 
+Total Num Flips: 2330  (21.502 flips/sec)
+     Plan file:       plan_k-problem.pddl_12.SOL Restart using stored plan
+.. found solution of bad quality. Restart using stored plan
+. solution found: 
+ Recompute start times
+
+Solution number: 13
+Total time:      128.97
+Search time:     119.29
+Actions:         157
+Duration:        185.000
+Plan quality:    130.000 
+Total Num Flips: 2504  (20.991 flips/sec)
+     Plan file:       plan_k-problem.pddl_13.SOL Restart using null plan
+.......... search limit exceeded. Restart using stored plan
+.. found solution of bad quality. Restart using stored plan
+.. found solution of bad quality.
+
+Searching ('.' = every 50 search steps):
+.......... search limit exceeded. Restart using stored plan
+.. found solution of bad quality. Restart using stored plan
+.. found solution of bad quality. Restart using null plan
+.......... search limit exceeded. Restart using stored plan
+.. found solution of bad quality. Restart using stored plan
+.. found solution of bad quality. Restart using null plan
+.......... search limit exceeded. Restart using stored plan
+.. found solution of bad quality. Restart using stored plan
+.. found solution of bad quality.
+
+Searching ('.' = every 50 search steps):
+.......... found solution of bad quality. Restart using stored plan
+.. found solution of bad quality. Restart using stored plan
+.. found solution of bad quality. Restart using null plan
+.......... search limit exceeded. Restart using stored plan
+.. found solution of bad quality. Restart using stored plan
+.. found solution of bad quality. Restart using null plan
+.......... search limit exceeded. Restart using stored plan
+.. found solution of bad quality. Restart using stored plan
+.. found solution of bad quality.
+
+Searching ('.' = every 50 search steps):
+.......... search limit exceeded. Restart using stored plan
+.. found solution of bad quality. Restart using stored plan
+.. found solution of bad quality. Restart using null plan
+......... solution found: 
+ Recompute start times
+
+Solution number: 14
+Total time:      430.84
+Search time:     421.16
+Actions:         161
+Duration:        181.000
+Plan quality:    118.000 
+Total Num Flips: 8795  (20.883 flips/sec)
+     Plan file:       plan_k-problem.pddl_14.SOL Restart using stored plan
+.. found solution of bad quality. Restart using stored plan
+.. found solution of bad quality. Restart using null plan
+..
+
+Max time exceeded.
+
+
+
+Time: 450.149994
+

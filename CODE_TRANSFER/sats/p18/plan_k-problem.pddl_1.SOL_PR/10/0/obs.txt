@@ -1,2 +1,0 @@
-( calibrated INSTRUMENT9 )
-( pointing SATELLITE2 STAR15 )

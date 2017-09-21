@@ -1,8 +1,0 @@
-( lifting DEPOT0 HOIST0 CRATE8 )
-( lifting distributor1 hoist0 crate2 )
-( at crate4 distributor1 )
-( available DEPOT0 HOIST4 )
-( at CRATE3 DEPOT0 )
-( clear CRATE3 )
-( on CRATE3 CRATE8 )
-( available depot0 hoist1 )

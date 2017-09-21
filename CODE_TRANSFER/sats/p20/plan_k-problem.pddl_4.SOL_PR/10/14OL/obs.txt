@@ -1,8 +1,0 @@
-( power_on INSTRUMENT28 )
-( pointing SATELLITE4 GROUNDSTATION1 )
-( power_on instrument11 )
-( calibrated INSTRUMENT7 )
-( calibrated INSTRUMENT28 )
-( have_image STAR6 SPECTROGRAPH6 )
-( pointing SATELLITE0 PLANET9 )
-( have_image STAR20 SPECTROGRAPH0 )

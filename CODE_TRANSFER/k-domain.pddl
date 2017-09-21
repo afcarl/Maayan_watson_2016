@@ -1,149 +1,124 @@
-(define (domain depot)
-	(:requirements :durative-actions :typing)
+(define (domain satellite)
+	(:requirements :durative-actions)
 (:types
-	place locatable driver - object
-	truck hoist surface - locatable
-	pallet crate - surface
-	place driver - superduperagent
-	superduperobject superduperpred hoist locatable object driver surface pallet superduperagent place crate distributor truck depot - superduperobject
-	depot distributor - place
+	satellite - superduperagent
+	satellite direction instrument mode - object
+	satellite object direction superduperpred instrument superduperagent superduperobject mode - superduperobject
 )
 (:constants
-	pred--at pred--on pred--in pred--clear pred--lifting pred--available pred--driving  - superduperpred
+	pred--pointing pred--have_image pred--calibrated pred--supports pred--on_board pred--calibration_target pred--power_avail pred--power_on  - superduperpred
 )
 (:predicates
-	(at ?x - locatable ?y - place)
-	(on ?x - crate ?y - surface)
-	(in ?x - crate ?y - truck)
-	(clear ?x - surface)
-	(lifting ?agent - place ?x - hoist ?y - crate)
-	(available ?agent - place ?x - hoist)
-	(driving ?agent - driver ?t - truck)
+	(pointing ?s - satellite ?d - direction)
+	(have_image ?d - direction ?m - mode)
+	(calibrated ?i - instrument)
+	(supports ?i - instrument ?m - mode)
+	(on_board ?i - instrument ?agent - satellite)
+	(calibration_target ?i - instrument ?d - direction)
+	(power_avail ?agent - satellite)
+	(power_on ?i - instrument)
 	(K-obj ?ag - superduperagent ?obj - superduperobject)
 	(K-pred ?ag - superduperagent ?pr - superduperpred)
 	(K-ag-pred ?ag - superduperagent ?pr - superduperpred)
 )
 
-(:durative-action drive
-	:parameters (?a - driver ?x - truck ?y - place ?z - place)
-	:duration (= ?duration 20)
+(:durative-action turn_to
+	:parameters (?s - satellite ?d_new - direction ?d_prev - direction)
+	:duration (= ?duration 5)
 	:condition (and
-		(at start(at ?x ?y ))
-		(over all(driving ?a ?x ))
-		(at start(K-ag-pred ?a pred--driving))
-		(at start(K-pred ?a pred--at))
-		(at start(K-obj ?a ?x))
-		(at start(K-obj ?a ?y))
-		(at start(K-obj ?a ?z))
+		(at start(pointing ?s ?d_prev ))
+		(at start(K-ag-pred ?s pred--pointing))
+		(at start(K-obj ?s ?d_new))
+		(at start(K-obj ?s ?d_prev))
 	)
 	:effect (and
-		(at end(at ?x ?z ))
-		(at start(not (at ?x ?y )))
+		(at end(pointing ?s ?d_new ))
+		(at start(not (pointing ?s ?d_prev )))
 	)
 )
 
 
-(:durative-action lift
-	:parameters (?p - place ?x - hoist ?y - crate ?z - surface)
-	:duration (= ?duration 11)
+(:durative-action switch_on
+	:parameters (?s - satellite ?i - instrument)
+	:duration (= ?duration 2)
 	:condition (and
-		(over all(at ?x ?p ))
-		(at start(available ?p ?x ))
-		(at start(at ?y ?p ))
-		(at start(on ?y ?z ))
-		(at start(clear ?y ))
-		(at start(K-pred ?p pred--clear))
-		(at start(K-pred ?p pred--on))
-		(at start(K-ag-pred ?p pred--lifting))
-		(at start(K-ag-pred ?p pred--available))
-		(at start(K-ag-pred ?p pred--at))
-		(at start(K-obj ?p ?x))
-		(at start(K-obj ?p ?y))
-		(at start(K-obj ?p ?z))
+		(over all(on_board ?i ?s ))
+		(at start(power_avail ?s ))
+		(at start(K-pred ?s pred--calibrated))
+		(at start(K-ag-pred ?s pred--power_avail))
+		(at start(K-pred ?s pred--power_on))
+		(at start(K-ag-pred ?s pred--on_board))
+		(at start(K-obj ?s ?i))
 	)
 	:effect (and
-		(at start(lifting ?p ?x ?y ))
-		(at start(clear ?z ))
-		(at start(not (at ?y ?p )))
-		(at start(not (clear ?y )))
-		(at start(not (available ?p ?x )))
-		(at start(not (on ?y ?z )))
+		(at end(power_on ?i ))
+		(at start(not (calibrated ?i )))
+		(at start(not (power_avail ?s )))
 	)
 )
 
 
-(:durative-action drop
-	:parameters (?p - place ?x - hoist ?y - crate ?z - surface)
-	:duration (= ?duration 11)
+(:durative-action switch_off
+	:parameters (?s - satellite ?i - instrument)
+	:duration (= ?duration 1)
 	:condition (and
-		(over all(at ?x ?p ))
-		(over all(at ?z ?p ))
-		(over all(clear ?z ))
-		(over all(lifting ?p ?x ?y ))
-		(at start(K-pred ?p pred--clear))
-		(at start(K-pred ?p pred--on))
-		(at start(K-ag-pred ?p pred--lifting))
-		(at start(K-ag-pred ?p pred--available))
-		(at start(K-ag-pred ?p pred--at))
-		(at start(K-obj ?p ?x))
-		(at start(K-obj ?p ?y))
-		(at start(K-obj ?p ?z))
+		(over all(on_board ?i ?s ))
+		(at start(power_on ?i ))
+		(at start(K-ag-pred ?s pred--power_avail))
+		(at start(K-pred ?s pred--power_on))
+		(at start(K-ag-pred ?s pred--on_board))
+		(at start(K-obj ?s ?i))
 	)
 	:effect (and
-		(at end(available ?p ?x ))
-		(at end(at ?y ?p ))
-		(at end(clear ?y ))
-		(at end(on ?y ?z ))
-		(at end(not (lifting ?p ?x ?y )))
-		(at end(not (clear ?z )))
+		(at end(power_avail ?s ))
+		(at start(not (power_on ?i )))
 	)
 )
 
 
-(:durative-action load
-	:parameters (?p - place ?x - hoist ?y - crate ?z - truck)
-	:duration (= ?duration 13)
+(:durative-action calibrate
+	:parameters (?s - satellite ?i - instrument ?d - direction)
+	:duration (= ?duration 5)
 	:condition (and
-		(over all(at ?x ?p ))
-		(over all(at ?z ?p ))
-		(over all(lifting ?p ?x ?y ))
-		(at start(K-pred ?p pred--in))
-		(at start(K-ag-pred ?p pred--lifting))
-		(at start(K-ag-pred ?p pred--available))
-		(at start(K-ag-pred ?p pred--at))
-		(at start(K-obj ?p ?x))
-		(at start(K-obj ?p ?y))
-		(at start(K-obj ?p ?z))
+		(over all(on_board ?i ?s ))
+		(over all(calibration_target ?i ?d ))
+		(at start(pointing ?s ?d ))
+		(over all(power_on ?i ))
+		(at start(K-pred ?s pred--calibrated))
+		(at start(K-pred ?s pred--power_on))
+		(at start(K-ag-pred ?s pred--on_board))
+		(at start(K-ag-pred ?s pred--pointing))
+		(at start(K-pred ?s pred--calibration_target))
+		(at start(K-obj ?s ?i))
+		(at start(K-obj ?s ?d))
 	)
-	:effect (and
-		(at end(in ?y ?z ))
-		(at end(available ?p ?x ))
-		(at end(not (lifting ?p ?x ?y )))
-	)
+	:effect 
+		(at end(calibrated ?i ))
 )
 
 
-(:durative-action unload
-	:parameters (?p - place ?x - hoist ?y - crate ?z - truck)
-	:duration (= ?duration 14)
+(:durative-action take_image
+	:parameters (?s - satellite ?i - instrument ?d - direction ?m - mode)
+	:duration (= ?duration 7)
 	:condition (and
-		(over all(at ?x ?p ))
-		(over all(at ?z ?p ))
-		(at start(available ?p ?x ))
-		(at start(in ?y ?z ))
-		(at start(K-pred ?p pred--in))
-		(at start(K-ag-pred ?p pred--lifting))
-		(at start(K-ag-pred ?p pred--available))
-		(at start(K-ag-pred ?p pred--at))
-		(at start(K-obj ?p ?x))
-		(at start(K-obj ?p ?y))
-		(at start(K-obj ?p ?z))
+		(over all(calibrated ?i ))
+		(over all(on_board ?i ?s ))
+		(over all(supports ?i ?m ))
+		(over all(power_on ?i ))
+		(over all(pointing ?s ?d ))
+		(at end(power_on ?i ))
+		(at start(K-pred ?s pred--have_image))
+		(at start(K-ag-pred ?s pred--pointing))
+		(at start(K-pred ?s pred--calibrated))
+		(at start(K-pred ?s pred--power_on))
+		(at start(K-pred ?s pred--supports))
+		(at start(K-ag-pred ?s pred--on_board))
+		(at start(K-obj ?s ?i))
+		(at start(K-obj ?s ?d))
+		(at start(K-obj ?s ?m))
 	)
-	:effect (and
-		(at end(lifting ?p ?x ?y ))
-		(at start(not (in ?y ?z )))
-		(at start(not (available ?p ?x )))
-	)
+	:effect 
+		(at end(have_image ?d ?m ))
 )
 
 )

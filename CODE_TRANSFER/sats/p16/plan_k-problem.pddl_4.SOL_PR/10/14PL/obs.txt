@@ -1,6 +1,0 @@
-( have_image groundstation0 image0 )
-( pointing SATELLITE7 PLANET10 )
-( have_image PLANET10 IMAGE0 )
-( have_image STAR20 IMAGE0 )
-( have_image star20 thermograph1 )
-( pointing satellite7 phenomenon9 )

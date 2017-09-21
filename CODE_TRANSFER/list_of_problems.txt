@@ -1,1 +1,1 @@
-domain_depo,p2
+domain_sats,p18,p19,p20,p21,p22,p23,p24

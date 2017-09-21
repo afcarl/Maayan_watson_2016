@@ -1,7 +1,0 @@
-( pointing satellite2 star9 )
-( pointing SATELLITE4 STAR0 )
-( pointing SATELLITE4 PLANET38 )
-( pointing SATELLITE1 PLANET13 )
-( pointing SATELLITE3 PLANET34 )
-( have_image STAR41 IMAGE1 )
-( have_image STAR9 THERMOGRAPH0 )

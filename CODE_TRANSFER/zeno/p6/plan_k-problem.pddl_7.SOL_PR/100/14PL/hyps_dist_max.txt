@@ -1,8 +1,0 @@
-******* TRUE GOAL *******
-(at person1 city3),(at person2 city1),(at person3 city3),(at person4 city3),(at person5 city1)
-	0.291232319318
-(at person1 city0),(at person2 city0),(at person3 city0),(at person4 city0),(at person5 city2)
-	0.272883162178
-(at person1 city1),(at person2 city2),(at person3 city1),(at person4 city1),(at person5 city3)
-	0.30923270684
-(at person1 city2),(at person2 city3),(at person3 city2),(at person4 city2),(at person5 city0)	0.126651811664

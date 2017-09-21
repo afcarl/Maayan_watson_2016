@@ -1,8 +1,0 @@
-( empty rover3store )
-( empty ROVER0STORE )
-( full ROVER0STORE )
-( have_rock_analysis ROVER0 WAYPOINT6 )
-( at ROVER0 WAYPOINT18 )
-( at ROVER7 WAYPOINT28 )
-( full ROVER2STORE )
-( have_soil_analysis ROVER2 WAYPOINT11 )

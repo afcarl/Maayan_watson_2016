@@ -1,8 +1,0 @@
-( power_on INSTRUMENT0 )
-( pointing SATELLITE0 STAR2 )
-( pointing SATELLITE3 PLANET25 )
-( have_image STAR30 INFRARED1 )
-( have_image PLANET42 INFRARED0 )
-( pointing SATELLITE3 STAR54 )
-( have_image STAR37 THERMOGRAPH2 )
-( have_image PHENOMENON55 THERMOGRAPH2 )

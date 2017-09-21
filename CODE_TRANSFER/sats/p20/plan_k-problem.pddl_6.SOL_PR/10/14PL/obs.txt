@@ -1,8 +1,0 @@
-( have_image phenomenon8 image2 )
-( have_image PLANET13 SPECTROGRAPH6 )
-( pointing satellite2 planet9 )
-( have_image star0 infrared5 )
-( have_image groundstation3 spectrograph0 )
-( pointing SATELLITE1 PLANET7 )
-( have_image PLANET7 INFRARED5 )
-( have_image STAR6 SPECTROGRAPH6 )

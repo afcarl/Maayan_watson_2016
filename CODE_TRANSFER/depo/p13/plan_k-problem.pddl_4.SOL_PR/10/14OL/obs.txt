@@ -1,4 +1,0 @@
-( lifting DISTRIBUTOR1 HOIST4 CRATE2 )
-( lifting distributor0 hoist4 crate1 )
-( lifting DISTRIBUTOR2 HOIST5 CRATE1 )
-( at TRUCK0 DEPOT1 )

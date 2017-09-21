@@ -1,7 +1,0 @@
-( pointing SATELLITE2 STAR1 )
-( have_image PHENOMENON13 THERMOGRAPH2 )
-( have_image STAR15 THERMOGRAPH2 )
-( pointing SATELLITE0 PHENOMENON18 )
-( have_image PHENOMENON18 IMAGE1 )
-( pointing SATELLITE0 PHENOMENON21 )
-( pointing satellite0 planet23 )

@@ -1,6 +1,0 @@
-( power_on INSTRUMENT8 )
-( pointing SATELLITE1 PLANET8 )
-( pointing SATELLITE1 PLANET34 )
-( have_image PLANET38 IMAGE1 )
-( pointing SATELLITE1 PLANET7 )
-( pointing SATELLITE1 STAR30 )

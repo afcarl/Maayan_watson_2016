@@ -1,6 +1,0 @@
-( power_on INSTRUMENT3 )
-( have_image PHENOMENON43 INFRARED0 )
-( have_image PHENOMENON38 INFRARED0 )
-( have_image PLANET49 INFRARED1 )
-( have_image PHENOMENON31 IMAGE2 )
-( pointing SATELLITE2 STAR40 )

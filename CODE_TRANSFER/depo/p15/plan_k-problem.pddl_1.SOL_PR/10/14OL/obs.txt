@@ -1,6 +1,0 @@
-( in CRATE11 TRUCK1 )
-( available DISTRIBUTOR2 HOIST5 )
-( in CRATE9 TRUCK0 )
-( in crate13 truck1 )
-( available DISTRIBUTOR0 HOIST3 )
-( lifting DISTRIBUTOR1 HOIST4 CRATE9 )

@@ -1,7 +1,0 @@
-( pointing SATELLITE3 STAR40 )
-( have_image PHENOMENON38 INFRARED0 )
-( have_image PHENOMENON23 INFRARED1 )
-( have_image PLANET49 INFRARED1 )
-( have_image PLANET9 INFRARED0 )
-( have_image PLANET3 INFRARED0 )
-( pointing satellite3 phenomenon30 )

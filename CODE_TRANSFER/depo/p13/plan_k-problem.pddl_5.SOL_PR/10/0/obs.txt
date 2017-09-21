@@ -1,4 +1,0 @@
-( at TRUCK0 DEPOT2 )
-( in CRATE2 TRUCK1 )
-( available DEPOT0 HOIST0 )
-( lifting DISTRIBUTOR1 HOIST4 CRATE2 )

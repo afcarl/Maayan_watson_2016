@@ -1,3 +1,0 @@
-( power_on instrument5 )
-( power_on INSTRUMENT9 )
-( pointing SATELLITE0 PHENOMENON21 )
