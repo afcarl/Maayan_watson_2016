@@ -136,16 +136,16 @@ for i, obs in enumerate(consideredobservation):
     discardactions = discardactions + "\n" + "(:durative-action hidden-discard-obs-" + obs
     explainactions = explainactions + "\n" + "     :parameters ()"  + "\n"
     discardactions = discardactions + "\n" + "     :parameters ()"  + "\n"
-    explainactions = explainactions + "\n" + "     :duration (= ?duration 1)"  + "\n"
+    explainactions = explainactions + "\n" + "     :duration (= ?duration 0.0000001)"  + "\n"
     discardactions = discardactions + "\n" + "     :duration (= ?duration {0})".format(penalty)  + "\n"
     if atObs == 1:
-				explainactions = explainactions + "     :condition (and  (at start (not (freeze))) (at start (considered_occur_init)) (at start " + preobservations[i] + "))"  + "\n"
+				explainactions = explainactions + "     :condition (and  (at start (not (freeze))) (at start (considered_occur_init)) (over all " + preobservations[i] + "))"  + "\n"
 				discardactions = discardactions + "     :condition (and  (at start (not (freeze))) (at start (considered_occur_init)) )" + "\n"
     
 				explainactions = explainactions + "     :effect (and (at start (not  (considered_occur_init))) (at end (considered_" + obs + ")) (at start (increase (total-cost) 1))))  "+ "\n"
 				discardactions = discardactions + "     :effect (and (at start (not  (considered_occur_init))) (at end (considered_" + obs + ")) (at start (increase (total-cost) 2000))))"+ "\n"
     else:
-				explainactions = explainactions + "     :condition (and (at start (not (freeze))) ( at start (considered_" + prevobs + ") ) (at start " + preobservations[i] + " ))"  + "\n"
+				explainactions = explainactions + "     :condition (and (at start (not (freeze))) ( at start (considered_" + prevobs + ") ) (over all " + preobservations[i] + " ))"  + "\n"
 				discardactions = discardactions + "     :condition (and (at start (not (freeze))) ( at start (considered_" + prevobs + ") ) )" + "\n"
     
 				explainactions = explainactions + "     :effect (and (at start (not (considered_" + prevobs + ")) ) (at end (considered_" + obs + ")) (at start (increase (total-cost) 1))))  "+ "\n"

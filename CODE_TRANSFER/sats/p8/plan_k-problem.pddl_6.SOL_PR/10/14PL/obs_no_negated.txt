@@ -1,0 +1,8 @@
+( power_on INSTRUMENT8 )
+( have_image phenomenon9 image0 )
+( have_image STAR6 THERMOGRAPH1 )
+( pointing satellite0 star7 )
+( pointing SATELLITE2 PHENOMENON14 )
+( pointing satellite2 star6 )
+( power_on instrument3 )
+( pointing SATELLITE2 STAR3 )

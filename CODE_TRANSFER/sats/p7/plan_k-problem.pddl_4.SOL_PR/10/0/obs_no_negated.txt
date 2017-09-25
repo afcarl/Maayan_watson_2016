@@ -1,0 +1,3 @@
+( pointing SATELLITE1 GROUNDSTATION4 )
+( have_image PLANET9 IMAGE3 )
+( have_image PLANET11 IMAGE2 )

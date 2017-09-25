@@ -1,0 +1,2 @@
+( lifting depot0 hoist0 crate4 )
+( lifting DEPOT1 HOIST1 CRATE6 )

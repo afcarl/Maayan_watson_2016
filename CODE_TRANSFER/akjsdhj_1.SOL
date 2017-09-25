@@ -1,0 +1,22 @@
+
+; Version LPG-td-1.0
+; Seed 89481548
+; Command line: ./lpg-td -o k-domain.pddl -f zeno/p3/curr_hyp.pddl -cputime 30 -n 100 -out akjsdhj 
+; Problem zeno/p3/curr_hyp.pddl
+; Time 0.01
+; Search time 0.01
+; Parsing time 0.00
+; Mutex time 0.00
+; MakeSpan 250.00
+
+
+0.0002:   (ZOOM PLANE2 CITY2 CITY0 FL5 FL4 FL3) [100.0000]
+100.0004:   (BOARD PLANE2 PERSON1 CITY0) [20.0000]
+120.0008:   (ZOOM PLANE2 CITY0 CITY1 FL3 FL2 FL1) [100.0000]
+220.0010:   (DEBARK PLANE2 PERSON1 CITY1) [30.0000]
+0.0002:   (ZOOM PLANE1 CITY0 CITY1 FL4 FL3 FL2) [100.0000]
+100.0004:   (BOARD PLANE1 PERSON3 CITY1) [20.0000]
+120.0008:   (ZOOM PLANE1 CITY1 CITY0 FL2 FL1 FL0) [100.0000]
+220.0010:   (DEBARK PLANE1 PERSON3 CITY0) [30.0000]
+
+

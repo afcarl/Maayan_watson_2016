@@ -1,0 +1,4 @@
+( have_image ROVER3 OBJECTIVE2 LOW_RES )
+( have_image rover2 objective0 colour )
+( at ROVER1 WAYPOINT5 )
+( at ROVER3 WAYPOINT5 )

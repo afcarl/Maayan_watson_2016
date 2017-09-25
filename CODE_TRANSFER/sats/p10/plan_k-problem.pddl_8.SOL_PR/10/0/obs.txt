@@ -1,0 +1,4 @@
+( pointing SATELLITE2 STAR2 )
+( calibrated INSTRUMENT4 )
+( pointing SATELLITE0 STAR7 )
+( pointing SATELLITE1 PLANET9 )

@@ -1,0 +1,7 @@
+( pointing SATELLITE0 STAR2 )
+( calibrated INSTRUMENT1 )
+( pointing satellite0 star6 )
+( pointing satellite2 star7 )
+( pointing SATELLITE3 PHENOMENON12 )
+( calibrated instrument4 )
+( have_image PHENOMENON9 IMAGE0 )

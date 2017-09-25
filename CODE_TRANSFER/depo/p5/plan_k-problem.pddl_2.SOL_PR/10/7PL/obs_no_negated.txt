@@ -1,0 +1,8 @@
+( lifting depot0 hoist1 crate6 )
+( at TRUCK0 DISTRIBUTOR1 )
+( lifting DISTRIBUTOR1 HOIST2 CRATE3 )
+( lifting distributor1 hoist2 crate6 )
+( at truck1 distributor1 )
+( lifting DEPOT0 HOIST0 CRATE4 )
+( lifting distributor0 hoist1 crate4 )
+( lifting DEPOT0 HOIST0 CRATE2 )

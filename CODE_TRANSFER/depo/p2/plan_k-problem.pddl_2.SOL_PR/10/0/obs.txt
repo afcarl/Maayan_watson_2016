@@ -1,0 +1,6 @@
+( available DISTRIBUTOR1 HOIST2 )
+( at CRATE2 DISTRIBUTOR1 )
+( clear CRATE2 )
+( on CRATE2 CRATE1 )
+(not ( lifting DISTRIBUTOR1 HOIST2 CRATE2 ))
+(not ( clear CRATE1 ))

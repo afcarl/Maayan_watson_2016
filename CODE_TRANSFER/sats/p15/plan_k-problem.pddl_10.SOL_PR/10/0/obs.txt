@@ -1,0 +1,6 @@
+( have_image STAR18 IMAGE1 )
+( have_image PHENOMENON10 IMAGE1 )
+( pointing SATELLITE5 PLANET7 )
+( pointing SATELLITE0 PHENOMENON16 )
+( have_image PHENOMENON16 IMAGE1 )
+( have_image PHENOMENON5 SPECTROGRAPH2 )

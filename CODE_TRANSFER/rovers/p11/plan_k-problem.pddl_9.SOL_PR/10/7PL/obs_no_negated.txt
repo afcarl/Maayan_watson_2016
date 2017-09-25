@@ -1,0 +1,7 @@
+( calibrated camera3 rover2 )
+( at rover0 waypoint3 )
+( at rover2 waypoint4 )
+( calibrated CAMERA1 ROVER2 )
+( at ROVER3 WAYPOINT5 )
+( at ROVER1 WAYPOINT6 )
+( empty ROVER1STORE )

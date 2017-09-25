@@ -1,0 +1,3 @@
+( in CRATE6 TRUCK1 )
+( in crate5 truck1 )
+( available DISTRIBUTOR1 HOIST2 )

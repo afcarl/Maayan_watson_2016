@@ -1,0 +1,5 @@
+( fuel-level PLANE2 FL2 )
+(not ( fuel-level PLANE2 FL1 ))
+( fuel-level PLANE1 FL2 )
+(not ( fuel-level PLANE1 FL1 ))
+( fuel-level plane1 fl2 )

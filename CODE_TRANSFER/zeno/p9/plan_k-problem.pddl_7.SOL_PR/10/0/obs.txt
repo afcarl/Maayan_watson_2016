@@ -1,0 +1,5 @@
+( fuel-level PLANE3 FL1 )
+(not ( fuel-level PLANE3 FL0 ))
+( at PERSON6 CITY4 )
+( fuel-level PLANE2 FL1 )
+(not ( fuel-level PLANE2 FL0 ))

@@ -1,0 +1,8 @@
+( in PERSON4 PLANE2 )
+( fuel-level PLANE3 FL1 )
+( fuel-level plane1 fl6 )
+( in person4 plane2 )
+( fuel-level plane1 fl3 )
+( fuel-level PLANE1 FL1 )
+( fuel-level PLANE2 FL1 )
+( fuel-level plane3 fl3 )

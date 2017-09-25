@@ -1,0 +1,5 @@
+( power_on instrument4 )
+( power_on INSTRUMENT2 )
+( pointing SATELLITE2 PLANET5 )
+( pointing SATELLITE3 PLANET10 )
+( have_image PLANET9 INFRARED0 )

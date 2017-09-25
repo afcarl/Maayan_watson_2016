@@ -1,0 +1,6 @@
+( power_on INSTRUMENT0 )
+( pointing SATELLITE4 GROUNDSTATION0 )
+( calibrated INSTRUMENT18 )
+( calibrated INSTRUMENT8 )
+( pointing SATELLITE4 PHENOMENON18 )
+( have_image STAR24 INFRARED4 )

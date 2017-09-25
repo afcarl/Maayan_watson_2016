@@ -1,0 +1,2 @@
+( at PLANE1 CITY0 )
+( fuel-level PLANE1 FL0 )

@@ -1,0 +1,4 @@
+( power_on INSTRUMENT2 )
+( pointing SATELLITE2 STAR10 )
+( power_on instrument4 )
+( have_image PLANET5 SPECTROGRAPH0 )

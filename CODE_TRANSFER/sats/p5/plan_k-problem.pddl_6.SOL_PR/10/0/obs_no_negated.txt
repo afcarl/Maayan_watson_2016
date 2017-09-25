@@ -1,0 +1,2 @@
+( calibrated INSTRUMENT2 )
+( have_image STAR7 THERMOGRAPH0 )

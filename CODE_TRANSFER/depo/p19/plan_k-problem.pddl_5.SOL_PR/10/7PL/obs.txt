@@ -1,0 +1,7 @@
+( at TRUCK1 DEPOT3 )
+( at truck3 distributor1 )
+( at TRUCK3 DEPOT1 )
+( at truck0 distributor3 )
+( at TRUCK1 DISTRIBUTOR2 )
+( at truck3 distributor2 )
+( at TRUCK0 DISTRIBUTOR1 )

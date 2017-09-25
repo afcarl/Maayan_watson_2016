@@ -1,0 +1,4 @@
+( have_image groundstation0 spectrograph1 )
+( power_on instrument3 )
+( power_on INSTRUMENT2 )
+( have_image PLANET9 SPECTROGRAPH1 )

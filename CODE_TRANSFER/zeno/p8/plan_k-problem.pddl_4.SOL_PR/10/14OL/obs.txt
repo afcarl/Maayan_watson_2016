@@ -1,0 +1,4 @@
+( in PERSON1 PLANE2 )
+( in person1 plane2 )
+( fuel-level PLANE2 FL1 )
+(not ( fuel-level PLANE2 FL0 ))

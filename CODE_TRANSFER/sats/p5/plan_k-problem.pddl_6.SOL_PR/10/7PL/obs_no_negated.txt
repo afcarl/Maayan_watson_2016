@@ -1,0 +1,4 @@
+( calibrated INSTRUMENT2 )
+( have_image planet9 thermograph0 )
+( have_image STAR7 THERMOGRAPH0 )
+( calibrated instrument4 )

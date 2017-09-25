@@ -1,0 +1,2 @@
+( at PERSON1 CITY1 )
+( at person1 city1 )

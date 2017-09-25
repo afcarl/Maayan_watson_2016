@@ -1,0 +1,5 @@
+( power_on INSTRUMENT5 )
+( pointing SATELLITE5 GROUNDSTATION1 )
+( calibrated INSTRUMENT11 )
+( pointing SATELLITE3 STAR10 )
+( have_image PLANET21 THERMOGRAPH0 )

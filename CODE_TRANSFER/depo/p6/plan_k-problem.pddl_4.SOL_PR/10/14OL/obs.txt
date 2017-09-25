@@ -1,0 +1,4 @@
+( lifting DEPOT0 HOIST0 CRATE8 )
+( lifting distributor0 hoist1 crate11 )
+( lifting DISTRIBUTOR1 HOIST2 CRATE12 )
+( lifting DISTRIBUTOR0 HOIST1 CRATE1 )

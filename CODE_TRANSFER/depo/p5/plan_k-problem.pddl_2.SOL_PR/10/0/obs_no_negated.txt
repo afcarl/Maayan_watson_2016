@@ -1,0 +1,8 @@
+( in CRATE8 TRUCK1 )
+( available DISTRIBUTOR0 HOIST1 )
+( in CRATE3 TRUCK0 )
+( available DEPOT0 HOIST0 )
+( at TRUCK1 DEPOT0 )
+( in CRATE5 TRUCK0 )
+( available DISTRIBUTOR1 HOIST2 )
+( at TRUCK0 DEPOT0 )

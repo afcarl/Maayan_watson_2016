@@ -1,0 +1,8 @@
+( at ROVER0 WAYPOINT4 )
+( at ROVER3 WAYPOINT4 )
+( full ROVER3STORE )
+( have_rock_analysis ROVER3 WAYPOINT2 )
+(not ( at_rock_sample WAYPOINT2 ))
+(not ( full ROVER3STORE ))
+( empty ROVER3STORE )
+( at ROVER2 WAYPOINT5 )
