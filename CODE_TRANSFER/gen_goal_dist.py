@@ -56,7 +56,12 @@ def get_curr_hyp_costs_set(domain_file, problem_file, path, num_of_plans, timeou
     costs.reverse()
 
     os.system("rm plan_lpg_td*")
-    return costs[(-1 * num_of_plans):]
+    to_return = costs[(-1 * num_of_plans):]
+    # if len(to_return) > 0:
+    #     print(to_return)
+    #     to_return[-1] = to_return[-1] / 2
+    #     print(to_return)
+    return to_return
 
 def get_best_plan_cost(domain_file, problem_file, path, planner='lpg'):
     os.system("rm -r plan*")
@@ -543,8 +548,8 @@ def diverse(d, k, include_negated = True):
         append_res_file('results_DIVERSE_d:{0}_k:{1}.txt'.format(d, k), percentages, noise, timeouts, domain_name)
 
 def hybrid(num_of_plans, include_negated = True, timeout = 450):
-    percentages = [ 100]#, 70, 40, 10 ]
-    noise = [0]#, '14PL', '14OL']
+    percentages = [ 100, 70, 40, 10 ]
+    noise = [0, '14PL', '14OL']
     timeout_list = [450]
     truth_vals = [True, False]
     domains = []
