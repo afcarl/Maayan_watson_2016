@@ -545,7 +545,7 @@ def diverse(d, k, include_negated = True):
 def hybrid(num_of_plans, include_negated = True, timeout = 450):
     percentages = [ 100]#, 70, 40, 10 ]
     noise = [0]#, '14PL', '14OL']
-    timeout_list = [8]
+    timeout_list = [450]
     truth_vals = [True, False]
     domains = []
     timeouts = []
@@ -572,18 +572,20 @@ def hybrid(num_of_plans, include_negated = True, timeout = 450):
         domain_name = line_s[0][7:].strip()
         domains.append(domain_name)
         print(domain_name)
+        for timeout_temp in timeout_list:
+            for truth_value in truth_vals:  # , False]:
+                for pct in percentages:
+                    for val in noise:
+                        dict_key = domain_name + '_{0}_{1}_{2}_{3}'.format(str(pct), str(val), str(timeout_temp),
+                                                                           str(truth_value))
+                        big_dist_dict_Q_HIGH[dict_key] = []
+                        big_dist_dict_Q_LOW[dict_key] = []
+                        big_dist_dict_P[dict_key] = []
+                        big_dist_dict_T[dict_key] = []
         for prob in line_s[1:]:
             problem = prob.strip()
             problem_path = domain_name + "/" + problem
-            for timeout_temp in timeout_list:
-                for truth_value in truth_vals:#, False]:
-                    for pct in percentages:
-                        for val in noise:
-                            dict_key = domain_name + '_{0}_{1}_{2}_{3}'.format(str(pct), str(val), str(timeout_temp), str(truth_value))
-                            big_dist_dict_Q_HIGH[dict_key] = []
-                            big_dist_dict_Q_LOW[dict_key] = []
-                            big_dist_dict_P[dict_key] = []
-                            big_dist_dict_T[dict_key] = []
+
             for timeout_temp in timeout_list:
                 for truth_value in truth_vals:#, False]:
                     with open('{0}/plans_list.txt'.format(problem_path), 'r') as plans_list_file:
