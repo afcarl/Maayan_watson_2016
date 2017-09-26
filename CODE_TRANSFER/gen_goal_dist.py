@@ -26,12 +26,12 @@ def insert_hyp_to_template(template_file, hyp, path):
     currHyp.close()
 
 
-def get_curr_hyp_costs_set(domain_file, problem_file, path, num_of_plans):
+def get_curr_hyp_costs_set(domain_file, problem_file, path, num_of_plans, timeout = 450):
     os.system("rm -r plan*")
 
-    timeout = 120
+    print(num_of_plans)
 
-    cmd = "./lpg-td -o {0} -f {2}/{1} -n 5 -cputime {3} -out plan_lpg_td > out_lpg_td".format(domain_file, problem_file, path, timeout) #> out_lpg_td.txt -cputime 600
+    cmd = "./lpg-td -o {0} -f {2}/{1} -nobestfirst -n 33 -cputime {3} -out plan_lpg_td > out_lpg_td".format(domain_file, problem_file, path, timeout) #> out_lpg_td.txt -cputime 600
     os.system(cmd)
 
     costs = []
@@ -40,7 +40,7 @@ def get_curr_hyp_costs_set(domain_file, problem_file, path, num_of_plans):
 
     plans = {}
 
-    for i in range(1, 6):
+    for i in range(1, 32):
         plan_file_name = plan_template.replace("SOLUTION_NUM", str(i))
 
         try:
@@ -90,10 +90,12 @@ def get_best_plan_cost(domain_file, problem_file, path, planner='lpg'):
                             make_span = temp_make_span
             except:
                 break
-
-    f = open(best_plan_file_name, 'r')
-    for line in f:
-        print(line)
+    try:
+        f = open(best_plan_file_name, 'r')
+        for line in f:
+            print(line)
+    except:
+        print("cannot print plan")
 
     if planner == 'sgplan':
         print("Using SGPLAN")
@@ -238,7 +240,7 @@ def create_prob_dist_file(normed_goal_probs, full_path, path, mode = 'no_mode'):
     dists_file.close()
 
 
-def compute_dist_hybrid(path_to_dir, domain_name, problem, problem_path, num_of_plans):
+def compute_dist_hybrid(path_to_dir, domain_name, problem, problem_path, num_of_plans, include_nageted = True, timeout = 450):
     domain_file = "k-domain.pddl_converted.pddl"
     template_file = "template.pddl"
     curr_hyp_conv = "curr_hyp.pddl_converted.pddl"
@@ -262,10 +264,15 @@ def compute_dist_hybrid(path_to_dir, domain_name, problem, problem_path, num_of_
         for i, hyp in enumerate(hypotheses):
             insert_hyp_to_template(template_file, hyp, path_to_dir)
             print(hyp)
-            cmd = "python compile_away_observations_time_penalty.py k-domain.pddl " + path_to_dir + "/curr_hyp.pddl " + path_to_dir + "/obs.txt {0} diverse".format(str (max_duration * 10) )
+            cmd = "python compile_away_observations_time_penalty.py k-domain.pddl " + path_to_dir + "/curr_hyp.pddl " + path_to_dir + "/obs.txt {0} diverse".format(str (max_duration * 500) )
+
+            if not include_nageted:
+                cmd = "python compile_away_observations_time_penalty.py k-domain.pddl " + path_to_dir + "/curr_hyp.pddl " + path_to_dir + "/obs_no_negated.txt {0} diverse".format(
+                    str(max_duration * 500))
+
             os.system(cmd)
 
-            costs_set = get_curr_hyp_costs_set(domain_file, curr_hyp_conv, path_to_dir, num_of_plans)
+            costs_set = get_curr_hyp_costs_set(domain_file, curr_hyp_conv, path_to_dir, num_of_plans, timeout)
             print(costs_set)
 
             if len(costs_set) != 0:
@@ -293,8 +300,18 @@ def compute_dist_hybrid(path_to_dir, domain_name, problem, problem_path, num_of_
             not_normed_goal_probs.append(0)
             not_normed_goal_probs_max.append(0)
         else:
-            not_normed_goal_probs.append(sum( normed_plans_probs_sum[index : index + idx] ) )
-            not_normed_goal_probs_max.append(sum( normed_plans_probs_max[index : index + idx] ) )
+            to_add_sum = 0
+            to_add_max = 0
+            discount_factor = 1.0
+            for i in range(idx):
+                to_add_sum += normed_plans_probs_sum[index + idx - 1 - i] * discount_factor
+                to_add_max += normed_plans_probs_max[index + idx - 1 - i] * discount_factor
+                discount_factor /= 3
+
+            #not_normed_goal_probs.append(sum( normed_plans_probs_sum[index : index + idx] ) )
+            #not_normed_goal_probs_max.append(sum( normed_plans_probs_max[index : index + idx] ) )
+            not_normed_goal_probs.append(to_add_sum)
+            not_normed_goal_probs_max.append(to_add_max)
             index += idx
 
 
@@ -310,7 +327,7 @@ def compute_dist_hybrid(path_to_dir, domain_name, problem, problem_path, num_of_
     create_prob_dist_file(normed_goal_probs_max, path_to_dir, problem_path, 'max')
     return normed_goal_probs_max
 
-def compute_dist_delta(path_to_dir, domain_name, problem, problem_path, best_plan_costs):
+def compute_dist_delta(path_to_dir, domain_name, problem, problem_path, best_plan_costs, include_negated = True):
     domain_file = "k-domain.pddl_converted.pddl"
     template_file = "template.pddl"
     curr_hyp_conv = "curr_hyp.pddl_converted.pddl"
@@ -318,7 +335,7 @@ def compute_dist_delta(path_to_dir, domain_name, problem, problem_path, best_pla
     not_normed_goal_probs = []
 
     # Compile away MA - Call MA script
-    pp, max_duration = compile_away_ma(path_to_dir + "/domain.pddl", path_to_dir + "/" + problem + ".pddl")
+    pp, max_duration = compile_away_ma(path_to_dir + "/domain.pddl", path_to_dir + "/" + problem + ".pddl", "0", 'penalty_on')
 
 
     os.system("cp {0}/hyps.dat ".format(problem_path) + path_to_dir + "/hyps.dat")
@@ -326,7 +343,12 @@ def compute_dist_delta(path_to_dir, domain_name, problem, problem_path, best_pla
     with open('{0}/hyps.dat'.format(problem_path)) as hypotheses:
         for i, hyp in enumerate(hypotheses):
             insert_hyp_to_template(template_file, hyp, path_to_dir)
-            cmd = "python compile_away_observations_time_penalty.py k-domain.pddl " + path_to_dir + "/curr_hyp.pddl " + path_to_dir + "/obs.txt {0}".format(str (max_duration * 500) )
+            cmd = "python compile_away_observations_time_penalty.py k-domain.pddl " + path_to_dir + "/curr_hyp.pddl " + path_to_dir + "/obs.txt {0} diverse".format(str (max_duration * 500) )
+
+            if not include_negated:
+                cmd = "python compile_away_observations_time_penalty.py k-domain.pddl " + path_to_dir + "/curr_hyp.pddl " + path_to_dir + "/obs_no_negated.txt {0} diverse".format(
+                    str(max_duration * 500))
+
             os.system(cmd)
 
             best_plan_cost = get_best_plan_cost(domain_file, curr_hyp_conv, path_to_dir)
@@ -348,7 +370,7 @@ def compute_dist_delta(path_to_dir, domain_name, problem, problem_path, best_pla
 
 
 
-def compute_dist(path_to_dir, domain_name, problem_name, problem_path, d, num_of_plans):
+def compute_dist(path_to_dir, domain_name, problem_name, problem_path, d, num_of_plans, include_nageted = True):
     domain_file = "k-domain.pddl_converted.pddl"
     template_file = "template.pddl"
     curr_hyp = "curr_hyp.pddl"
@@ -362,7 +384,12 @@ def compute_dist(path_to_dir, domain_name, problem_name, problem_path, d, num_of
     dist_dict = {}
     not_normed_goal_probs = []
 
-    cmd = "python compile_away_observations_time_penalty.py k-domain.pddl " + path_to_dir + "/template.pddl " + path_to_dir + "/obs.txt {0} diverse".format(str (max_duration * 10) )
+    cmd = "python compile_away_observations_time_penalty.py k-domain.pddl " + path_to_dir + "/template.pddl " + path_to_dir + "/obs.txt {0} diverse".format(str (max_duration * 500) )
+
+    if not include_nageted:
+        cmd = "python compile_away_observations_time_penalty.py k-domain.pddl " + path_to_dir + "/template.pddl " + path_to_dir + "/obs_no_negated.txt {0} diverse".format(
+            str(max_duration * 500))
+
     os.system(cmd)
     os.system("python addGoalActions.py k-domain.pddl_converted.pddl {0}/template.pddl_converted.pddl {1}/hyps.dat".format(path_to_dir, problem_path))
     os.system(cmd)
@@ -383,36 +410,38 @@ def compute_dist(path_to_dir, domain_name, problem_name, problem_path, d, num_of
     return normed_goal_probs
 
 
-def append_res_file(res_file_name, percentages, noise, timeouts):
+def append_res_file(res_file_name, percentages, noise, timeouts, domain_name, timeout_list = [], truth_vals = []):
 
     res_file = open(res_file_name,'a')
 
-    for pct in percentages:
-        for val in noise:
-            try:
-                dict_key = domain_name + '_{0}_{1}'.format(str(pct), str(val))
+    for timeout in timeout_list:
+        for truth_val in truth_vals:
+            for pct in percentages:
+                for val in noise:
+                    try:
+                        dict_key = domain_name + '_{0}_{1}_{2}_{3}'.format(str(pct), str(val), str(timeout), str(truth_val))
 
-                res_file.write(dict_key + "_T\t")
-                res_file.write(str (sum(big_dist_dict_T[dict_key]) / len(big_dist_dict_T[dict_key]) ))
-                res_file.write('\n')
+                        res_file.write(dict_key + "_T\t")
+                        res_file.write(str (sum(big_dist_dict_T[dict_key]) / len(big_dist_dict_T[dict_key]) ))
+                        res_file.write('\n')
 
-                a = int(float(sum(big_dist_dict_Q_HIGH[dict_key]))/float(len(big_dist_dict_Q_HIGH[dict_key])) * 100)
-                res_file.write(dict_key + "_Q_HIGH\t")
-                res_file.write(str  ( a   ))
-                res_file.write('\n')
+                        a = int(float(sum(big_dist_dict_Q_HIGH[dict_key]))/float(len(big_dist_dict_Q_HIGH[dict_key])) * 100)
+                        res_file.write(dict_key + "_Q_HIGH\t")
+                        res_file.write(str  ( a   ))
+                        res_file.write('\n')
 
-                a = int(float(sum(big_dist_dict_Q_LOW[dict_key]))/float(len(big_dist_dict_Q_LOW[dict_key])) * 100)
-                res_file.write(dict_key + "_Q_LOW\t")
-                res_file.write(str  ( a   ))
-                res_file.write('\n')
+                        a = int(float(sum(big_dist_dict_Q_LOW[dict_key]))/float(len(big_dist_dict_Q_LOW[dict_key])) * 100)
+                        res_file.write(dict_key + "_Q_LOW\t")
+                        res_file.write(str  ( a   ))
+                        res_file.write('\n')
 
-                res_file.write(dict_key + "_P\t")
-                res_file.write(str (sum(big_dist_dict_P[dict_key]) / len(big_dist_dict_P[dict_key]) ))
-                res_file.write('\n')
+                        res_file.write(dict_key + "_P\t")
+                        res_file.write(str (sum(big_dist_dict_P[dict_key]) / len(big_dist_dict_P[dict_key]) ))
+                        res_file.write('\n')
 
 
-            except:
-                continue
+                    except:
+                        continue
 
 
     res_file.write("======= TIMEOUTS =======\n")
@@ -421,7 +450,7 @@ def append_res_file(res_file_name, percentages, noise, timeouts):
         res_file.write('\n')
     res_file.close()
 
-def diverse(d, k):
+def diverse(d, k, include_negated = True):
     percentages = [ 100, 70, 40, 10 ]
     noise = [0, '14PL', '14OL']
     domains = []
@@ -474,7 +503,7 @@ def diverse(d, k):
                             working_file.close()
 
                             start = datetime.datetime.now()
-                            ret_val = compute_dist(path, domain_name, problem, problem_path, d, k)
+                            ret_val = compute_dist(path, domain_name, problem, problem_path, d, k, include_negated)
                             end = datetime.datetime.now()
 
                             dict_key = domain_name + '_{0}_{1}'.format(str(pct), str(val))
@@ -513,9 +542,11 @@ def diverse(d, k):
 
         append_res_file('results_DIVERSE_d:{0}_k:{1}.txt'.format(d, k), percentages, noise, timeouts, domain_name)
 
-def hybrid(num_of_plans):
-    percentages = [ 100, 70, 40, 10 ]
-    noise = [0, '14PL', '14OL']
+def hybrid(num_of_plans, include_negated = True, timeout = 450):
+    percentages = [ 100]#, 70, 40, 10 ]
+    noise = [0]#, '14PL', '14OL']
+    timeout_list = [8]
+    truth_vals = [True, False]
     domains = []
     timeouts = []
     list_of_problems = open('list_of_problems.txt', 'r')
@@ -532,6 +563,8 @@ def hybrid(num_of_plans):
     res_file = open('results_HYBRID.txt','w')
     res_file.close()
 
+
+
     for line in list_of_problems:
         if line[0] == '#':
             continue
@@ -542,67 +575,73 @@ def hybrid(num_of_plans):
         for prob in line_s[1:]:
             problem = prob.strip()
             problem_path = domain_name + "/" + problem
-            for pct in percentages:
-                for val in noise:
-                    dict_key = domain_name + '_{0}_{1}'.format(str(pct), str(val))
-                    big_dist_dict_Q_HIGH[dict_key] = []
-                    big_dist_dict_Q_LOW[dict_key] = []
-                    big_dist_dict_P[dict_key] = []
-                    big_dist_dict_T[dict_key] = []
-
-            with open('{0}/plans_list.txt'.format(problem_path), 'r') as plans_list_file:
-                for plan in plans_list_file:
+            for timeout_temp in timeout_list:
+                for truth_value in truth_vals:#, False]:
                     for pct in percentages:
                         for val in noise:
-                            path = problem_path + "/" + plan.rstrip('\n') + "/" + str(pct) + "/" + str(val)
-                            print("***********************************************************")
-                            print(path)
-                            print("***********************************************************")
+                            dict_key = domain_name + '_{0}_{1}_{2}_{3}'.format(str(pct), str(val), str(timeout_temp), str(truth_value))
+                            big_dist_dict_Q_HIGH[dict_key] = []
+                            big_dist_dict_Q_LOW[dict_key] = []
+                            big_dist_dict_P[dict_key] = []
+                            big_dist_dict_T[dict_key] = []
+            for timeout_temp in timeout_list:
+                for truth_value in truth_vals:#, False]:
+                    with open('{0}/plans_list.txt'.format(problem_path), 'r') as plans_list_file:
+                        for plan in plans_list_file:
+                            for pct in percentages:
+                                for val in noise:
+                                    path = problem_path + "/" + plan.rstrip('\n') + "/" + str(pct) + "/" + str(val)
+                                    print("***********************************************************")
+                                    print(path + " Include negated: {0}   timeout: {1}".format(truth_value, timeout_temp))
+                                    print("***********************************************************")
 
-                            working_file = open('gen_goal_dist_working.txt','a')
-                            working_file.write('{0}_{1}_{2}_{3}_{4}_Working\n'.format(domain_name, problem, plan, pct, val))
-                            working_file.close()
+                                    working_file = open('gen_goal_dist_working.txt','a')
+                                    working_file.write('{0}_{1}_{2}_{3}_{4}_{5}_{6}_Working\n'.format(domain_name, problem, plan, pct, val, str(timeout_temp), str(truth_value)))
+                                    working_file.close()
 
-                            start = datetime.datetime.now()
-                            ret_val = compute_dist_hybrid(path, domain_name, problem, problem_path, num_of_plans)
-                            end = datetime.datetime.now()
+                                    start = datetime.datetime.now()
+                                    ret_val = compute_dist_hybrid(path, domain_name, problem, problem_path, num_of_plans, truth_value, timeout_temp)
+                                    end = datetime.datetime.now()
 
-                            dict_key = domain_name + '_{0}_{1}'.format(str(pct), str(val))
-                            big_dist_dict_T[dict_key].append((end-start).seconds)
+                                    dict_key = domain_name + '_{0}_{1}_{2}_{3}'.format(str(pct), str(val),
+                                                                                       str(timeout_temp),
+                                                                                       str(truth_value))
+                                    big_dist_dict_T[dict_key].append((end-start).seconds)
 
-                            timing_file = open('timing.txt','a')
-                            timing_file.write('{0}_{1}_{2}_{3}_{4}_Working\n'.format(domain_name, problem, plan, pct, val))
-                            timing_file.write('{0} (s) \n'.format(str((end-start).seconds)))
-                            timing_file.close()
+                                    timing_file = open('timing.txt','a')
+                                    timing_file.write('{0}_{1}_{2}_{3}_{4}_{5}_{6}_Working\n'.format(domain_name, problem, plan, pct, val, str(timeout_temp), str(truth_value)))
+                                    timing_file.write('{0} (s) \n'.format(str((end-start).seconds)))
+                                    timing_file.close()
 
-                            if ret_val == -1:
-                                print("**** TIMEOUT ****")
-                                timeouts.append(domain_name + " " + problem + '_{0}_{1}'.format(str(pct), str(val) ))
-                                continue
-
-
-                            big_dist_dict_P[dict_key].append(ret_val[0])
-                            if ret_val[0] > 0.03:
-                                if ret_val.index(max(ret_val)) == 0:
-                                    big_dist_dict_Q_HIGH[dict_key].append(1)
-                                    big_dist_dict_Q_LOW[dict_key].append(0)
-                                else:
-                                    big_dist_dict_Q_HIGH[dict_key].append(0)
-                                    big_dist_dict_Q_LOW[dict_key].append(1)
-                            else:
-                                big_dist_dict_Q_HIGH[dict_key].append(0)
-                                big_dist_dict_Q_LOW[dict_key].append(0)
-
-
-                            working_file = open('gen_goal_dist_working.txt','a')
-                            working_file.write('{0}_{1}_{2}_{3}_{4}_DONE\n'.format(domain_name, problem, plan, pct, val))
-                            working_file.close()
+                                    if ret_val == -1:
+                                        print("**** TIMEOUT ****")
+                                        timeouts.append(domain_name + " " + problem + '_{0}_{1}'.format(str(pct), str(val) ))
+                                        continue
 
 
-        append_res_file('results_HYBRID.txt', percentages, noise, timeouts, domain_name)
+                                    big_dist_dict_P[dict_key].append(ret_val[0])
+                                    print(big_dist_dict_P)
+                                    if ret_val[0] > 0.03:
+                                        if ret_val.index(max(ret_val)) == 0:
+                                            big_dist_dict_Q_HIGH[dict_key].append(1)
+                                            big_dist_dict_Q_LOW[dict_key].append(0)
+                                        else:
+                                            big_dist_dict_Q_HIGH[dict_key].append(0)
+                                            big_dist_dict_Q_LOW[dict_key].append(1)
+                                    else:
+                                        big_dist_dict_Q_HIGH[dict_key].append(0)
+                                        big_dist_dict_Q_LOW[dict_key].append(0)
 
 
-def delta(planner):
+                                    working_file = open('gen_goal_dist_working.txt','a')
+                                    working_file.write('{0}_{1}_{2}_{3}_{4}_{5}_{6}_DONE\n'.format(domain_name, problem, plan, pct, val, str(timeout_temp), str(truth_value)))
+                                    working_file.close()
+
+
+        append_res_file('results_HYBRID.txt', percentages, noise, timeouts, domain_name, timeout_list, truth_vals)
+
+
+def delta(planner, include_negated = True):
     percentages = [ 100]#, 70, 40, 10 ]
     noise = [0]#, '14PL', '14OL']
     domains = []
@@ -634,7 +673,7 @@ def delta(planner):
             problem_path = domain_name + "/" + problem
             # Compile away MA - Call MA script
             compile_away_ma(problem_path + "/domain.pddl", problem_path + "/" + problem + ".pddl")
-
+            best_plan_costs = []
             with open('{0}/hyps.dat'.format(problem_path), 'r') as hypotheses:
                 for hyp in hypotheses:
                     print(hyp)
@@ -667,7 +706,7 @@ def delta(planner):
                             working_file.close()
 
                             start = datetime.datetime.now()
-                            ret_val = compute_dist_delta(path, domain_name, problem, problem_path, best_plan_costs)
+                            ret_val = compute_dist_delta(path, domain_name, problem, problem_path, best_plan_costs, include_negated)
                             end = datetime.datetime.now()
 
                             dict_key = domain_name + '_{0}_{1}'.format(str(pct), str(val))
@@ -708,23 +747,43 @@ def delta(planner):
     #os.system("rm {0}/k-*").format(problem_path)
     #os.system("rm {0}/template.pddl_*").format(problem_path)
 
-if len(sys.argv) == 1:
-    print ("Usage == python gen_goal_dist_combined {delta, diverse, hybrid}")
-    sys.exit
+# if len(sys.argv) == 1:
+#     print ("Usage == python gen_goal_dist_combined {delta, diverse, hybrid}")
+#     sys.exit
+#
+# if sys.argv[1].lower() == 'diverse':
+#     d = sys.argv[2]
+#     num_of_plans = sys.argv[3]
+#     if len(sys.argv) > 4:
+#         if sys.argv[4].lower() == 'no_negated':
+#             diverse(d, num_of_plans, False)
+#     else:
+#         print("d: {0}".format(d))
+#         print("k: {0}".format(num_of_plans))
+#         diverse(d, num_of_plans)
+#
+# elif sys.argv[1].lower() == 'delta':
+#     if len(sys.argv) > 3:
+#         if sys.argv[3].lower() == 'no_negated':
+#             delta(sys.argv[2], False)
+#     else:
+#         delta(sys.argv[2])
+#
+#
+# elif sys.argv[1].lower() == 'hybrid':
+#     if len(sys.argv) > 3:
+#         if sys.argv[3].lower() == 'no_negated':
+#             hybrid(int(sys.argv[2]), False)
+#     else:
+#         hybrid(int(sys.argv[2]))
 
-if sys.argv[1].lower() == 'diverse':
-    d = sys.argv[2]
-    num_of_plans = sys.argv[3]
 
-    print("d: {0}".format(d))
-    print("k: {0}".format(num_of_plans))
-    diverse(d, num_of_plans)
+hybrid(int('3'))
 
-elif sys.argv[1].lower() == 'delta':
-    delta(sys.argv[2])
-
-elif sys.argv[1].lower() == 'hybrid':
-    hybrid(int(sys.argv[2]))
-		  	
-	
-		
+# for timeout in [440, 120]:
+#     for truth_value in [True, False]:
+#         if truth_value:
+#             print('WITH NEGATED - {0}'.format(timeout))
+#         else:
+#             print("NO NEGATED - {0}".format(timeout))
+#         hybrid(int('3'), truth_value, timeout)
