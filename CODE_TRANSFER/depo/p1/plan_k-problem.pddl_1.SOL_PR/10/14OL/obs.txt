@@ -1,0 +1,4 @@
+( in CRATE0 TRUCK0 )
+( available DISTRIBUTOR0 HOIST1 )
+(not ( lifting DISTRIBUTOR0 HOIST1 CRATE0 ))
+( in crate1 truck0 )
