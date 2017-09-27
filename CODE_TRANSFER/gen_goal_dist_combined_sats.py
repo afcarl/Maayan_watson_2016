@@ -645,7 +645,7 @@ def hybrid(num_of_plans, include_negated = True, timeout = 450):
                                     working_file.close()
 
 
-        append_res_file('results_HYBRID_DEPO.txt', percentages, noise, timeouts, domain_name, timeout_list, truth_vals)
+        append_res_file('results_HYBRID_SATS.txt', percentages, noise, timeouts, domain_name, timeout_list, truth_vals)
 
 
 def delta(planner, include_negated = True):
