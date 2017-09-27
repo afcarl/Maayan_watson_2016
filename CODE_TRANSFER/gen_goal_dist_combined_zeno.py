@@ -222,15 +222,15 @@ def get_dict_of_plan_costs(path_to_dir, d_cofficient = 0.5, plan_set_size = 50):
 
 
 
-def create_prob_dist_file(normed_goal_probs, full_path, path, mode = 'no_mode'):
+def create_prob_dist_file(normed_goal_probs, full_path, path, include_negated, mode = 'no_mode'):
     hyps_file = open(path + "/hyps.dat", "r")
 
-    hyps_dist = open("{0}/hyps_dist_{1}.txt".format(full_path, mode), 'w')
+    hyps_dist = open("{0}/hyps_dist_{1}_{2}.txt".format(full_path, mode, include_negated), 'w')
 
     dists_file = open('goal_dists_by_prob.txt','a')
     dists_file.write('===============\n{0}\n================\n'.format(full_path))
 
-    dists_file.write('{0}\n'.format(mode))
+    dists_file.write('{0}   include_negated:{1}\n'.format(mode, include_negated))
 
     for i, hyp in enumerate(hyps_file):
         if i == 0:
@@ -328,8 +328,8 @@ def compute_dist_hybrid(path_to_dir, domain_name, problem, problem_path, num_of_
     print(normed_goal_probs_max)
     if sum( normed_goal_probs ) == 0:
         return -1
-    create_prob_dist_file(normed_goal_probs, path_to_dir, problem_path, 'sum')
-    create_prob_dist_file(normed_goal_probs_max, path_to_dir, problem_path, 'max')
+    create_prob_dist_file(normed_goal_probs, path_to_dir, problem_path, include_nageted, 'sum')
+    create_prob_dist_file(normed_goal_probs_max, path_to_dir, problem_path, include_nageted, 'max')
     return normed_goal_probs_max
 
 def compute_dist_delta(path_to_dir, domain_name, problem, problem_path, best_plan_costs, include_negated = True):
