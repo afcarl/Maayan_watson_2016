@@ -1,3 +1,2 @@
 (on crate7 pallet0),(on crate4 crate7),(on crate0 crate4)
 (on crate6 pallet1),(on crate2 crate6),(on crate5 pallet2)
-(on crate2 pallet1)
