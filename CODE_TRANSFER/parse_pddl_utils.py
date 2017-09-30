@@ -455,7 +455,7 @@ class PlanningProblem(object):
                 delete_line = True
                 break
             if not delete_line:
-              #print(line)
+              print(line)
               pfile_to_write.write(line)
               #pfile_to_write.write('\n')
           else:
