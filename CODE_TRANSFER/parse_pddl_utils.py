@@ -505,7 +505,6 @@ class PlanningProblem(object):
     int_opencounter = 0
     priv_agent = False
     for word in pfile_array:
-      print(word)
       if word == '(':
         opencounter += 1
       elif word == ')':
