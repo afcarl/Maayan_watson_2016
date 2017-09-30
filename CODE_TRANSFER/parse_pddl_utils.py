@@ -183,7 +183,7 @@ class GroundFunction(object):
 
 
 class PlanningProblem(object):
-  def __init__(self, domainfile, problemfile, agents_to_delete):
+  def __init__(self, domainfile, problemfile, agents_to_delete = []):
     self.domain = '' #String
     self.requirements = set() #[String]
     self.type_list = set() #{String}
@@ -439,14 +439,15 @@ class PlanningProblem(object):
       problemfile_orig = problemfile
       problemfile = problemfile_orig + "_modified.pddl"
       pfile_to_write = open(problemfile, 'w+')
-      print(problemfile)
+      #print(problemfile)
       with open(problemfile_orig) as pfile:
         for line in pfile:
           delete_line = False
           if line.find(':init') != -1:
             after_init = True
-          if found_agent > 0:
-            found_agent -= 1
+          if found_agent == True:
+            if line.find(')'):
+              found_agent = False
             continue
           if after_init:
             for agent in agents_to_delete:
@@ -461,7 +462,7 @@ class PlanningProblem(object):
             if (line.find('private') != -1):
               for agent in agents_to_delete:
                 if line.find(agent) != -1:
-                  found_agent = 2
+                  found_agent = True
                   delete_line = True
                   break
             if not delete_line:
@@ -829,7 +830,6 @@ def compile_away_ma(domain_file, problem_file, path_to_dir = "0", penalty = 'pen
 		pp.write_pddl_problem('k-problem.pddl')
 		
 	return pp, max_duration
-
 
 
 
