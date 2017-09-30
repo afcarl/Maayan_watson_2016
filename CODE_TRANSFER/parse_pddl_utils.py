@@ -447,9 +447,6 @@ class PlanningProblem(object):
             after_init = True
           if found_agent > 0:
             found_agent -= 1
-            if found_agent == 1:
-              if line.find(')') == -1:
-                found_agent += 1
             continue
           if after_init:
             for agent in agents_to_delete:
