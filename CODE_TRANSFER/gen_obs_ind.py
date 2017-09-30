@@ -54,7 +54,7 @@ def sample_ops_from_plan(plan, pct, pos_dict, not_observable=[]):
     return obs_seq, modified_plan_dict
 
 
-def get_operators_effects(domain_actions, ops_seq, noise_val, pp, plan_len, pos_dict, negated_obs):
+def get_operators_effects(domain_actions, ops_seq, noise_val, pp, plan_len, pos_dict, negated_obs = False):
     obs_seq = []
     noisy_obs = []
     obs_dict = {}
