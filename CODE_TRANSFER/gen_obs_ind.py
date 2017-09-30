@@ -9,9 +9,13 @@ import math
 import re
 
 
-def sample_ops_from_plan_group_of_agents(set_of_agents, plan, pct, set_of_all_agents, not_observable=[]):
+def sample_ops_from_plan_group_of_agents(set_of_agents, plan, pct, set_of_all_agents, plan_dict, not_observable=[]):
     obs_seq = []
     agents = set()
+    modified_plan_dict = {}
+    pos = 0
+    orig_pos = 0
+
     for step in plan:
         for ag in set_of_agents:
             if step.find(ag.upper()) != -1:
@@ -20,27 +24,43 @@ def sample_ops_from_plan_group_of_agents(set_of_agents, plan, pct, set_of_all_ag
                     #print(agent)
                     if (step.find(agent.upper()) != -1):
                         agents.add(agent.upper())
-                obs_seq.append(step)
+                if step not in obs_seq:
+                    modified_plan_dict[pos] = plan_dict[orig_pos]
+                    obs_seq.append(step)
+                    print(pos)
+                    print(len(obs_seq))
+                    pos += 1
+        orig_pos += 1
                 #break;
 
 
-    return obs_seq, agents
+    return obs_seq, agents, modified_plan_dict
 
 
-def sample_ops_from_plan(plan, pct, not_observable=[]):
+def sample_ops_from_plan(plan, pct, pos_dict, not_observable=[]):
+    modified_plan_dict = {}
+    #print(plan)
     observable = [i for i in range(len(plan))]
     sampled_indices = random.sample(observable, int(math.ceil((pct / 100.0) * len(observable))))
     sampled_indices.sort()
     if len(sampled_indices) == 0:
         sampled_indices = [0]
+
+    pos = 0
+    for i in sampled_indices:
+        modified_plan_dict[pos] = pos_dict[i]
+        pos += 1
     obs_seq = [plan[i] for i in sampled_indices]
-    return obs_seq
+    return obs_seq, modified_plan_dict
 
 
-def get_operators_effects(domain_actions, ops_seq, noise_val, pp, plan_len):
+def get_operators_effects(domain_actions, ops_seq, noise_val, pp, plan_len, pos_dict, negated_obs):
     obs_seq = []
     noisy_obs = []
-
+    obs_dict = {}
+    pos = 0
+    print(pos_dict)
+    print(ops_seq)
     # We take all domain actions that were not observed
     not_observed_actions = [domain_actions[action] for action in domain_actions if
                             action not in [op.split()[0][1:].lower() for op in ops_seq]]
@@ -59,13 +79,22 @@ def get_operators_effects(domain_actions, ops_seq, noise_val, pp, plan_len):
 
         for eff in action_effects:
             print(eff)
+            atStart = False
             if eff.temp_attr == 'at start':
                 continue
+                atStart = True
+
+            #    continue
+
             if eff.is_negated:
-                continue
+                if not negated_obs:
+                    continue
+
+            if eff.is_negated:
+                observation = "(not ( " + eff.name
             else:
                 observation = "( " + eff.name
-                noisy_observation = "( " + eff.name
+            noisy_observation = "( " + eff.name
             for arg in eff.args:
                 if arg == ')':
                     continue
@@ -73,32 +102,55 @@ def get_operators_effects(domain_actions, ops_seq, noise_val, pp, plan_len):
 
                 observation += " " + op.split()[idx + 1].rstrip(')')
 
-                # list of all other objects that do not appear in current observation's effects
-                try:
-                    obj_list = [obj for obj in pp.objects[params_only_types[idx].lower()] if
-                                obj.find(op.split()[idx + 1].rstrip(')')) == -1]
-                except:
-                    type = random.sample(pp.types[params_only_types[idx].lower()], 1)[0]
-                    obj_list = [obj for obj in pp.objects[type] if obj.find(op.split()[idx + 1].rstrip(')')) == -1]
+                if not eff.is_negated:
+                    # list of all other objects that do not appear in current observation's effects
+                    try:
+                        obj_list = [obj for obj in pp.objects[params_only_types[idx].lower()] if
+                                    obj.find(op.split()[idx + 1].rstrip(')')) == -1]
+                    except:
+                        type = random.sample(pp.types[params_only_types[idx].lower()], 1)[0]
+                        obj_list = [obj for obj in pp.objects[type] if obj.find(op.split()[idx + 1].rstrip(')')) == -1]
 
-                noisy_observation += " " + random.sample((obj_list), 1)[0]
+                    noisy_observation += " " + random.sample((obj_list), 1)[0]
+
 
             noisy_observation += " )"
-            observation += " )"
+            if eff.is_negated:
+                observation += " ))"
+            else:
+                observation += " )"
 
-            noisy_obs.append(noisy_observation)
+            if not eff.is_negated:
+                noisy_obs.append(noisy_observation)
 
+            if atStart:
+                a = pos_dict[pos] - float(curr_action.duration)
+                while a in list(obs_dict):
+                    a += 0.009
+
+                obs_dict[a] = observation
+            else:
+                print(observation)
+                print(pos_dict[pos])
+                a = pos_dict[pos]
+                while a in list(obs_dict):
+                    a += 0.0001
+                obs_dict[a] = observation
             obs_seq.append(observation)
+        pos += 1
 
             # From list of noisy_obs randomly choose a percentage of obs, according to noise_val. Add to obs_seq
-
+    sorted_steps = collections.OrderedDict(sorted(obs_dict.items()))
+    print(sorted_steps)
+    obs_seq = [sorted_steps[step] for step in sorted_steps]
+    print(obs_seq)
     return obs_seq, noisy_obs
 
 def get_best_plan(domain_actions):
     os.system("rm -r plan*")
 
     if 1:
-        cmd = "./lpg-td -o k-domain.pddl -f k-problem.pddl -nobestfirst -n 20 -cputime 350 > out_lpg_td.txt"
+        cmd = "./lpg-td -o k-domain.pddl -f k-problem.pddl -nobestfirst -n 33 -cputime 300 > out_lpg_td.txt"
 
     os.system(cmd)
 
@@ -113,7 +165,7 @@ def get_best_plan(domain_actions):
         plans = {}
         num_of_plans = 0
 
-        for i in range(1, 19):
+        for i in range(1, 32):
             plan_file_name = plan_template.replace("SOLUTION_NUM", str(i))
             print(plan_file_name)
             try:
@@ -132,6 +184,7 @@ def get_best_plan(domain_actions):
 
     print(plan_nums)
     plans = {}
+    clean_plan_dict = {}
     for i in plan_nums:
         plan = []
         plan_file_name = plan_template.replace("SOLUTION_NUM", str(i))
@@ -178,6 +231,11 @@ def get_best_plan(domain_actions):
             sorted_steps = collections.OrderedDict(sorted(plan_dict.items()))
             #print(sorted_steps)
             #print(len(sorted_steps))
+
+            pos = 0
+            for key in sorted_steps:
+                clean_plan_dict[pos] = key
+                pos += 1
             plan_steps = [sorted_steps[step][sorted_steps[step].find('('): (sorted_steps[step].find('[') - 1)] for step
                           in sorted_steps]
             #print(plan_steps)
@@ -190,10 +248,11 @@ def get_best_plan(domain_actions):
             print("Done with plans creation")
             break
 
-    return plans
+    #os.system("rm plan_lpg_td*")
 
-    os.system("rm plan_lpg_td*")
-    os.system("rm plan_sgplan")
+    return plans, clean_plan_dict
+
+
 
 def get_plans(domain_actions):
     os.system("rm -r plan*")
@@ -332,8 +391,11 @@ def create_template_file(problem_file):
 
 
 def add_noise_to_obs(obs_seq, noisy_obs, val, plan_len):
-    if val.find("PL") != -1:
+    if val.find("14PL") != -1:
         val_num = int(val[0:2])
+        num_of_noisy = min(int(math.ceil((val_num / 100.0) * plan_len)), len(noisy_obs))
+    elif val.find("7PL") != -1:
+        val_num = int(val[0:1])
         num_of_noisy = min(int(math.ceil((val_num / 100.0) * plan_len)), len(noisy_obs))
     elif val.find("OL") != -1:
         val_num = int(val[0:2])
@@ -375,12 +437,12 @@ def create_PR_problems(domain_file, problem_file, path_to_prob_dir):
         domain_actions[action.name] = action
 
         # Get plans for sub problems #
-    plans = get_best_plan(domain_actions)
+    plans, pos_dict = get_best_plan(domain_actions)
 
     plans_list_file = open('{0}/plans_list.txt'.format(path_to_prob_dir), 'w')
 
-    percentages = [100, 70]#, 40, 10]
-    noise = [0]#, '14PL', '14OL', '7PL']
+    percentages = [100, 70, 40, 10]
+    noise = [0, '14PL', '14OL', '7PL']
     for plan in plans:
         path = plan + "_PR"
         plans_list_file.write(path + "\n")
@@ -396,22 +458,33 @@ def create_PR_problems(domain_file, problem_file, path_to_prob_dir):
                 noise_path += str(val)
                 print(noise_path)
                 os.system('mkdir {0}/{1}'.format(path_to_prob_dir, noise_path))
-
+                print(plans)
                 # Sample %pct of operators from ground truth plan
-                ops_seq = sample_ops_from_plan(plans[plan], pct)
+                ops_seq, modified_pos_dict = sample_ops_from_plan(plans[plan], pct, pos_dict)
 
                 # Get sampled operators effects
-                obs_seq, noisy_obs = get_operators_effects(domain_actions, ops_seq, val, pp, len(plans[plan]))
+                obs_seq, noisy_obs = get_operators_effects(domain_actions, ops_seq, val, pp, len(plans[plan]), modified_pos_dict, True)
+                no_negated_obs_seq, noisy_obs = get_operators_effects(domain_actions, ops_seq, val, pp, len(plans[plan]),
+                                                           modified_pos_dict, False)
+
 
                 if val > 0:
                     # Add random noisy observations
+                    final_obs_seq_no_negated = add_noise_to_obs(no_negated_obs_seq, noisy_obs, val, len(plans[plan]))
                     final_obs_seq = add_noise_to_obs(obs_seq, noisy_obs, val, len(plans[plan]))
                 else:
+                    final_obs_seq_no_negated = no_negated_obs_seq
                     final_obs_seq = obs_seq
 
                 obs_file = open("{0}/{1}/obs.txt".format(path_to_prob_dir, noise_path), 'w')
                 for ob in final_obs_seq:
                     obs_file.write(ob + "\n")
+
+
+                obs_file = open("{0}/{1}/obs_no_negated.txt".format(path_to_prob_dir, noise_path), 'w')
+                for ob in final_obs_seq_no_negated:
+                    obs_file.write(ob + "\n")
+
                 os.system("cp real_hyp.txt {0}/{1}".format(path_to_prob_dir, noise_path))
                 os.system("cp {0} {1}/{2}".format(domain_file, path_to_prob_dir, noise_path))
                 os.system("cp {0} {1}/{2}".format(problem_file, path_to_prob_dir, noise_path))
