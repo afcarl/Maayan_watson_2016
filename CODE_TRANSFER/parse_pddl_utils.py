@@ -445,9 +445,11 @@ class PlanningProblem(object):
           delete_line = False
           if line.find(':init') != -1:
             after_init = True
-          if found_agent == True:
-            if line.find(')'):
-              found_agent = False
+          if found_agent > 0:
+            found_agent -= 1
+            if found_agent == 1:
+              if line.find(')') == -1:
+                found_agent += 1
             continue
           if after_init:
             for agent in agents_to_delete:
@@ -455,14 +457,14 @@ class PlanningProblem(object):
                 delete_line = True
                 break
             if not delete_line:
-              print(line)
+              #print(line)
               pfile_to_write.write(line)
               #pfile_to_write.write('\n')
           else:
             if (line.find('private') != -1):
               for agent in agents_to_delete:
                 if line.find(agent) != -1:
-                  found_agent = True
+                  found_agent = 2
                   delete_line = True
                   break
             if not delete_line:
