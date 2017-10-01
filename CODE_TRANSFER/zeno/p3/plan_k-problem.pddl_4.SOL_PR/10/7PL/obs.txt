@@ -1,2 +1,0 @@
-( in person2 plane2 )
-( in PERSON1 PLANE2 )
