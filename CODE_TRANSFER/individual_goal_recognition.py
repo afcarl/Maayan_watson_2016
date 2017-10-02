@@ -324,6 +324,7 @@ def find_best_joint_pl(path_to_dir, problem_path, problem_name):
     os.system("rm k-*")
     os.system("rm template.pddl_*")
     os.system("rm set_of_plans*")
+    STOP = False
 
     # Compile away MA - Call MA script
     pp, max_duration = compile_away_ma(path_to_dir + "/domain.pddl", path_to_dir + "/" + problem_name + ".pddl", "0",
@@ -340,7 +341,7 @@ def find_best_joint_pl(path_to_dir, problem_path, problem_name):
             path_to_dir, problem_path))
     os.system(cmd)
 
-    timeout = 280
+    timeout = 290
 
     os.system("rm -r *.SOL")
     # os.system("./lpg -o k-domain.pddl_converted.pddl_added_goal_actions.pddl -f {3}/template.pddl_converted.pddl_added_goal_actions.pddl -d_coefficient {0} -k_coefficient {1} -cputime {2} -out set_of_plans_lpg -v off > out_lpg.txt".format(str(d_cofficient), str(plan_set_size), timeout, path_to_dir)) # > out_lpg.txt
@@ -363,6 +364,7 @@ def find_best_joint_pl(path_to_dir, problem_path, problem_name):
 
         try:
             f = open(plan_file_name, 'r')
+            print(i)
             for line in f:
                 if line.find("MetricValue") != -1 or line.find("MakeSpan") != -1:
                     temp_make_span = float(re.sub("[^0-9.]", "", line))
@@ -370,8 +372,12 @@ def find_best_joint_pl(path_to_dir, problem_path, problem_name):
                         best_plan_file = plan_file_name
                         make_span = temp_make_span
         except:
+            if i == 1:
+                STOP = True
             break
 
+    if STOP:
+        return 0, 0, 0
     plan = []
     domain_actions = {}
     # pp = PlanningProblem("{0}/domain.pddl",
@@ -697,7 +703,7 @@ def append_res_file(res_file_name, percentages, noise, timeouts, domain_name):
 
 
 def ind_goal_rec(domain = 0):
-    percentages = [100, 70, 40, 10]
+    percentages = [100, 70, 40, 10]#, 70, 40, 10]
     noise = [0]#, '14PL', '14OL']
     domains = []
     timeouts = []
@@ -750,7 +756,13 @@ def ind_goal_rec(domain = 0):
                         for pct in percentages:
                             for val in noise:
                                 path = problem_path + "/" + plan.rstrip('\n') + "/" + str(pct) + "/" + str(val)
-                                clean_plan_dict, plan_steps, pp = find_best_joint_pl(path, problem_path, problem)
+                                try:
+                                    clean_plan_dict, plan_steps, pp = find_best_joint_pl(path, problem_path, problem)
+                                    if pp == 0:
+                                        #print("STOPPPP")
+                                        continue
+                                except:
+                                    continue
                                 for subset in agent_subsets:
                                     subset_stripped = subset.strip()
                                     print("***********************************************************")
