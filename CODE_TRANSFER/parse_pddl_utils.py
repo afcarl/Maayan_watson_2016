@@ -432,6 +432,7 @@ class PlanningProblem(object):
     after_init = False
     found_agent = 0
     delete_line = False
+    found_ag = False
     print("AGENTS_TO_DELETE")
     print(agents_to_delete)
     print("====================")
@@ -440,19 +441,30 @@ class PlanningProblem(object):
       problemfile = problemfile_orig + "_modified.pddl"
       pfile_to_write = open(problemfile, 'w+')
       #print(problemfile)
+      obj_to_delete = []
       with open(problemfile_orig) as pfile:
         for line in pfile:
           delete_line = False
           if line.find(':init') != -1:
             after_init = True
-          if found_agent > 0:
+          #if found_agent > 0:
+          if found_ag == True:
+            if line.find(')') != -1:
+              found_ag = False
+            else:
+              if line.find('instrument') or line.find('hoist') != -1:
+                obj_to_delete.append(line.split()[0])
             found_agent -= 1
             continue
           if after_init:
+            #print(obj_to_delete)
             for agent in agents_to_delete:
               if line.find(agent) != -1:
                 delete_line = True
                 break
+            for object in obj_to_delete:
+              if line.find(object) != -1:
+                delete_line = True
             if not delete_line:
               #print(line)
               pfile_to_write.write(line)
@@ -462,6 +474,7 @@ class PlanningProblem(object):
               for agent in agents_to_delete:
                 if line.find(agent) != -1:
                   found_agent = 2
+                  found_ag = True
                   delete_line = True
                   break
             if not delete_line:
@@ -832,5 +845,5 @@ def compile_away_ma(domain_file, problem_file, path_to_dir = "0", penalty = 'pen
 
 
 
-
+#compile_away_ma('sats/p5/domain.pddl','sats/p5/p5.pddl', "0", "penalty_off", ['satellite0'])
 
