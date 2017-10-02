@@ -1,8 +1,0 @@
-( at ROVER3 WAYPOINT3 )
-( have_image ROVER2 OBJECTIVE1 HIGH_RES )
-(not ( calibrated CAMERA1 ROVER2 ))
-( at ROVER3 WAYPOINT7 )
-( full ROVER1STORE )
-( have_rock_analysis ROVER1 WAYPOINT4 )
-(not ( at_rock_sample WAYPOINT4 ))
-( at rover1 waypoint5 )
