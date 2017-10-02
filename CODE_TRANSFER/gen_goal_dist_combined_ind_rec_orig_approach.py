@@ -93,7 +93,7 @@ def get_best_plan_cost(domain_file, problem_file, path, planner='lpg'):
     os.system("rm -r plan*")
 
     if planner == 'lpg':
-        cmd = "./lpg-td -o {0} -f {2}/{1} -nobestfirst -n 32 -cputime 20 -out plan_lpg_td > out_lpg_td.txt".format(
+        cmd = "./lpg-td -o {0} -f {2}/{1} -nobestfirst -n 32 -cputime 160 -out plan_lpg_td > out_lpg_td.txt".format(
             domain_file, problem_file, path)  # > out_lpg_td.txt -cputime 600
 
     os.system(cmd)
@@ -874,7 +874,7 @@ def delta(planner, path, domain_name, problem, problem_path, subset, best_plan_c
 
 
 # delta('lpg')
-ind_goal_rec('zeno')
+ind_goal_rec('rovers')
 
 # if len(sys.argv) == 1:
 #     print ("Usage == python gen_goal_dist_combined {delta, diverse, hybrid}")
