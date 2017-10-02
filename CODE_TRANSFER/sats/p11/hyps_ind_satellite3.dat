@@ -1,0 +1,4 @@
+(have_image star5 image3),(have_image star8 image3),(have_image planet16 image3)
+(have_image planet6 infrared1),(have_image phenomenon7 infrared1)
+(have_image star11 infrared1),(have_image phenomenon15 infrared0),(have_image star17 infrared0)
+(have_image star10 thermograph2),(have_image planet13 spectrograph4),(have_image planet14 thermograph2)
