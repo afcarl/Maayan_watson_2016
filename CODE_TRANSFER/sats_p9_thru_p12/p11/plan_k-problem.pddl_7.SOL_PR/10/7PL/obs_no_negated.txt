@@ -1,0 +1,7 @@
+( pointing satellite1 star4 )
+( pointing satellite2 star5 )
+( pointing SATELLITE1 STAR2 )
+( calibrated INSTRUMENT8 )
+( pointing SATELLITE3 PLANET16 )
+( have_image STAR11 INFRARED1 )
+( calibrated instrument7 )

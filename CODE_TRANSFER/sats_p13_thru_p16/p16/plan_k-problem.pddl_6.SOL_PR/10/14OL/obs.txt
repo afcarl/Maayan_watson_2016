@@ -1,0 +1,7 @@
+( power_on INSTRUMENT0 )
+( calibrated INSTRUMENT6 )
+( pointing SATELLITE4 PHENOMENON18 )
+( have_image PHENOMENON23 IMAGE0 )
+( pointing SATELLITE8 STAR14 )
+( power_on instrument12 )
+( have_image PLANET10 IMAGE0 )

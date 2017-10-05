@@ -1,0 +1,7 @@
+( power_on INSTRUMENT7 )
+( pointing SATELLITE7 GROUNDSTATION2 )
+( pointing SATELLITE2 STAR1 )
+( pointing SATELLITE6 STAR3 )
+( pointing SATELLITE7 PLANET14 )
+( have_image STAR13 THERMOGRAPH3 )
+( power_on instrument14 )

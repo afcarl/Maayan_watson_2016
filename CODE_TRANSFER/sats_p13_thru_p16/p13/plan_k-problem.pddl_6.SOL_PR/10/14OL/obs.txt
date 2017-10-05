@@ -1,0 +1,8 @@
+( pointing SATELLITE2 GROUNDSTATION3 )
+( pointing SATELLITE3 GROUNDSTATION3 )
+( have_image STAR22 IMAGE4 )
+( pointing SATELLITE3 PLANET10 )
+( pointing SATELLITE0 PHENOMENON5 )
+( pointing satellite2 groundstation3 )
+( pointing SATELLITE1 PLANET29 )
+( pointing SATELLITE2 PLANET8 )

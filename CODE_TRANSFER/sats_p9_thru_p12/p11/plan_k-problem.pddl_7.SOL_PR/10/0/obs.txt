@@ -1,0 +1,4 @@
+( power_on INSTRUMENT7 )
+( power_on INSTRUMENT5 )
+( pointing SATELLITE2 STAR10 )
+( have_image STAR17 INFRARED0 )

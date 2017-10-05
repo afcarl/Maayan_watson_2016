@@ -1,0 +1,6 @@
+( power_on INSTRUMENT2 )
+( have_image star6 thermograph2 )
+( power_on instrument2 )
+( pointing SATELLITE0 STAR1 )
+( pointing satellite1 star1 )
+( have_image STAR7 INFRARED3 )

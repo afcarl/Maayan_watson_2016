@@ -1,0 +1,5 @@
+( power_on INSTRUMENT7 )
+( calibrated instrument7 )
+( calibrated INSTRUMENT4 )
+( have_image PLANET11 IMAGE2 )
+( power_on instrument7 )

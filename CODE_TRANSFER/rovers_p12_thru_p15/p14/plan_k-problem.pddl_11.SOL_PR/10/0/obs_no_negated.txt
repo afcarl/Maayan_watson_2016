@@ -1,0 +1,5 @@
+( full ROVER1STORE )
+( have_rock_analysis ROVER1 WAYPOINT5 )
+( at ROVER0 WAYPOINT1 )
+( at ROVER1 WAYPOINT8 )
+( at ROVER0 WAYPOINT3 )

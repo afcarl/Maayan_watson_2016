@@ -1,0 +1,8 @@
+( have_image ROVER5 OBJECTIVE4 HIGH_RES )
+( at ROVER1 WAYPOINT11 )
+( full ROVER3STORE )
+( have_rock_analysis ROVER3 WAYPOINT2 )
+( have_image rover5 objective0 high_res )
+( empty ROVER3STORE )
+( at ROVER5 WAYPOINT12 )
+( at ROVER3 WAYPOINT0 )

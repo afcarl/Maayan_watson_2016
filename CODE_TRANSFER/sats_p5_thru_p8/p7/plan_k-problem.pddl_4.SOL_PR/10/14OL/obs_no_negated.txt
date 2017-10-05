@@ -1,0 +1,4 @@
+( power_on INSTRUMENT1 )
+( pointing SATELLITE1 PLANET10 )
+( pointing SATELLITE1 PLANET11 )
+( power_on instrument3 )

@@ -1,0 +1,8 @@
+( empty ROVER8STORE )
+( calibrated CAMERA7 ROVER1 )
+( full ROVER9STORE )
+( have_rock_analysis ROVER9 WAYPOINT9 )
+( channel_free GENERAL )
+( empty rover8store )
+( communicated_rock_data WAYPOINT9 )
+( available ROVER9 )

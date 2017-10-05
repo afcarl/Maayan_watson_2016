@@ -1,0 +1,6 @@
+( power_on INSTRUMENT11 )
+( power_on instrument6 )
+( power_on INSTRUMENT10 )
+( have_image PLANET8 IMAGE2 )
+( have_image PLANET23 IMAGE1 )
+( have_image PHENOMENON18 IMAGE1 )

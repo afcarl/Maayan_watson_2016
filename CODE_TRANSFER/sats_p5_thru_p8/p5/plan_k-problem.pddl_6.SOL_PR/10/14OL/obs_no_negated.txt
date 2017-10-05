@@ -1,0 +1,3 @@
+( calibrated instrument3 )
+( calibrated INSTRUMENT7 )
+( have_image PHENOMENON8 IMAGE2 )

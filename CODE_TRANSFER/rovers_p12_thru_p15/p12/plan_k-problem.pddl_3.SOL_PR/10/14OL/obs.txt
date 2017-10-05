@@ -1,0 +1,5 @@
+( have_image rover2 objective0 colour )
+( have_image ROVER3 OBJECTIVE2 LOW_RES )
+(not ( calibrated CAMERA3 ROVER3 ))
+( at ROVER1 WAYPOINT5 )
+( at ROVER3 WAYPOINT5 )

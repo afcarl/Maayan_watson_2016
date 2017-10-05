@@ -1,0 +1,8 @@
+( pointing SATELLITE3 STAR0 )
+( have_image star14 image4 )
+( have_image PHENOMENON7 INFRARED1 )
+( pointing satellite1 star14 )
+( have_image groundstation1 spectrograph0 )
+( have_image phenomenon8 infrared1 )
+( have_image PHENOMENON13 SPECTROGRAPH0 )
+( have_image PLANET10 IMAGE4 )

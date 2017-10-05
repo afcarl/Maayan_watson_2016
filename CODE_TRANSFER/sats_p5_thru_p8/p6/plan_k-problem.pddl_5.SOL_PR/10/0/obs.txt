@@ -1,0 +1,3 @@
+( power_on INSTRUMENT2 )
+( pointing SATELLITE1 STAR2 )
+( calibrated INSTRUMENT0 )

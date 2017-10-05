@@ -1,0 +1,7 @@
+(have_image planet11 image1),(have_image phenomenon16 image1),(have_image star18 image1)
+(have_image phenomenon10 image1),(have_image planet20 image1),(have_image planet22 image1)
+(have_image phenomenon5 spectrograph2),(have_image planet17 thermograph3),(have_image planet23 thermograph3)
+(have_image planet6 spectrograph2),(have_image star12 thermograph3),(have_image star13 thermograph3)
+(have_image planet7 infrared0),(have_image planet21 infrared0)
+(have_image phenomenon9 infrared0),(have_image planet24 infrared0)
+(have_image planet14 thermograph4)

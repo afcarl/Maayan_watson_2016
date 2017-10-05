@@ -1,0 +1,6 @@
+( power_on instrument9 )
+( power_on INSTRUMENT2 )
+( have_image PLANET7 IMAGE1 )
+( pointing SATELLITE2 STAR22 )
+( pointing SATELLITE0 STAR10 )
+( have_image STAR10 IMAGE1 )
