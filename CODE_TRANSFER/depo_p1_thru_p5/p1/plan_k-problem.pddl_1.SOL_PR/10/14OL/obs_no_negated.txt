@@ -1,0 +1,3 @@
+( in CRATE0 TRUCK0 )
+( available DISTRIBUTOR0 HOIST1 )
+( in crate1 truck0 )

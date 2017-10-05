@@ -1,0 +1,8 @@
+( lifting DISTRIBUTOR1 HOIST2 CRATE0 )
+( available DISTRIBUTOR1 HOIST2 )
+( at CRATE5 DISTRIBUTOR1 )
+( available depot0 hoist2 )
+( clear CRATE5 )
+( on CRATE5 CRATE0 )
+( lifting distributor1 hoist0 crate4 )
+( at crate5 distributor0 )

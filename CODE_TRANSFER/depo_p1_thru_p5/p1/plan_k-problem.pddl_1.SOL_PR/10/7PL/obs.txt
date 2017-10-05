@@ -1,0 +1,3 @@
+( at TRUCK1 DISTRIBUTOR0 )
+( lifting DISTRIBUTOR1 HOIST2 CRATE0 )
+( at truck1 distributor1 )

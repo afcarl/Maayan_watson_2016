@@ -1,0 +1,2 @@
+( at TRUCK0 DISTRIBUTOR1 )
+( at truck2 depot1 )
